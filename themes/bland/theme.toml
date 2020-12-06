@@ -1,0 +1,15 @@
+name = "BLand"
+license = "MIT"
+
+[author]
+  name = "Benjamin Land"
+  homepage = "https://ben.land"
+
+[original]
+  name = "Kellen Evan Person"
+  homepage = "https://goodroot.ca"
+
+[original]
+  author = "Yihui Xui"
+  homepage = "https://xmin.yihui.name/"
+  repo = "https://github.com/yihui/hugo-xmin"

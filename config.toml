@@ -1,0 +1,48 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "benland"
+theme = "bland"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "About Me"
+    url = "/about"
+    weight = 1
+    
+[[menu.main]]
+    name = "Contact Info"
+    url = "/contact"
+    weight = 2
+    
+[[menu.main]]
+    name = "Resume/CV"
+    url = "/resume"
+    weight = 3
+
+#[[menu.main]]
+#    name = "Categories"
+#    url = "/categories/"
+#    weight = 1
+#[[menu.main]]
+#    name = "Tags"
+#    url = "/tags/"
+#    weight = 2
+#[[menu.feed]]
+#    name = "Subscribe"
+#    url = "/index.xml"
+
+[params]
+    description = "Homepage for Benjamin Land"
+    footer = "Copyright 2020 Benjamin Land"
+    custom_css = ["css/theme-override.css"]
+    
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
