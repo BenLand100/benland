@@ -3,7 +3,8 @@ title: Home
 ---
 
 {{% center %}}
-# Benjamin Land
+# Benjamin J. Land
+BenLand100
 
 ![Profile Picture](/images/profile.jpg)
 
