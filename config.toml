@@ -12,17 +12,17 @@ footnotereturnlinkcontents = "↩"
 
 [[menu.main]]
     name = "About Me"
-    url = "/about"
+    url = "/about/"
     weight = 1
     
 [[menu.main]]
     name = "Contact Info"
-    url = "/contact"
+    url = "/contact/"
     weight = 2
     
 [[menu.main]]
     name = "Resume/CV"
-    url = "/resume"
+    url = "/resume/"
     weight = 3
 
 #[[menu.main]]
