@@ -95,18 +95,21 @@ img, iframe, video {
 }
 img[src$='#floatleft']
 {
-	max-width: 45%;
-	float:left;
+  max-width: 45%;
+  float:left;
+  padding: 1em;
 }
 img[src$='#floatleftsmall']
 {
-	max-width: 20%;
-	float:left;
+  max-width: 25%;
+  float:left;
+  padding: 1em;
 }
 img[src$='#floatright']
 {
-	max-width: 45%;
-	float:right;
+  max-width: 45%;
+  float:right;
+  padding: 1em;
 }
 main {
   hyphens: auto;
