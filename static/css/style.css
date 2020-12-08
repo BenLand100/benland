@@ -77,6 +77,8 @@ header .current a {
     color: #fff
 }
 
+footer { font-size: 90%; }
+
 /* Code Boxes */
 pre {
   border: 1px solid #ddd;

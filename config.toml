@@ -1,7 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "benland"
-theme = "bland"
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 enableEmoji = true
@@ -40,7 +39,6 @@ footnotereturnlinkcontents = "↩"
 [params]
     description = "Homepage for Benjamin Land"
     footer = "Copyright 2020 Benjamin Land"
-    custom_css = ["css/theme-override.css"]
     
 [markup]
   [markup.goldmark]
