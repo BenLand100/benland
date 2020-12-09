@@ -27,11 +27,13 @@ footnotereturnlinkcontents = "↩"
 [[menu.main]]
     name = "Categories"
     url = "/categories/"
-    weight = -1
+    weight = 4
+
 #[[menu.main]]
 #    name = "Tags"
 #    url = "/tags/"
 #    weight = 2
+
 #[[menu.feed]]
 #    name = "Subscribe"
 #    url = "/index.xml"
