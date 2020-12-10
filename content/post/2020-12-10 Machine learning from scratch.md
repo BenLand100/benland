@@ -21,7 +21,7 @@ Historically this hands-on deep-dive learning style has worked quite well for me
 Lately I've found myself using Python more than any other language, and given its ubiquity in datascience, it's an obvious choice for new projects.
 Some would complain that Python is slow, and to an extent these people are correct, but Python's ability to integrate optimized native libraries sidesteps this issue, as long as you are willing to adopt the API/paradigm of these packages.
 NN math maps well onto matrix operations, and this is _exactly_ the paradigm that the [NumPy](https://numpy.org/) package has optimized and exposed to Python.
-What follows is a description of a neural network package based on NumPy [tensornet](https://github.com/BenLand100/tensornetwork) that ended up being very similar in use to the Keras package mentioned earlier.
+What follows is a description of a neural network package based on NumPy, [tensornetwork](https://github.com/BenLand100/tensornetwork), that ended up being very similar in use to the Keras package mentioned earlier.
 
 I also wanted to test a post that renders both highlighted code and mathematical expressions. Looks like it works nicely!
 
