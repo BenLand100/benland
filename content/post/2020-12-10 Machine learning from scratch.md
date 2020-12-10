@@ -4,6 +4,7 @@ date: '2020-12-10'
 categories:
   - Programming
 slug: machine-learning-from-scratch
+toc: true
 ---
 
 Early in the Covid19 pandemic I decided to take a deep dive into the math and implementation of [neural networks (NNs)](https://en.wikipedia.org/wiki/Neural_network).
@@ -24,7 +25,9 @@ What follows is a description of a neural network package based on NumPy [tensor
 
 I also wanted to test a post that renders both highlighted code and mathematical expressions. Looks like it works nicely!
 
-## Neurons
+## The Math
+
+### Neurons
 
 The basic building block of the network is a neuron $N$ which accepts some input values, $x_i$, where $i$ is the index of the input, and has a single output value, $y$.
 
@@ -42,7 +45,7 @@ $$ y = N(\vec{x}) = \sigma(\vec{w} \cdot \vec{x} + b) $$
 
 where $\vec{w}$ and $b$ are the learned quantities for the neuron.
 
-## Networks
+### Networks
 
 Neural networks are collections of many neurons, $N_j(x_i)$, connected together, with some number of inputs $x_i$ and some number of outputs $y_j$ determined to suit a particular problem.
 It is common to think of large neural networks as a series of layers consisting of many neurons each.
@@ -70,7 +73,7 @@ This expression is _perfect_ for a math library like NumPy (and for hardware lik
 output = activation(np.matmul(weights,inputs) + biases)
 ~~~
 
-## Learning
+### Learning
 
 [Backpropagation](https://en.wikipedia.org/wiki/Backpropagation) is the fundamental algorithm for updating the weights of each neuron incrementally such that the network approaches a configuration that results in the desired output for a given input.
 Reading the Wikipedia article will likely convince you that mathematical notation is confusing, but I'll argue its the "bookkeeping" that is difficult, not the concepts.
@@ -124,7 +127,7 @@ More complicated adjustment algorithms such as [RMSProp](https://en.wikipedia.or
 
 As a final note, in most machine learning literature the error is called the "loss" and derivatives are referred to as "gradients".
 
-## Where are the tensors?
+### Where are the tensors?
 
 Up to now I've only shown vectors and scalars as inputs and outputs to a neural network layer.
 Vectors are just tensors with a single index, and that's all that's necessary to describe inputs and outputs to single neurons or simple layers.
@@ -179,7 +182,7 @@ Contains several activation functions as subclasses of `Activation` which calcul
 * The gradient $\frac{da}{dz}$ given the output activation $a$
     + Coincidentally, most activation functions are monotonic with easy ways to express the gradient as a function of the output
 
-## Example
+## Examples
 
 The following example creates a network with 4 layers:
 * Input 32x32
@@ -212,7 +215,7 @@ s = tn.System(inputs=[in_layer],outputs=[out_layer])
 
 The output shows the shapes of the tensors each layer expects:
 
-~~~text
+~~~
 Input :: [] -> [(32, 32)]
 Dense :: [(32, 32)] -> [(15, 15)]
 Dense :: [(15, 15)] -> [(15, 15)]
