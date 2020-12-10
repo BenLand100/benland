@@ -90,6 +90,12 @@ pre {
 code { background: #f9f9f9; }
 pre code { background: none; }
 
+code.has-jax {
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
+
 /* Images, tables, misc. */
 img, iframe, video {
   max-width: 100%;
@@ -151,3 +157,4 @@ tr:nth-child(even) { background: #eee }
   padding: 10px;
   display: block;
 }
+
