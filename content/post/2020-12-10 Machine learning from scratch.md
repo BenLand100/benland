@@ -1,5 +1,5 @@
 ---
-title: Machine learning from scratch
+title: Machine learning from scratch with Python
 date: '2020-12-10'
 categories:
   - Programming
@@ -113,9 +113,9 @@ In the simple case of quadratic error:
 
 $$ \frac{dE}{dy} = 2(y-y_{true}) $$
 
-For all other neurons, note that the $y$ outputs are $x_i$ inputs for other neurons, or they are unused (and the derivative of the error is zero). 
+For all other neurons, note that the $y$ outputs are $x_i$ inputs for other neurons. (Otherwise the outputs are unused, and the derivative of the error is zero). 
 This means that $\frac{dE}{dy}$ for non-output neurons is the sum of the $\frac{dE}{dx_i}$ values, wherever the output $y$ is used as an input.
-This is where the "backpropagation" term comes from: first one computes the input derivatives $\frac{dE}{dx_i}$ for all neurons where \frac{dE}{dy}, then repeats this procedure for the next layer up, and so on until all derivatives have been computed.
+This is where the "backpropagation" term comes from: first one computes the input derivatives $\frac{dE}{dx_i}$ for all neurons where $\frac{dE}{dy}$ is known, then repeats this procedure for the next layer up, and so on until all derivatives have been computed.
 
 Once the derivative of the error is known with respect to each bias and weight in the network, a weight adjusting procedure can use these derivatives to adjust these parameters.
 The most straightforward is to adjust each weight (bias) by a small factor, $\epsilon$ of the derivative to arrive at a new weight $w_i'$ (new bias $b'$):
