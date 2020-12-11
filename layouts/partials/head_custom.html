@@ -9,15 +9,8 @@
       </li>
       {{ range .Site.Menus.main }}
       {{ $name := lower .Name }}
-      <li class="pull-left {{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
+      <li class="{{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
         <a href="{{ .URL }}">{{.Name }}</a>
-      </li>
-      {{end}}
-
-      {{ range .Site.Menus.feed }}
-      {{ $name := lower .Name}}
-      <li class="pull-right">
-        <a href="{{ .URL }}">{{.Name}}</a>
       </li>
       {{end}}
 

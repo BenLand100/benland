@@ -32,11 +32,7 @@ footnotereturnlinkcontents = "↩"
 #[[menu.main]]
 #    name = "Tags"
 #    url = "/tags/"
-#    weight = 2
-
-#[[menu.feed]]
-#    name = "Subscribe"
-#    url = "/index.xml"
+#    weight = 5
 
 [params]
     description = "Personal website for Benjamin Land / BenLand100"
