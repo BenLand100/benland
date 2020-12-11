@@ -1,4 +1,4 @@
----
+UP---
 title: About Me
 ---
 
@@ -9,7 +9,7 @@ Ultimately my thesis ended up being about using [solar neutrinos](https://en.wik
 You can find a copy [here](https://nino.lbl.gov/~benland100/thesis_final.pdf). 
 During graduate school, my particular involvement was with the [SNO](https://sno.phy.queensu.ca/), [SNO+](https://snoplus.phy.queensu.ca/), and [Theia](https://theia.berkeley.edu/index.php/Main_Page) projects.
 
-![PhDone!](/images/upenn.png#floatleftsmall)
+![UPenn Shield](/images/upenn.png#floatleftsmall)
 Currently, I work as a postdoc at the University of Pennsylvania where I continue to research neutrinos in the [high energy physics neutrino group](https://www.physics.upenn.edu/research/high-energy-physics). 
 I've remained involved in the SNO+ and Theia projects, and am getting involved in the [DUNE](https://www.dunescience.org/) experiment, where I'll be focusing on developing the cold electronics / supporting hardware for the detector and exploring solar neutrino interactions in liquid argon.
 
