@@ -1,38 +1,17 @@
+:root {
+  --basecolor: #0269a4;
+}
+
 body {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
 }
 
-/* Table of contents */
-
-#TableOfContents, #TOC {
-  border: 1px solid #eee;
-  border-radius: 5px;
-}
-
-/* Header and Footer */
-.menu li { display: inline-block; }
-.article-meta, .menu a {
-  text-decoration: none;
-  color: #000;
-}
-
-.terms { font-size: .9em; }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
-
-.pull-left {
-    float: left
-}
-.pull-right {
-    float: right
-}
-
 a {
-  color: #613DC1;
+  color: var(--basecolor);
+  font-weight: 550;
   text-decoration: none;
 }
 
@@ -40,79 +19,9 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-    position: relative;
-    width: 100%;
-    height: 1.75rem;
-    font-size: 1rem;
-    background: #0269a4;
-    border-bottom: 1px solid #000;
-}
-
-header ul,
-header ol {
-    margin: 0;
-    padding: 0;
-    list-style: none
-}
-header nav {
-    padding: 0 0.5rem
-}
-
-header a {
-    color: #fff;
-    line-height: 1.75rem;
-    padding: 0 0.5rem
-}
-header a:hover,
-header .current a {
-    color: #fff
-}
-
-footer { font-size: 90%; }
-
-/* Code Boxes */
-pre {
-  border: 1px solid #0269a4;
-  box-shadow: 2px 2px 2px #0269a4;
-  background: #f8f8f8;
-  overflow-x: auto;
-}
-code { background: none; }
-pre code { background: none; }
-
-code.has-jax {
-    background: inherit !important;
-    border: none !important;
-    font-size: 100%;
-}
-
-/* Images, tables, misc. */
-img, iframe, video {
-  max-width: 100%;
-  height: auto;
-}
-img[src$='#floatleft']
-{
-  max-width: 45%;
-  float:left;
-  padding: 1em;
-}
-img[src$='#floatleftsmall']
-{
-  max-width: 25%;
-  float:left;
-  padding: 1em;
-}
-img[src$='#floatright']
-{
-  max-width: 45%;
-  float:right;
-  padding: 1em;
-}
 main {
   hyphens: auto;
-  max-width: 650px;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7em;
@@ -120,32 +29,146 @@ main {
   display: block;
   font-size: 1.1em;
 }
-main a {
-  font-weight: bold;
+
+hr {
+  color: var(--basecolor);
+  width: 100%;
 }
+
+/* Table of contents */
+
+#TableOfContents, #TOC {
+  max-width: 95%;
+  margin: auto;
+  border: 1px solid var(--basecolor);
+}
+
+/* Header and Footer */
+
+.menu li { display: inline-block; }
+.article-meta, .menu a {
+  text-decoration: none;
+  color: #000;
+}
+.terms { font-size: .9em; }
+.menu, .article-meta, footer { text-align: center; }
+.title { font-size: 1.1em; }
+.pull-left {
+    float: left
+}
+.pull-right {
+    float: right
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 1.75rem;
+  font-size: 1rem;
+  background: var(--basecolor);
+  border-bottom: 2px solid #000;
+}
+
+header ul, header ol {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+header nav {
+  padding: 0 0.5rem
+}
+
+header a {
+  color: #fff;
+  line-height: 1.75rem;
+  padding: 0 0.5rem
+}
+header a:hover,
+header .current a {
+  color: #fff
+}
+
+footer { 
+  font-size: 80%;
+}
+
+/* Code Boxes */
+
+code {
+  font-size: 120%;
+  background: #eee;
+  padding: 2px;
+}
+
+/* highlight.js */
+
+pre code {
+  border: 1px solid var(--basecolor);
+  box-shadow: 2px 2px 2px var(--basecolor);
+  background: #ddd;
+  overflow-x: auto;
+  font-size: 120%;
+}
+
+/* Mathjax */
+
+code.mathjax {
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
+}
+
+/* Images, tables, misc. */
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  padding: 1em;
+}
+
+img[src$='#left']
+{
+  max-width: 40%;
+  float:left;
+}
+
+img[src$='#leftsmall']
+{
+  max-width: 25%;
+  float:left;
+}
+
+img[src$='#right']
+{
+  max-width: 40%;
+  float:right;
+}
+
+img[src$='#rightsmall']
+{
+  max-width: 25%;
+  float:right;
+}
+
 blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #ccc;
+  background: #eee;
+  border-left: 5px solid var(--basecolor);
   padding: 3px 1em 3px;
 }
 
 table {
   margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-tr:nth-child(even) { background: #eee }
-
-.content-wrapper {
-  padding: 0px 12px 0px 12px;
+  border-top: 1px solid var(--basecolor);
+  border-bottom: 1px solid var(--basecolor);
 }
 
-#main-image {
-  min-width: 40px;
-  float: right;
-  padding: 10px;
-  display: block;
+table thead th { 
+  border-bottom: 1px solid var(--basecolor); 
+}
+th, td { 
+  padding: 5px; 
+}
+tr:nth-child(even) {
+  background: #eee
 }
 

@@ -14,7 +14,7 @@ Sitting in the middle of this infrastructure is the Warm Interface Board (WIB) w
 The WIB, therefore, needs to be able to receive high-level configuration and monitoring commands from upstream systems, and send the appropriate low-level commands to downstream systems.
 It is based on a [Xilinx Zynq Ultrascale+ FPGA](https://www.xilinx.com/products/silicon-devices/fpga/virtex-ultrascale-plus.html) with the idea that the PL side will provide [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface) register mapped hardware interfaces to the front end electronics and handle the high speed data streams, while the PS side (consisting of two or four ARM cores) will run software that receives commands over a 1gbps ethernet link as TCP packets and translate these into the appropriate hardware state changes.
 
-## Alphabet soup
+## Big data alphabet soup
 
 The WIB controls four frontend motherboards (FEMBs) submerged in liquid argon.
 Each FEMB contains two COLDATA [ASICs](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit) designed specifically for DUNE, which control the logic on the frontend.

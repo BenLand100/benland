@@ -232,7 +232,7 @@ for true_out,input in ocr_data.tagged_2d_data(length):
 
 ### Optical character recognition benchmark
 
-![Example weights for one neuron.](/images/dense_weights.png#floatright)
+![Example weights for one neuron.](/images/dense_weights.png#right)
 The network built in the previous section was trained to identify upper case block letters represented as 32x32 grayscale images. 
 After sufficient training, this achieves 100% accuracy, which is unsurprising given that there is limited variability possible in this benchmarking dataset. 
 Looking at the weights of the neurons in the first dense layer, one can get an idea of the features the network is learning to recognize, for which an example is shown to the right.
