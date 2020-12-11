@@ -76,31 +76,24 @@ header {
   border-bottom: 2px solid #000;
 }
 
-header li {
-  display: inline-block;
-}
-
-header li.current {
-  display: inline-block;
+header nav {
+  padding: 0 0.5rem;
 }
 
 header ul, header ol {
   margin: 0;
   padding: 0;
-  list-style: none
+  list-style: none;
 }
 
-header nav {
-  padding: 0 0.5rem
+header li {
+  display: inline-block;
 }
 
 header a {
   color: #fff;
   line-height: 1.75rem;
   padding: 0 0.5rem
-}
-
-header a:hover {
 }
 
 header .current a {
@@ -183,9 +176,11 @@ table {
 table thead th { 
   border-bottom: 1px solid var(--basecolor); 
 }
+
 th, td { 
   padding: 5px; 
 }
+
 tr:nth-child(even) {
   background: #eee
 }
