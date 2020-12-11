@@ -1,5 +1,5 @@
 ---
-title: Resume / CV
+title: Resume/CV
 ---
 
 ## Education
