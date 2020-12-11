@@ -9,6 +9,10 @@ body {
   line-height: 1.5em;
 }
 
+h1 {
+  line-height: 1.5em;
+}
+
 a {
   color: var(--basecolor);
   font-weight: 550;
@@ -89,6 +93,7 @@ header .current a {
 }
 
 footer { 
+  width: 100%;
   font-size: 80%;
 }
 
@@ -110,19 +115,10 @@ pre code {
   font-size: 120%;
 }
 
-/* Mathjax */
-
-code.mathjax {
-  background: inherit !important;
-  border: none !important;
-  font-size: 100%;
-}
-
 /* Images, tables, misc. */
 
 img, iframe, video {
-  max-width: 100%;
-  height: auto;
+  max-width: 95%;
   padding: 1em;
 }
 
