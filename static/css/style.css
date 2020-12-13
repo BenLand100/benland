@@ -2,6 +2,15 @@
   --basecolor: #0269a4;
 }
 
+html {
+  font-family:
+    'Helvetica',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
 body {
   max-width: 900px;
   margin: auto;
@@ -112,7 +121,13 @@ footer {
 /* Code Boxes */
 
 code {
-  font-size: 120%;
+  font-family:
+    Courier New,
+    monospace,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 110%;
   background: #eee;
   padding: 2px;
 }
@@ -122,16 +137,14 @@ code {
 pre code {
   border: 1px solid var(--basecolor);
   box-shadow: 2px 2px 2px var(--basecolor);
-  background: #ddd;
   overflow-x: auto;
-  font-size: 120%;
 }
 
 /* Images, tables, misc. */
 
 img, iframe, video {
-  max-width: 90%;
-  padding: 1em 0;
+  max-width: 95%;
+  padding: 0.5em 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -140,28 +153,28 @@ img, iframe, video {
 img[src$='#left']
 {
   max-width: 40%;
-  padding: 1em;
+  padding: 0.75%;
   float:left;
 }
 
 img[src$='#leftsmall']
 {
   max-width: 25%;
-  padding: 1em;
+  padding: 0.75%;
   float:left;
 }
 
 img[src$='#right']
 {
   max-width: 40%;
-  padding: 1em;
+  padding: 0.75%;
   float:right;
 }
 
 img[src$='#rightsmall']
 {
   max-width: 25%;
-  padding: 1em;
+  padding: 0.75%;
   float:right;
 }
 
