@@ -4,11 +4,9 @@
 
 html {
   font-family:
+    'Open Sans',
     'Helvetica',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol';
+    sans-serif;
 }
 
 body {
@@ -28,7 +26,7 @@ h1 {
 
 a {
   color: var(--basecolor);
-  font-weight: 550;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -123,10 +121,7 @@ footer {
 code {
   font-family:
     Courier New,
-    monospace,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    monospace;
   font-size: 110%;
   background: #eee;
   padding: 2px;
