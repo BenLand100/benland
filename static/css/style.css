@@ -148,28 +148,28 @@ img, iframe, video {
 img[src$='#left']
 {
   max-width: 40%;
-  padding: 0.75%;
+  padding: 0 2%;
   float:left;
 }
 
 img[src$='#leftsmall']
 {
   max-width: 25%;
-  padding: 0.75%;
+  padding: 0 2%;
   float:left;
 }
 
 img[src$='#right']
 {
   max-width: 40%;
-  padding: 0.75%;
+  padding: 0 2%;
   float:right;
 }
 
 img[src$='#rightsmall']
 {
   max-width: 25%;
-  padding: 0.75%;
+  padding: 0 2%;
   float:right;
 }
 

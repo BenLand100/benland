@@ -13,8 +13,8 @@ During graduate school, my particular involvement was with the [SNO](https://sno
 Currently, I work as a postdoc at the University of Pennsylvania where I continue to research neutrinos in the [high energy physics neutrino group](https://www.physics.upenn.edu/research/high-energy-physics). 
 I've remained involved in the SNO+ and Theia projects, and am getting involved in the [DUNE](https://www.dunescience.org/) experiment, where I'll be focusing on developing the cold electronics / supporting hardware for the detector and exploring solar neutrino interactions in liquid argon.
 
-Otherwise, I am 29 years old and hail from Macon, GA. 
-I am a long time programmer and have contributed to many a project and learned many a language since I became interested in using computers to automate mundane human tasks (read: cheating on MMORPGs) back in the early aughts. 
+Otherwise, I am 30 years old and hail from Macon, GA. 
+I am a long time programmer, have contributed to many projects, and learned many languages since I became interested in using computers to automate mundane human tasks (read: cheating on MMORPGs) back in the early aughts. 
 Check out my [GitHub](https://github.com/BenLand100) for more about the projects I deemed most interesting. 
 Besides physics and programming, I enjoy the outdoors (that is, photographing them), Minecraft (with mods... lots of mods), and astronomy.
 
