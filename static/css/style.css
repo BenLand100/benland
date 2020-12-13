@@ -9,6 +9,10 @@ body {
   line-height: 1.5em;
 }
 
+div.home-wrapper {
+  text-align: center;
+}
+
 h1 {
   line-height: 1.5em;
 }

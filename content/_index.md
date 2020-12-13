@@ -2,8 +2,6 @@
 title: Home
 ---
 
-{{% center %}}
-
 # Benjamin J. Land
 ~BenLand100
 
@@ -17,7 +15,3 @@ Particle physicist / Computer nerd / Scifi superfan
 [Facebook](https://facebook.com/benland100) /
 [SMART](https://ben.land/smart.php) /
 [Wiki](https://ben.land/wiki/)
-
-{{% /center %}}
-
-## Posts
