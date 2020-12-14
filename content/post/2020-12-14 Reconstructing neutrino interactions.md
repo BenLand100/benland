@@ -153,10 +153,10 @@ The network topology is as follows:
 * A 33-length fully connected dense layer, that is reshaped into a (3,11) tensor
 For the last layer, the first dimension is the axis, and the second dimension encodes the offset in that axis. 
 
-Because the input to this network is large, this network contains roughly 4 million trainable parameters /
+Because the input to this network is large, this network contains roughly 4 million trainable parameters.
 The network is trained on simulated events (as depicted above) where the initial position is known.
 It can then be used to reconstruct events it has never seen.
-This is done by weighting the positions represented in the output neurons by the activation of the neurons.
+This reconstruction is done by weighting the positions represented in the output neurons by the activation of the neurons.
 This procedure results in a comparable position resolution to the maximum likelihood method above.
 
 ## Where to go from here
