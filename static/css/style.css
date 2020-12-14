@@ -148,29 +148,63 @@ img, iframe, video {
 img[src$='#left']
 {
   max-width: 40%;
-  padding: 0 2%;
+  padding: 0.5em 2% 0 0;
   float:left;
 }
 
 img[src$='#leftsmall']
 {
   max-width: 25%;
-  padding: 0 2%;
+  padding: 0.5em 2% 0 0;
+  float:left;
+}
+
+img[src$='#leftlarge']
+{
+  max-width: 60%;
+  padding: 0.5em 2% 0 0;
   float:left;
 }
 
 img[src$='#right']
 {
   max-width: 40%;
-  padding: 0 2%;
+  padding: 0.5em 0 0 2%;
   float:right;
 }
 
 img[src$='#rightsmall']
 {
   max-width: 25%;
-  padding: 0 2%;
+  padding: 0.5em 0 0 2%;
   float:right;
+}
+
+figure {
+  max-width: 95%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  text-align: justify;
+}
+
+figure img {
+  padding: 0;
+}
+
+figure.right {
+  max-width: 40%;
+  padding: 0.5em 0 0 2%;
+  float:right;
+}
+
+figure.left {
+  max-width: 40%;
+  padding: 0.5em 2% 0 0;
+  float:left;
 }
 
 blockquote {

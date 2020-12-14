@@ -3,6 +3,7 @@ title: Machine learning from scratch with Python
 date: '2020-12-10'
 categories:
   - Programming
+  - Machine Learning
 slug: machine-learning-from-scratch
 toc: true
 ---
