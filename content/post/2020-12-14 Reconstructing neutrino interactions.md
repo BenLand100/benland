@@ -10,7 +10,7 @@ toc: true
 
 ## Introduction
 
-{{< figure src="/images/chroma_theia25.png" class="right" caption="A Chroma model of the Theia25 detector with PMTs and LAPPDs as photon detectors." >}}
+{{< figure src="/images/chroma_theia25.png" class="right" caption="A [Chroma](/post/2020/12/07/optical-physics-chroma/) model of the Theia25 detector with PMTs and LAPPDs as photon detectors." >}}
 
 Neutrino detectors like [SNO+](https://snoplus.phy.queensu.ca/) and [Theia](https://theia.berkeley.edu/index.php/Main_Page) don't detect neutrinos directly.
 Instead they detect optical signals (light/photons) produced by high energy charged particles present after neutrinos interact in the medium.
