@@ -128,7 +128,7 @@ Suffice to say, maximizing the likelihood here with a modern detector on the sca
 
 ### Machine learning method
 
-Compared to a maximal likelihood method, which requires a lot of mathematical knowledge to implement a solution for a specific problem, machine learning with neural networks hides the detailed mathematical description of the problem within a generic framework for classifying data. 
+Compared to a maximal likelihood method, which requires a lot of mathematical knowledge to implement a solution for a specific problem, [machine learning with neural networks](/post/2020/12/10/machine-learning-from-scratch/) hides the detailed mathematical description of the problem within a generic framework for classifying data. 
 The difficulty in extracting output parameters from data is offloaded into choosing a good encoding for the input and output and choosing a network topology that can learn to classify the data. 
 In this case, the input data will be the the time at which each PMT detects its first photon, which is analogous to the $(x_i,t)$ from the likelihood method, except that we don't need to tell the network where each PMT is, as the network can learn that.
 The output will be a representation of the position and time of the event. 
@@ -138,7 +138,7 @@ For neural networks, a time series is data same shape that is sampled at differe
 For example, a single slice of the time series could be a series of values for each PMT with the quantity 1 (0) for PMTs that were (not) hit within that time slice.
 In practice, I have found it better to weight the time slice before and after the PMT hit such that the weighted average of those two time slice times is the actual detected time.
 If these slices are stacked vertically, a 2D image is generated with axes of "PMT ID" and "time slice" is generated.
-This is an accurate representation of the 2D tensor that is passed to the [Keras](https://keras.io/) ([tensorflow](https://www.tensorflow.org/)) network as an input:
+This is an accurate representation of the 2D tensor that is passed to the network as an input:
 ![The input time series representing PMT hit times](/images/nn_recon_input.png)
 
 The output of this network will encode the true event position $\vec{x}$ as a 2D tensor where one axis represents position slices and encode the true position similar to how time is encoded above, and the other axis represents X, Y, or Z dimensions.
@@ -146,12 +146,13 @@ For example, to encode the X position, the two neurons in the X dimension row ne
 This could easily be three separate 1D output tensors, however since the dimensions are encoded the same way (11 neurons at 1 meter spacing) it is possible to use a single 2D tensor:
 ![The output representing the true X,Y,Z position](/images/nn_recon_output.png)
 
-The network topology is as follows: 
+The network topology was implemented using [Keras](https://keras.io/) ([tensorflow](https://www.tensorflow.org/)) and is as follows: 
 * 2D input tensor with the PMT time series
 * LSTM with 256-length output which digests this timeseries
 * 256-length hidden state is fed into a 256-length fully connected dense layer
 * A 33-length fully connected dense layer, that is reshaped into a (3,11) tensor
-For the last layer, the first dimension is the axis, and the second dimension encodes the offset in that axis. 
+
+The last layer is taken as the output, and the first dimension is the axis, while the second dimension encodes the offset in that axis. 
 
 Because the input to this network is large, this network contains roughly 4 million trainable parameters.
 The network is trained on simulated events (as depicted above) where the initial position is known.
