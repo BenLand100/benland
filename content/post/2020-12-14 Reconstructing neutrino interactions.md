@@ -150,9 +150,28 @@ The network topology was implemented using [Keras](https://keras.io/) ([tensorfl
 * 2D input tensor with the PMT time series
 * LSTM with 256-length output which digests this timeseries
 * 256-length hidden state is fed into a 256-length fully connected dense layer
-* A 33-length fully connected dense layer, that is reshaped into a (3,11) tensor
+* A 33-length fully connected dense layer, that is reshaped into a (3,11) tensor where the first dimension is the axis, while the second dimension encodes the offset in that axis. 
 
-The last layer is taken as the output, and the first dimension is the axis, while the second dimension encodes the offset in that axis. 
+The code to generate this network (along with additional code to reconstruct direction, which I may get into in a different post) can be found here:
+~~~python
+# Very simple proof of concept network topology
+# timesteps x channels input series
+# 256-neuron LSTM with final hidden state output
+# Dense neuron layer for each output dimension (xyz,theta,phi) 
+
+time_series = layers.Input((None,num_channels),name='time_series')
+lstm_h = layers.LSTM(256,name='lstm')(time_series)
+state = layers.Dense(256,activation='tanh',name='state')(lstm_h)
+activation = 'sigmoid'
+pos_out = layers.Dense((3*pos_bins),activation=activation,name='pos_intermediate')(state)
+pos_out = tf.reshape(pos_out,(-1,3,pos_bins),name='pos')
+theta_out = layers.Dense(theta_bins,activation=activation,name='theta')(state)
+phi_out = layers.Dense(phi_bins,activation=activation,name='phi')(state)
+model = keras.Model(inputs=dict(time_series=time_series),
+                    outputs=dict(pos=pos_out,theta=theta_out,phi=phi_out),
+                    name='PositionDirection')
+model.compile(optimizer='adam',loss='mean_squared_error')
+~~~
 
 Because the input to this network is large, this network contains roughly 4 million trainable parameters.
 The network is trained on simulated events (as depicted above) where the initial position is known.
