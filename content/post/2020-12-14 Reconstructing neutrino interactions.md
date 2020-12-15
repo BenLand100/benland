@@ -10,7 +10,7 @@ toc: true
 
 ## Introduction
 
-{{< figure src="/images/chroma_theia25.png" class="right" caption="A [Chroma](/post/2020/12/07/optical-physics-chroma/) model of the Theia25 detector with PMTs and LAPPDs as photon detectors." >}}
+{{< figure src="/images/chroma_theia25.jpg" class="right" caption="A [Chroma](/post/2020/12/07/optical-physics-chroma/) model of the Theia25 detector with PMTs and LAPPDs as photon detectors." >}}
 
 Neutrino detectors like [SNO+](https://snoplus.phy.queensu.ca/) and [Theia](https://theia.berkeley.edu/index.php/Main_Page) don't detect neutrinos directly.
 Instead they detect optical signals (light/photons) produced by high energy charged particles present after neutrinos interact in the medium.
@@ -68,9 +68,9 @@ This allows PMTs to accurately measure single photons, and provide a measure of 
 Below is a picture of the large area R7081 Hamamatsu PMTs used in the CHESS experiment I worked on at UC Berkeley.
 ![The large are photomultiplier tubes used in the CHESS experiment at UC Berkeley](/images/chess_pmts.png)
 
-{{< figure src="/images/chess_lappd.png" class="right" caption="The large area picosecond photodetector evaluated at UC Berkeley." >}}
+{{< figure src="/images/chess_lappd.jpg" class="right" caption="The large area picosecond photodetector evaluated at UC Berkeley as an alternate light detection mechanism in the CHESS experiment." >}}
 PMTs are a relatively old technology, and more recent R&D have resulted in devices that operate on similar principles, but provide much better time resolution.
-Large Area Picosecond Photon Detectors (LAPPDs) developed by INCOM are an example of new technologies that utilize [microchannel plates](https://en.wikipedia.org/wiki/Microchannel_plate_detector) instead of the series of metal plates to amplify the single electron signal.
+Large Area Picosecond Photon Detectors (LAPPDs) developed by [INCOM](https://incomusa.com/) are an example of new technologies that utilize [microchannel plates](https://en.wikipedia.org/wiki/Microchannel_plate_detector) instead of the series of metal plates to amplify the single electron signal.
 These devices can deliver time resolutions better than 60 picoseconds for the arrival of photons, and can also provide spatial resolution on where the photon hit, while traditional PMTs are more monolithic.
 
 ## Reconstruction
@@ -110,7 +110,7 @@ All is not lost, though, as several approximations can be made to make this prob
 Using these approximations, define a quantity called the "hit time residual" that approximates the emission time of each detected photon:
 $$ t_{resid,i} = \left(t_i - t\right) - \left|\vec{x}_i - \vec{x}\right| \frac{n}{c} $$
 
-![The hit time residual distribution for a hypothetical neutrino detector](/images/1kt_time_residuals.png#leftlarge) 
+{{< figure src="/images/1kt_time_residuals.png" class="left" caption="The hit time residual distribution for a hypothetical neutrino detector. These show the time profiles of the different light sources: Cherenkov, scintillation, and reemission." >}}
 A [simulation with accurate optics](/post/2020/12/07/optical-physics-chroma/) can then be done to generate a [probability distribution function](https://en.wikipedia.org/wiki/Probability_density_function) (PDF) for the $t_{resid}$ distribution.
 In a simulation, the initial position and time $(\vec{x},t)$ of the electron are known quantities, which means the PDF generated represents the way the "true shape" of the $t_{resid}$ distribution.
 If this PDF is taken to be $P(t)$ then the total likelihood ${\mathscr L}$ of the hit time residuals from a particular event can be written as:

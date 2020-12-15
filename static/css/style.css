@@ -189,20 +189,24 @@ figure {
 
 figcaption {
   text-align: justify;
+  font-size: 85%;
+  line-height: 1.5rem;
 }
 
 figure img {
+  max-width: 100%;
   padding: 0;
+  margin: auto;
 }
 
 figure.right {
-  max-width: 40%;
+  max-width: 50%;
   padding: 0.5em 0 0 2%;
   float:right;
 }
 
 figure.left {
-  max-width: 40%;
+  max-width: 50%;
   padding: 0.5em 2% 0 0;
   float:left;
 }
