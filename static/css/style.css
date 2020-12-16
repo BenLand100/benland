@@ -16,10 +16,6 @@ body {
   line-height: 1.5em;
 }
 
-div.home-wrapper {
-  text-align: center;
-}
-
 h1 {
   line-height: 1.5em;
 }
@@ -40,9 +36,13 @@ main {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7em;
-  hyphens: auto;
   display: block;
   font-size: 1.1em;
+}
+
+div.home-wrapper {
+  text-align: center;
+  hyphens: none;
 }
 
 hr {

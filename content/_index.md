@@ -7,7 +7,7 @@ title: Home
 
 ![Profile Picture](/images/profile.jpg)
 
-Particle physicist / Computer nerd / Scifi superfan
+Particle&nbsp;physicist / Computer&nbsp;nerd / Scifi&nbsp;superfan
 
 [GitHub](https://github.com/BenLand100/) /
 [ORCID](https://orcid.org/0000-0002-1775-6969) /
