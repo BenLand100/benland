@@ -3,7 +3,7 @@ title: About Me
 ---
 
 ![PhDone!](/images/phdone.jpg#right)
-I received my Ph.D. in Physics at UC Berkeley in 2019 after receiving a B.S. in Physics from Georgia Tech in 2013. 
+I received my Ph.D. in Physics at [UC Berkeley](https://cal.berkeley.edu/benland100/) in 2019 after receiving a B.S. in Physics from [Georgia Tech](https://sites.gatech.edu/benland100/) in 2013. 
 Going from undergrad to graduate school, I entirely switched research interests from [atomic molecular and optical physics](https://en.wikipedia.org/wiki/Atomic,_molecular,_and_optical_physics) (particularly [Bose-Einstein condensates](https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate)) to [weakly interacting physics](https://en.wikipedia.org/wiki/Weak_interaction) and worked with a [group at Berkeley](https://underground.physics.berkeley.edu/) studying [neutrinos](https://en.wikipedia.org/wiki/Neutrino).
 Ultimately my thesis ended up being about using [solar neutrinos](https://en.wikipedia.org/wiki/Solar_neutrino) to understand fundamental properties of neutrinos, and developing new neutrino detection techniques. 
 You can find a copy [here](https://nino.lbl.gov/~benland100/thesis_final.pdf). 
