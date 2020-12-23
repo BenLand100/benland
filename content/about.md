@@ -10,8 +10,8 @@ You can find a copy [here](https://nino.lbl.gov/~benland100/thesis_final.pdf).
 During graduate school, my particular involvement was with the [SNO](https://sno.phy.queensu.ca/), [SNO+](https://snoplus.phy.queensu.ca/), and [Theia](https://theia.berkeley.edu/index.php/Main_Page) projects.
 
 ![UPenn Shield](/images/upenn.png#leftsmall)
-Currently, I work as a postdoc at the University of Pennsylvania where I continue to research neutrinos in the [high energy physics neutrino group](https://www.physics.upenn.edu/research/high-energy-physics). 
-I've remained involved in the SNO+ and Theia projects, and am getting involved in the [DUNE](https://www.dunescience.org/) experiment, where I'll be focusing on developing the cold electronics / supporting hardware for the detector and exploring solar neutrino interactions in liquid argon.
+Currently, I work as a postdoc at the [University of Pennsylvania](https://web.sas.upenn.edu/bland100) where I continue to research neutrinos in the [high energy physics neutrino group](https://live-sas-physics.pantheon.sas.upenn.edu/research/particle-physics). 
+I've remained involved in the SNO+ and Theia projects, and am getting involved in the [DUNE](https://www.dunescience.org/) experiment, where I'll be focusing on developing the cold electronics / supporting hardware for the detector and exploring (solar) neutrino interactions in liquid argon.
 
 Otherwise, I am 30 years old and hail from Macon, GA. 
 I am a long time programmer, have contributed to many projects, and learned many languages since I became interested in using computers to automate mundane human tasks (read: cheating on MMORPGs) back in the early aughts. 
