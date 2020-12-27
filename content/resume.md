@@ -4,14 +4,14 @@ title: Resume/CV
 
 ## Education
 
-* *University of California, Berkeley*, CA  
-  **PhD Physics**, May 2019
+* **PhD Physics**, May 2019
+  *University of California, Berkeley*, CA  
 
-* *University of California, Berkeley*, CA  
-  **M.A. Physics**, May 2015
+* **M.A. Physics**, May 2015
+  *University of California, Berkeley*, CA
 
-* *Georgia Institute of Technology*, Atlanta, GA  
-  **B.S. Physics**, May 2013 (GPA 4.0/4.0)
+* **B.S. Physics**, May 2013 (GPA 4.0/4.0)
+  *Georgia Institute of Technology*, Atlanta, GA
 
 ## Experience
 
@@ -78,7 +78,7 @@ title: Resume/CV
 * C.S. Gerving, T.M. Hoang, B.J. Land, M. Anquez, C.D. Hamley, M.S. Chapman. ***Non-equilibrium dynamics of an unstable quantum pendulum explored in a spin-1 Bose condensate*** [Nat. Commun. 8, 1169 (2012)](https://doi.org/10.1038/ncomms2179).
 
 ## Conferences
-* B.J. Land ***Photon-Based Neutrino Detector Workshop Panel***. [SNOWMASS 2021 Neutrino Frontier Topical Group](https://indico.fnal.gov/event/46803/). Invited panelist. 
+* B.J. Land ***Photon-Based Neutrino Detector Workshop Panel***. [SNOWMASS 2021 Neutrino Frontier Topical Group. December 18, 2020.](https://indico.fnal.gov/event/46803/) Invited panelist. 
 * B.J. Land, T. Kaptanoglu, M. Luo, A. Bacon, J.R. Klein. ***Impact of Spectral Photon Sorting on Future Neutrino Experiments***. [APS DNP Meeting 2020, Virtual Conference. October 29, 2020.](http://meetings.aps.org/Meeting/DNP20/Session/SF.5) Talk by B.J. Land.
 * B.J. Land, T. Kaptanoglu, M. Luo, J.R. Klein.  ***Impacts of Spectral Photon Sorting in Large Neutrino Detectors***. [Neutrino 2020, Virtual Conference. June 2020.](https://indico.fnal.gov/event/19348/contributions/186270/) [Poster by B.J. Land.](https://indico.fnal.gov/event/19348/contributions/186270/attachments/129421/156993/spectral_sorting_poster.pdf)
 * B.J. Land for the SNO Collaboration. ***Constraints on Neutrino Lifetime from the Sudbury Neutrino Observatory***. [APS DNP Meeting 2018, Waikoloa, Hawaii. October 27, 2018](http://meetings.aps.org/Meeting/HAW18/Session/LN.2). Talk by B.J. Land.
