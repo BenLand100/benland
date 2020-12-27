@@ -4,13 +4,13 @@ title: Resume/CV
 
 ## Education
 
-* **PhD Physics**, May 2019
+* **PhD Physics**, May 2019  
   *University of California, Berkeley*, CA  
 
-* **M.A. Physics**, May 2015
+* **M.A. Physics**, May 2015  
   *University of California, Berkeley*, CA
 
-* **B.S. Physics**, May 2013 (GPA 4.0/4.0)
+* **B.S. Physics**, May 2013 (GPA 4.0/4.0)  
   *Georgia Institute of Technology*, Atlanta, GA
 
 ## Experience
