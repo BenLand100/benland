@@ -1,5 +1,5 @@
 ---
-title: Reconstructing neutrino interactions
+title: Reconstructing neutrino interactions with Machine Learning and Likelihood methods
 date: '2020-12-14'
 categories:
   - Physics

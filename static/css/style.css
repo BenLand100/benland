@@ -205,8 +205,20 @@ figure.right {
   float:right;
 }
 
+figure.rightsmall {
+  max-width: 35%;
+  padding: 0.5em 0 0 2%;
+  float:right;
+}
+
 figure.left {
   max-width: 50%;
+  padding: 0.5em 2% 0 0;
+  float:left;
+}
+
+figure.leftsmall {
+  max-width: 35%;
   padding: 0.5em 2% 0 0;
   float:left;
 }

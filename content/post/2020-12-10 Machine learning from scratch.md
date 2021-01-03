@@ -1,5 +1,5 @@
 ---
-title: Machine learning from scratch with Python
+title: Machine learning from scratch in Python with Numpy
 date: '2020-12-10'
 categories:
   - Programming
