@@ -11,6 +11,9 @@ toc: true
 
 ## Introduction
 
+
+{{< figure src="/images/mc_base.jpg" class="right" caption="Home sweet home on the Direwolf20 1.16 server." >}}
+
 I have played a lot of Minecraft and continue to enjoy the game because it is very open ended and every world is unique.
 For those that don't know, Minecraft is a world made of blocks, and all the blocks can be moved or changed by the player.
 It starts off as a [procedurally generated](https://en.wikipedia.org/wiki/Procedural_generation) "infinite" world for the player to explore and develop however they see fit.
