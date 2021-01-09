@@ -183,7 +183,7 @@ This procedure results in a comparable position resolution to the maximum likeli
 
 With the position (and time) known, there are still other quantities that could be reconstructed, such as the direction of the event if the Cherenkov photons can be identified.
 After this, PDFs as a function of the reconstructed quantities are generated for each class of event that may be present in the dataset.
-Finally, a [maximum likelihood](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) method not dissimilar to the position reconstruction method used above is employed to determine the number of each type of event in the dataset.
+Finally, a [maximum likelihood method](/post/2021/01/08/maximum-likelihood-python/) not dissimilar to the position reconstruction method used above is employed to determine the number of each type of event in the dataset.
 The relative frequency of certain classes of events, or simply the (non)presence of a certain class of event, can be a physically meaningful result.
 For instance, the [SNO](https://en.wikipedia.org/wiki/Sudbury_Neutrino_Observatory) detector measured the distribution of neutrino flavor from solar neutrinos to solve the [solar neutrino problem](https://en.wikipedia.org/wiki/Solar_neutrino_problem) while the upgrade of SNO, SNO+, aims to set an upper limit on the rate of [neutrinoless double beta decay](https://en.wikipedia.org/wiki/Double_beta_decay) by demonstrating that there is always energy carried away by neutrinos in isotopes that undergo double beta decay.
 
