@@ -1,6 +1,6 @@
 ---
 title: Basic maximum likelihood fitting with two (or more) event classes in Python
-date: '2021-01-08'
+date: '2021-01-09'
 categories:
   - Programming
   - Physics
