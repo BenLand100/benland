@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
     <h1>{{ .Title }}</h1>
-    <ul class="terms">
+    <ul>
       {{ range .Data.Terms -}}
       <li>
         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
