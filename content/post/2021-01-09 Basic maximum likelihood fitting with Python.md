@@ -413,3 +413,27 @@ Number of B events = $ 197.54^{+16.56}_{-15.78} $
 These results are nicely consistent with the initial conditions, as the estimated parameter error covers the true value.
 To demonstrate a rigorous fit, one would repeat this procedure for many different fake datasets and record the results.
 The results of this meta-analysis can be used to demonstrate both that the one-sigma confidence intervals actually contain the true values the correct fraction of the time and that there is no bias between the true and estimated number of events on average.
+
+## Final Results
+
+The fitted number of events can be used to generate the $\lambda_i$ expected events for each bin, as well as the breakdown by event class.
+It is straightforward to plot this, both to demonstrate that the best fit agrees well with the data, and show how the total fit is built from the PDFs of the event classes.
+This is done with the following Python code, which also shows the data with Poisson error bars.
+
+```python
+#Plot binned data with errorbars
+bin_centers = (binning[:-1] + binning[1:])/2
+plt.errorbar(bin_centers,nllfn.data_counts,yerr=np.sqrt(nllfn.data_counts),marker='x',linestyle='none',label='Data')
+#Borrowed from the NegativeLogLikelihoodFunction class
+expecteds = [scale*pdf for scale,pdf in zip(nll_result.x,nllfn.class_pdfs)]
+#Plot each event class as a separate hisotgram
+for class_name,expected_class in zip(['A','B'],expecteds):    
+    plt.plot(binning[:-1],expected_class,drawstyle='steps-post',label='Class %s Fit'%class_name)
+#Sum the histograms to plot the total fit
+expected = np.sum(expecteds,axis=0)
+plt.plot(binning[:-1],expected,drawstyle='steps-post',color='k',label='Total Fit')
+plt.legend()
+```
+
+![The final fit to the fake dataset](/images/nll_fit_final.png)
+
