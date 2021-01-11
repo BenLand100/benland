@@ -102,7 +102,7 @@ plt.legend()
 
 ## Binned likelihood function
 
-To determine the number of each class of event in the a data, a likelihood function needs to be constructed and optimized.
+To determine the number of each class of event in the data, a likelihood function needs to be constructed and optimized.
 This function will be parameterized by a hypothesized number of events for each event class $\mu_j$ for class $j$.
 A binned fit will be performed, so this function will need to construct an expected number of events for each bin according to the expected distributions for each class.
 This is particularly useful when you have a large amount of data, since it is less computationally intense than an unbinned fit.
