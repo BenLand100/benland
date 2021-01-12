@@ -48,6 +48,21 @@ import numpy as np # Perform mathematical operations on arrays
 from scipy.stats import poisson # To calculate poisson probabilities 
 import scipy.optimize as opt # Function optimizers and root finders
 import matplotlib.pyplot as plt # Creating plots
+
+#Force matplotlib to make Pretty Plots™
+import matplotlib
+matplotlib.rcParams['figure.figsize'] = [10,7]
+matplotlib.rcParams['xtick.top'] = True
+matplotlib.rcParams ['xtick.direction'] = 'in'
+matplotlib.rcParams['xtick.minor.visible'] = True
+matplotlib.rcParams['ytick.right'] = True
+matplotlib.rcParams['ytick.direction'] = 'in'
+matplotlib.rcParams['ytick.minor.visible'] = True
+matplotlib.rcParams['font.size'] = 19
+matplotlib.rcParams['font.family']= 'DejaVu Serif'
+matplotlib.rcParams['mathtext.default'] = 'regular'
+matplotlib.rcParams['errorbar.capsize'] = 3
+matplotlib.rcParams['figure.facecolor'] = (1,1,1)
 ```
 
 This will be a one dimensional analysis, i.e. one parameter will be used to distinguish event classes.
@@ -377,7 +392,7 @@ plt.ylabel('-$\Delta$ Log ${\scr L}$')
 ```
 ![Class A profile](/images/nll_a_profile.png)
 
-The profile for the class A scale factor:
+The profile for the class B scale factor:
 ```python
 x = np.linspace(180,215,50)
 y = [profile_class_b(nev) for nev in x]
