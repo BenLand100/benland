@@ -216,7 +216,7 @@ s = tn.System(inputs=[in_layer],outputs=[out_layer])
 
 The output shows the shapes of the tensors each layer expects:
 
-~~~
+~~~plaintext
 Input :: [] -> [(32, 32)]
 Dense :: [(32, 32)] -> [(15, 15)]
 Dense :: [(15, 15)] -> [(15, 15)]

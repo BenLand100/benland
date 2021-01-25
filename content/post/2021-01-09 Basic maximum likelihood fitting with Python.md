@@ -200,7 +200,7 @@ Here the 'true' scale factors are passed to see their likelihood.
 print(lfn(100,200))
 ```
 Results:
-```bash
+```plaintext
 2.517486079648127e-31
 ```
 Note that these likelihoods are typically _tiny_.
@@ -250,7 +250,7 @@ result = opt.minimize(lambda x: -lfn(*x),x0=(50,50),method='Nelder-Mead')
 print(result)
 ```
 Results:
-```bash
+```plaintext
  final_simplex: (array([[101.45923284, 197.54074435],
        [101.45923555, 197.54080241],
        [101.45933045, 197.5406877 ]]), array([-2.55289889e-31, -2.55289889e-31, -2.55289889e-31]))
@@ -340,7 +340,7 @@ nll_result = opt.minimize(lambda x: nllfn(*x),x0=(50,50),method='Nelder-Mead')
 print(nll_result)
 ```
 Results:
-```bash
+```plaintext
  final_simplex: (array([[101.45923284, 197.54074435],
        [101.45923555, 197.54080241],
        [101.45933045, 197.5406877 ]]), array([-466.04590926, -466.04590926, -466.04590926]))
