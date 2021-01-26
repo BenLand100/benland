@@ -209,7 +209,7 @@ Note that I've included the ability to parse integer, string, and real literals 
 An ideologically-pure LISP machine could do everything with just symbols, as described, but it is much more convenient to have the ability to express and manipulate other data types.
 Ultimately this just means the machine needs to implement more primitive functions to manipulate these primitive types.
 ```python
-ef parse(expr_str):
+def parse(expr_str):
     '''Converts a string into a Cell datastructure'''
     expr_str = re.sub(';[^\n]+','',expr_str) #remove comments
     toks = re.findall(r'''"(?:[\\].|[^\\"])*"|\(|\)|,@|'|`|,|[^\s\)\(]+''',expr_str)
