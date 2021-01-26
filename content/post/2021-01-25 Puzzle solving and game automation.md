@@ -442,6 +442,35 @@ Because of this, a hybrid algorithm that tests that uses the "lookahead" method 
 It is probably sufficient for practical purposes to just go with whatever the lookahead algorithm finds within a minute or so. 
 For less practical people, like myself, one might even consider training a neural network to identify the best moves at any stage, and use that as a heuristic... some other time, perhaps.
 
+### Profiling
+
+After some fiddling with `gcc` to prevent it from inlining functions (which does incur a small a performance hit), and building the code with the profiler enabled (`-pg` arguments),
+running a test solve will additionally generate a `gmon.out` file which contains a binary log of how long each function took and how many times it was executed.
+
+```bash
+g++ -g -pg -O3 -fno-inline -fno-inline-small-functions crush.cc -o crush
+```
+
+The utility `gprof` can turn this into a human readable report.
+
+```bash
+gprof crush gmon.out > report.txt
+```
+
+Then the utilities `gprof2dot` and `dot` can turn this report into a graphical representation of the call graph, showing how much time was spent in each function.
+
+```bash
+gprof2dot -s report.txt | dot -Tsvg -o crush.gprof.svg
+```
+
+[![Call graph for the standard solver](/images/crush.gprof.svg)](/images/crush.gprof.svg)
+
+As expected, the most time is spent running the `contract` function as part of a `move`. 
+The next biggest slice, perhaps non-intuitively, is the `unique` function.
+Both are called about a 130 million times. 
+Most of the remaining time is spent in the `cluster` algorithm, with most of that being spent shuffling memory around when calling standard library routines.
+While `cluster` is much more complicated than `unique`, it is called far fewer times (7 million), resulting in less overall runtime, and indicating the $N+M<N_{best}$ criteria is sparing some serious computation time.
+
 ## Example solutions
 
 Here are the solutions to the board shown earlier found by the algorithms described in the previous section. 
