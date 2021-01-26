@@ -186,7 +186,7 @@ int unique() {
 
 Finally, in any brute force search, the key to reducing total runtime is to not redundantly or unnecessarily search possible solutions.
 Here, this means that instead of simulating clicking each location on the board (which would have $48! = 10^{61}$ total possibilities), one only needs to simulate clicking each cluster (_only_ $\approx 10^{11}$ possibilities).
-Do do this a routine to identify the clusters must be defined, where a cluster will be described as a `cluster_result`:
+To do this, a routine to identify the clusters must be defined, where a cluster will be described as a `cluster_result`:
 ```c++
 typedef struct {
     int x,y; // one position in the cluster
