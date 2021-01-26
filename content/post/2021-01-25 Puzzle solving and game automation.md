@@ -1,10 +1,10 @@
 ---
-title: Puzzle solving and game automation
+title: Depth first search puzzle solving with heuristics
 date: '2021-01-25'
 categories:
   - Programming
   - Games
-slug: dust-matching-puzzle
+slug: dfs-puzzle-solving
 toc: true
 ---
 
