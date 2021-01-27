@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://ben.land/"
 languageCode = "en-us"
 title = "ben.land"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
@@ -29,5 +29,5 @@ footnoteReturnLinkContents = "↩"
     weight = 4
 
 [params]
-    description = "Personal website and Physics / Programming blog by Benjamin J. Land / BenLand100"
+    description = "Homepage for (and Physics / Programming blog by) Benjamin J. Land / BenLand100"
     footer = "Copyright 2020-2021 Benjamin J. Land"
