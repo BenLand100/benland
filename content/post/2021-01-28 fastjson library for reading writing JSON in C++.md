@@ -15,7 +15,7 @@ This can vary from the mundane, such as how many events to simulate for this par
 Historically each set of input data will define its own format in some contrived [ASCII](https://en.wikipedia.org/wiki/ASCII) file that, while perhaps not difficult to parse, requires dedicated code to read that specific format.
 That's not ideal, and a large push has been made in the last decade to normalize these formats.
 Fortunately, some modern simulation toolkits, like [RAT-PAC](https://github.com/rat-pac/rat-pac/) have opted to adopt industry standard serialization formats like [JSON](https://www.json.org/json-en.html) to serialize their databases.
-I have opted to take a similar approach for DAQ systems I have written, as seen in the [WbLSdaq](https://github.com/benland100/fastjson/) program I designed to read out [CAEN](https://www.caen.it/sections/digitizer-families/) digitizers to [HDF5](https://www.hdfgroup.org/solutions/hdf5/) files for the CHESS experiment at UC Berkeley. 
+I have opted to take a similar approach for DAQ systems I have written, as seen in the [WbLSdaq](https://github.com/benland100/WbLSdaq/) program I designed to read out [CAEN](https://www.caen.it/sections/digitizer-families/) digitizers to [HDF5](https://www.hdfgroup.org/solutions/hdf5/) files for the CHESS experiment at UC Berkeley. 
 
 JSON has the attractive features of being human readable, very simple, and highly structured.
 It allows for a suite of standard types to be defined (integers, floats, strings, and booleans), arrays of these types, and also an "object" notation similar to a Python dictionary, or a C++ map with string keys and arbitrary typed values.
