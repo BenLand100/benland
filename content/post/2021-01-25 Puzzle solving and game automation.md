@@ -440,7 +440,7 @@ The "lookahead" method is also better at more full boards, while "standard" perf
 Because of this, a hybrid algorithm that tests that uses the "lookahead" method to find a solution quickly for early moves, and then the more lightweight "standard" method to clear other potential solutions for later moves, called "shortlook" (which I leave as an exercise to the reader), ultimately finds solutions faster. 
 
 It is probably sufficient for practical purposes to just go with whatever the lookahead algorithm finds within a minute or so. 
-For less practical people, like myself, one might even consider training a neural network to identify the best moves at any stage, and use that as a heuristic... some other time, perhaps.
+For less practical people, like myself, one might even consider [training a neural network to identify the best moves at any stage](/post/2021/02/10/machine-learning-puzzle-solving/), and use that as a heuristic... some other time, perhaps.
 
 ### Profiling
 
