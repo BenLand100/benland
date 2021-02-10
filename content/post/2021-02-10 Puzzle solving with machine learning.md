@@ -312,7 +312,7 @@ for m in moves:
 ```
 
 But really what's wanted here is a function that generates a whole batch for the Keras/Tensorflow model:
-```
+```python
 def gen_batch(dummy=None):
     batch_in = []
     batch_out = []
