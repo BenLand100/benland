@@ -549,6 +549,9 @@ This is typical of the network making one or two less-than-optimal moves in the 
 Third, note that there are _several_ NN solutions that were better than the DFS solver, as exampled in the last section.
 This is mostly a happy coincidence, as one cannot expect the NN to learn to solve any better than the dataset it is given. 
 
+After another day of training, the NN solutions do indeed approach the DFS solutions much more reliably:
+![A plot of NN solution length vs DFS solution length with one more day of training](/images/nn_puzzle_solutions2.png)
+
 ## What next?
 
 From here, more training with additional generated datasets would likely result in the NN reproducing the DFS solver solution lengths, with a few shorter flukes. 
