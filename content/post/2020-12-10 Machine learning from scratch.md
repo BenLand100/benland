@@ -4,6 +4,7 @@ date: '2020-12-10'
 categories:
   - Programming
   - Machine Learning
+  - Math
 slug: machine-learning-from-scratch
 toc: true
 ---
