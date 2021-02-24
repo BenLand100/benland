@@ -28,7 +28,7 @@ It can also be implemented with a for loop:
 def ipow(x,y):
     res = 1
     for i in range(y):
-        res = res * x
+        res = res*x
     return res
 ```
 It is also possible to make these support negative integers (repeated division), but that won't be necessary in the following sections.
@@ -79,7 +79,7 @@ or with loops instead of recursion:
 def factorial(x):
     res = 1
     for i in range(1,x+1):
-        res = res * i
+        res = res*i
     return res
 ```
 
@@ -102,8 +102,8 @@ def exp(z,ftol=1e-20):
     i = 1
     while True:
         term = ipow(z,i)/factorial(i)
-        res = res + term
-        if term  < ftol:
+        res = res+term
+        if term < ftol:
             break
         i = i+1
     return res
@@ -125,7 +125,7 @@ def log(x,q=3,ftol=1e-20):
     if x > q:
         r = 0
         while x > q:
-            x = x / q
+            x = x/q
             r = r+1
         return log(x,q=q,ftol=ftol)+r*log(q,q=q,ftol=ftol)
     else:
@@ -134,7 +134,7 @@ def log(x,q=3,ftol=1e-20):
         i = 1
         while True:
             term = 2*ipow(ratio,i)/i
-            res = res + term
+            res = res+term
             if (term if term>0 else -term) < ftol:
                 break
             i = i+2
