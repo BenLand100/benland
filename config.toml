@@ -5,7 +5,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 enableEmoji = true
 enableGitInfo = true
 footnoteReturnLinkContents = "↩"
-googleAnalytics = "G-V1LTGRZK1N"
+googleAnalytics = "UA-190640148-1"
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
