@@ -4,6 +4,7 @@ date: '2021-01-09'
 categories:
   - Programming
   - Physics
+description: A combined mathematical and Python-code description of how to perform a maximum likelihood fit with multiple probability distribution functions in one dimension
 slug: maximum-likelihood-python
 toc: true
 ---

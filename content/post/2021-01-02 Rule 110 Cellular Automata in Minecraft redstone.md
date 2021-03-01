@@ -5,6 +5,7 @@ categories:
   - Programming
   - Physics
   - Games
+description: A discussion of computation, Turing machines, and cellular automatons with a "practical" implementation of the latter in Minecraft's redstone logic.
 slug: rule-110-minecraft-redstone
 toc: true
 ---

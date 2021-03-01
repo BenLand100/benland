@@ -3,6 +3,7 @@ title: Mouse mover program for "working" from home
 date: '2020-12-19'
 categories:
   - Programming
+description: A simple Windows tray application that can move your mouse to keep you "active" while away from your machine
 slug: mouse-mover-work-from-home
 toc: false
 ---
