@@ -5,6 +5,7 @@ categories:
   - Programming
   - Machine Learning
   - Games
+description: Using a neural network approach to the Q-learning algorithm to find a solution to a puzzle game
 slug: reinforcement-learning-puzzle-solving
 toc: true
 ---

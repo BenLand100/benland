@@ -3,6 +3,7 @@ title: SNO+ Experiment Nearly Full of Scintillator
 date: '2021-03-01'
 categories:
   - Physics
+description: A summary of the scintillator fill progress and physics goals for the SNO+ experiment.
 slug: snop-nearly-full
 ---
 

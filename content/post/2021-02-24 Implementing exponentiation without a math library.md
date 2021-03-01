@@ -4,6 +4,7 @@ date: '2021-02-24'
 categories:
   - Programming
   - Math
+description: How to implement mathematical functions like exponentiation with series expansions
 slug: power-without-math-lib
 toc: true
 ---
