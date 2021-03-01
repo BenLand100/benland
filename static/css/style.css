@@ -209,6 +209,11 @@ figure img {
   margin: auto;
 }
 
+figure.center {
+  padding: 0.5em 0 0 2%;
+  float:center;
+}
+
 figure.right {
   max-width: 50%;
   padding: 0.5em 0 0 2%;
