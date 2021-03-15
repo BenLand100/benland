@@ -56,7 +56,7 @@ title: Resume/CV
 
 ## Publications
 
-* B. J. Land, Z. Bagdasarian, J. Caravaca, M. Smiley, G. D. Orebi Gann. ***MeV-scale performance of water-based and pure liquid scintillator detectors***. [arXiv:2007.14999](https://arxiv.org/abs/2007.14999).
+* B. J. Land, Z. Bagdasarian, J. Caravaca, M. Smiley, G. D. Orebi Gann. ***MeV-scale performance of water-based and pure liquid scintillator detectors***. [Phys. Rev. D 103, 052004 (2021)](https://doi.org/10.1103/PhysRevD.103.052004).
 * SNO Collaboration. ***A search for hep solar neutrinos and the diffuse supernova neutrino background using all three phases of the Sudbury Neutrino Observatory***. [Phys. Rev. D 102, 062006 (2020)](https://doi.org/10.1103/PhysRevD.102.062006).
 * SNO+ Collaboration. ***Measurement of neutron-proton capture in the SNO+ water phase***. [Phys. Rev. C 102, 014002 (2020)](https://doi.org/10.1103/PhysRevC.102.014002).
 * J. Caravaca, B. J. Land, M. Yeh, G. D. Orebi Gann ***Characterization of water-based liquid scintillator for Cherenkov and scintillation separation***. [Eur. Phys. J. C 80:867 (2020)](https://doi.org/10.1140/epjc/s10052-020-8418-4).
