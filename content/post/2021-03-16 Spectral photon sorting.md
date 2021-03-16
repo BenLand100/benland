@@ -23,7 +23,7 @@ Due to their exceptional sensitivity to high energy particles, neutrino detector
 The photons detected from this light carry information about the physical interaction, and the following properties are used by most experiments to extract this information:
 
 * The **number** of photons (intensity of the light) is proportional to the energy lost by the electrons, which is related to the **energy** of the neutrino.
-* The hit **time** of the photons can be used to reconstruct the **position and time**(/post/2020/12/14/reconstructing-neutrino-interactions/#reconstruction) of the interaction within the detector.
+* The hit **time** of the photons can be used to [reconstruct](/post/2020/12/14/reconstructing-neutrino-interactions/#reconstruction) the **position and time** of the interaction within the detector.
 * The hit **topology** (of directional Cherenkov photons) carry information on the **direction** of the electron when it produced the light, since they are produced at a constant angle from the electron direction. 
 
 Additional information is carried by these photons, which is not usually measured by experiments:
@@ -31,7 +31,7 @@ Additional information is carried by these photons, which is not usually measure
 * The **polarization** of the photons is random for scintillation, but has a topology for Cherenkov light.
 * The **wavelength** of the photons follow a narrow distribution for scintillation, but have a very broad distribution for Cherenkov.
 
-## Cherenkov and scintillation
+## Cherenkov and scintillation light
 
 The energy, position, and time of the interaction are common inputs to [higher-level analyses of detector data](/post/2021/01/09/maximum-likelihood-python/).
 All three of these metrics can be [reconstructed](/post/2020/12/14/reconstructing-neutrino-interactions/#reconstruction) from scintillation photons.
