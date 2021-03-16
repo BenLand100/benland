@@ -1,5 +1,5 @@
 ---
-title: SNO+ Experiment Nearly Full of Scintillator
+title: SNO+ experiment nearly full of scintillator
 date: '2021-03-01'
 categories:
   - Physics
