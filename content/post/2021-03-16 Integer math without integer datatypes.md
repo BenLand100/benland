@@ -61,12 +61,12 @@ To be extra clear that no numbers are being used in this representation of numbe
 ```python
 bin_rep = ['o','i']
 
-def rep_int(i,rep=bin_rep):
+def int_to_rep(i,rep=bin_rep):
     '''Turn a python integer into a base rep integer representation'''
     if not i:
         return []
     else:
-        res = [] if i > 0 else ['-'] 
+        res = [] if i > 0 else ['-']
         if i < 0:
             i = -i
         while i > 0:
@@ -82,7 +82,7 @@ $$ N_i = \lfloor N_{i-1} / b \rfloor $$
 where $N_{-1} = A$, the number to be encoded in this base.
 These mathematical operations will be re-implemented later; for now, this is just to generate some representations to work with.
 ```python
-rep_int(128)
+int_to_rep(128)
 ```
 ```
 ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'i']
@@ -99,7 +99,7 @@ Where a two symbol in the ones place, zero symbol in threes place, twp symbol in
 If you're following, that's base three for $2\times1+0\times3+2\times9+1\times27+1\times81=128$.
 And since base-10 is included in "any base":
 ```python
-rep_int(128,rep='0123456789')
+int_to_rep(128,rep='0123456789')
 ```
 ```
 ['8', '2', '1']
@@ -108,7 +108,7 @@ Which clearly drives the point home that this representation has the least signi
 
 I'll make an array of small numbers in binary encoding for testing purposes as the algorithms for mathematical operations are developed.
 ```python
-numbers = [rep_int(i) for i in range(10)]
+numbers = [int_to_rep(i) for i in range(10)]
 ```
 ```
 [[],
@@ -127,7 +127,7 @@ Which clearly drives the point home that this representation has the least signi
 
 Even though these numbers are least significant bit first, I'll choose to represent negative numbers as a signed magnitude by appending a special minus symbol `'-'` to them.
 ```python
-rep_int(-128,rep='0123456789')
+int_to_rep(-128,rep='0123456789')
 ```
 ```
 ['-', '8', '2', '1']
@@ -163,16 +163,16 @@ Just like L2, an empty list tests as `False` and a list with elements tests as `
 
 Methods can be constructed to test for negativity and negate an integer representation.
 ```python
-def is_negative(rep):
+def is_neg_bin_rep(rep):
     return rep and getl(rep) == '-'
 
-def negate(rep):
+def neg_bin_rep(rep):
     if not rep:
         return rep
-    elif is_negative(rep):
-        return getr(rep) #getr pop's the negative symbol
+    elif is_neg_bin_rep(rep):
+        return getr(rep) #getr pops the negative sign
     else:
-        return ['-']+rep
+        return cell('-',rep)
 ```
 
 To clean up any representations with leading zero symbols, or any other symbols, they can be removed from the right side.
@@ -246,22 +246,7 @@ def add_bin_rep(a,b,carry='o'):
 ```
 
 So far this only handles unsigned numbers. 
-Because I've chosen to use signed magnitude with arbitrary bit depth instead of something like [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement), additional logic will be necessary to handle adding numbers with different signs.
-```python
-def add_bin_rep_signed(a,b):
-    if is_negative(a) and is_negative(b): #same sign
-        return negate(add_bin_rep(getr(a),getr(b)))
-    elif not is_negative(a) and not is_negative(b): #same sign
-        return add_bin_rep(a,b)
-    elif is_negative(a): #opposite sign
-        a = getr(a)
-        return sub_bin_rep(b,a)
-    elif is_negative(b): #opposite sign
-        b = getr(b)
-        return sub_bin_rep(a,b)
-```
 
-However, note here that I've used a yet undefined function `sub_bin_rep` to subtract absolute values numbers when the signs are different.
 Subtraction is fortunately very similar to addition, just with different single bit rules, and borrowing $B$ from higher place values instead of carrying.
 | $A$ | $B$ |   | $R$ | $B$ |
 |---|---|---|---|---|
@@ -325,9 +310,8 @@ def sub_bin_rep_(a,b,borrow='o'):
 ```
 This result can be tested to see if it has more bits than the arguments, and if so, use the two's complement formula above to find the magnitude of the 2-adic number.
 ```python
-def sign_correct(a,b,res):
-    '''Subtraction can return a truncated 2-adic or twos-complement number, 
-       convert to a negative magnitude if this happens.'''
+def sign_correct_bin_rep(a,b,res):
+    '''Subtraction can return a truncated 2-adic or twos-complement number, convert to a negative'''
     res = rep_strip(res)
     def longer(a,b,res):
         if res and ((not a) and (not b)):
@@ -339,7 +323,7 @@ def sign_correct(a,b,res):
     if longer(a,b,res):
         # twos is the value 2**d where d is the number of bits in res
         twos =  append('i',['o' for b in res]) # L2 can map functions
-        return negate(rep_strip(sub_bin_rep_(twos,res)))
+        return neg_bin_rep(rep_strip(sub_bin_rep_(twos,res)))
     else:
         return res
 ```
@@ -350,34 +334,36 @@ def sub_bin_rep(a,b,borrow='o'):
 ```
 
 So far these functions have only dealt with positive magnitudes as inputs, and only subtraction can return a negative magnitude. 
+Because I've chosen to use signed magnitude with arbitrary bit depth instead of something like [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement), additional logic will be necessary to handle adding numbers with different signs.
+An advantage of the fixed-length representations using twos complement ring is that this distinction is unnecessary (addition is just addition, regardless of sign), but I wanted arbitrary-length numbers here, so the extra logic is required.
 To write functions that handle signed numbers, each operation should check the sign of the inputs, and perform the correct operation.
-An advantage of the fixed-length representations using twos complement ring is that this distinction is unnecessary (addition is just addition, regardless of sign), but I wanted arbitrary-length numbers here, so the extra logic is required
+
 ```python
 def add_bin_rep_signed(a,b):
-    if is_negative(a) and is_negative(b): #same sign
-        return negate(add_bin_rep(getr(a),getr(b)))
-    elif not is_negative(a) and not is_negative(b): #same sign
+    if is_neg_bin_rep(a) and is_neg_bin_rep(b): #same sign
+        return neg_bin_rep(add_bin_rep(getr(a),getr(b)))
+    elif not is_neg_bin_rep(a) and not is_neg_bin_rep(b): #same sign
         return add_bin_rep(a,b)
-    elif is_negative(a): #opposite sign
+    elif is_neg_bin_rep(a): #opposite sign
         return sub_bin_rep(b,getr(a))
-    elif is_negative(b): #opposite sign
+    elif is_neg_bin_rep(b): #opposite sign
         return sub_bin_rep(a,getr(b))
-    
+        
 def sub_bin_rep_signed(a,b):
-    if is_negative(a) and is_negative(b): #same sign
-        return negate(sub_bin_rep(getr(a),getr(b)))
-    elif not is_negative(a) and not is_negative(b): #same sign
+    if is_neg_bin_rep(a) and is_neg_bin_rep(b): #same sign
+        return neg_bin_rep(sub_bin_rep(getr(a),getr(b)))
+    elif not is_neg_bin_rep(a) and not is_neg_bin_rep(b): #same sign
         return sub_bin_rep(a,b)
-    elif is_negative(a): #opposite sign
-        return negate(add_bin_rep(getr(a),b))
-    elif is_negative(b): #opposite sign
+    elif is_neg_bin_rep(a): #opposite sign
+        return neg_bin_rep(add_bin_rep(getr(a),b))
+    elif is_neg_bin_rep(b): #opposite sign
         return add_bin_rep(a,getr(b))
 ```
 
 Using the `numbers` generated earlier, these functions can be tested right away.
 ```python
 print('two',add_bin_rep_signed(numbers[1],numbers[1]))
-print('negative two',add_bin_rep_signed(numbers[4],negate(numbers[6])))
+print('negative two',add_bin_rep_signed(numbers[4],neg_bin_rep(numbers[6])))
 print('two',sub_bin_rep_signed(numbers[3],numbers[1]))
 print('negative one',sub_bin_rep(numbers[1],numbers[2]))
 ```
@@ -412,21 +398,21 @@ def mul_bin_rep(a,b):
     return add_bin_rep(low,high)
 
 def mul_bin_rep_signed(a,b):
-    if is_negative(a) and is_negative(b): #same sign
+    if is_neg_bin_rep(a) and is_neg_bin_rep(b): #same sign
         return mul_bin_rep(getr(a),getr(b))
-    elif not is_negative(a) and not is_negative(b): #same sign
+    elif not is_neg_bin_rep(a) and not is_neg_bin_rep(b): #same sign
         return mul_bin_rep(a,b)
-    elif is_negative(a): #opposite sign
-        return negate(mul_bin_rep(b,getr(a)))
-    elif is_negative(b): #opposite sign
-        return negate(mul_bin_rep(a,getr(b)))
+    elif is_neg_bin_rep(a): #opposite sign
+        return neg_bin_rep(mul_bin_rep(getr(a),b))
+    elif is_neg_bin_rep(b): #opposite sign
+        return neg_bin_rep(mul_bin_rep(a,getr(b)))
 ```
 
 Testing with the numbers generated earlier demonstrates that this works.
 ```python
 print('six',mul_bin_rep_signed(numbers[3],numbers[2]))
 print('negative eighty-one',mul_bin_rep_signed(numbers[9],numbers[9]))
-print('negative eighty-one',mul_bin_rep_signed(numbers[9],negate(numbers[9])))
+print('negative eighty-one',mul_bin_rep_signed(numbers[9],neg_bin_rep(numbers[9])))
 ```
 ```
 six ['o', 'i', 'i']
@@ -448,30 +434,33 @@ This is a more efficient position notation algorithm than repeated subtraction, 
 This algorithm simplifies a bit in binary because the subtraction step will require either zero or one subtraction, so an attempted subtraction is either negative or not.
 Again, recursion can be used to implement this algorithm to iterate over place values.
 ```python
-def div_bin_rep(a,b):
+def div_bin_rep_(a,b):
     if not a:
         return [],[]
     div,rem = div_bin_rep(getr(a),b)
     rem = cell(getl(a),rem)
     cmp = sub_bin_rep_signed(rem,b)
-    if is_negative(cmp):
+    if is_neg_bin_rep(cmp):
         if div: #suppress zeros in high bits
             div = cell('o',div)
-        rem = rep_strip(rem)
     else:
         div = cell('i',div)
         rem = cmp
     return div,rem
 
+def div_bin_rep(a,b):
+    div,rem = div_bin_rep_(a,b)
+    return div,rep_strip(rem) #to prevent accumulating zero high bits
+
 def div_bin_rep_signed(a,b):
-    if is_negative(a) and is_negative(b): #same sign
+    if is_neg_bin_rep(a) and is_neg_bin_rep(b): #same sign
         return div_bin_rep(getr(a),getr(b))
-    elif not is_negative(a) and not is_negative(b): #same sign
+    elif not is_neg_bin_rep(a) and not is_neg_bin_rep(b): #same sign
         return div_bin_rep(a,b)
     elif getl(a) == '-': #opposite sign
-        return [negate(x) for x in div_bin_rep(b,getr(a))]
+        return [neg_bin_rep(x) for x in div_bin_rep(getr(a),b)]
     elif getl(b) == '-': #opposite sign
-        return [negate(x) for x in div_bin_rep(a,getr(b))]
+        return [neg_bin_rep(x) for x in div_bin_rep(a,getr(b))]
 ```
 
 And you can see that the division result and remainder are calculated correctly.
@@ -490,26 +479,29 @@ With addition, subtraction, multiplication, and division, all the integer math o
 To demonstrate this, I'll implement some functions to convert representations in one base to another base, which will let L2 handle converting to and from human-readable base-10 numbers.
 But first, some utilities for representing list lengths, element positions, and list indexing.
 ```python
-zero = []
-one = ['i']
+b_zero = []
+b_one = ['i']
+b_two = ['o','i']
 
 def length(list):
     if not list:
-        return zero
-    return add_bin_rep(one,length(getr(list)))
+        return b_zero
+    return add_bin_rep(b_one,length(getr(list)))
 
 def position(list,x):
-    if getl(list) == x:
-        return zero
-    return add_bin_rep(one,position(getr(list),x))
+    if not list:
+        return b_zero
+    elif getl(list) == x:
+        return b_zero
+    return add_bin_rep(b_one,position(getr(list),x))
 
-def take(list,i):
+def element(list,i):
     if not list:
         return None
     elif not i:
         return getl(list)
     else:
-        return take(getr(list),sub_bin_rep(i,one))
+        return element(getr(list),sub_bin_rep(i,b_one))
 ```
 `length` will return the total length of a list in a binary representation.
 ```python
@@ -534,74 +526,77 @@ take(arr,position(arr,'2'))
 '2'
 ```
 
-With these parts, a `from_rep` function can be implemented to convert any base into a binary representation, using the same algorithm in the earlier test method `rep_int`.
-A `from_str` method wraps this to convert a more standard most-to-least-significant ordering of digits into binary representations. 
+With these parts, a `rep_to_bin_rep` function can be implemented to convert any base into a binary representation, using the same algorithm in the earlier test method `int_to_rep`.
+A `str_to_bin_rep` method wraps this to convert a more standard most-to-least-significant ordering of digits into binary representations. 
 ```python
-def from_rep_(i,rep,base):
+def rep_to_bin_rep_(i,rep,base):
     if not i:
         return []
     res = position(rep,getl(i))
-    higher = from_rep_(getr(i),rep,base)
+    higher = rep_to_bin_rep_(getr(i),rep,base)
     return add_bin_rep(res,mul_bin_rep(base,higher))
 
-def from_rep(i,rep=['0','1','2','3','4','5','6','7','8','9']):
+def rep_to_bin_rep(i,rep=['0','1','2','3','4','5','6','7','8','9']):
     if not i:
         return []
     else:
         base = length(rep)
-        if is_negative(i):
-            return negate(from_rep_(i,rep,base))
+        if is_neg_bin_rep(i):
+            return neg_bin_rep(rep_to_bin_rep_(i,rep,base))
         else:
-            return from_rep_(i,rep,base)
+            return rep_to_bin_rep_(i,rep,base)
         
-def from_str(digits,rep=['0','1','2','3','4','5','6','7','8','9']):
-    if is_negative(digits):
-        return from_rep(negate(reverse(negate(digits))),rep=rep)
+def str_to_bin_rep(digits,rep=['0','1','2','3','4','5','6','7','8','9']):
+    digits = list(digits)
+    if is_neg_bin_rep(digits):
+        return neg_bin_rep(rep_to_bin_rep(reverse(neg_bin_rep(digits)),rep=rep))
     else:
-        return from_rep(reverse(digits),rep=rep)
+        return rep_to_bin_rep(reverse(digits),rep=rep)
 ```
 
 Now, a string in any base (which is really just a list of digit symbols) can be converted to the binary number representations the mathematical algorithms can work with. 
 ```python
-from_str('37')
+str_to_bin_rep('37')
 ```
 ```
 ['i', 'o', 'i', 'o', 'o', 'i']
 ```
 
-Finally, to convert any base representation to any other base representation, a function `to_rep` and matching `to_str` can be written.
+Finally, to convert any base representation to any other base representation, a function `bin_rep_to_rep` and matching `bin_rep_to_str` can be written.
 ```python
-def to_rep_(i,rep,base):
+def bin_rep_to_rep_(i,rep,base):
     if not i:
         return []
     i,rem = div_bin_rep(i,base)
-    higher = to_rep_(i,rep,base)
-    return cell(take(rep,rem),higher)
+    higher = bin_rep_to_rep_(i,rep,base)
+    return cell(element(rep,rem),higher)
 
-def to_rep(i,rep=['0','1','2','3','4','5','6','7','8','9']):
+def bin_rep_to_rep(i,rep=['0','1','2','3','4','5','6','7','8','9']):
     if not i:
         return []
     else:
         base = length(rep)
-        if is_negative(i):
-            i = negate(i)
-            return negate(to_rep_(i,rep,base))
+        if is_neg_bin_rep(i):
+            i = neg_bin_rep(i)
+            return neg_bin_rep(bin_rep_to_rep_(i,rep,base))
         else:
-            return to_rep_(i,rep,base)
+            return bin_rep_to_rep_(i,rep,base)
 
-def to_str(i,rep=['0','1','2','3','4','5','6','7','8','9']):
-    i_rep = to_rep(i,rep=rep)
-    if is_negative(i_rep):
-        return ''.join(negate(reverse(negate(i_rep))))
+def bin_rep_to_str(i,rep=['0','1','2','3','4','5','6','7','8','9']):
+    i_rep = bin_rep_to_rep(i,rep=rep)
+    if not i_rep:
+        return getl(rep)
+    if is_neg_bin_rep(i_rep):
+        return ''.join(neg_bin_rep(reverse(neg_bin_rep(i_rep))))
     else:
         return ''.join(reverse(i_rep))
 ```
 
 This can be tested end-to-end to ensure the input is the same as the output.
 ```python
-i = from_str('37')
+i = str_to_bin_rep('37')
 print(i)
-s = to_str(i)
+s = bin_rep_to_str(i)
 print(s)
 ```
 ```
@@ -618,16 +613,15 @@ Factorials get large fast, and indeed is one of the fastest-growing classes of f
 Something like the factorial of 100 is so large that it will overflow a 64-bit integer, approximately $9.3\times10^{157}$, but should be calculable with the arbitrary-length integer representations developed here.
 
 Code to compute factorials is easy to write with recursion.
-```python
-def factorial(i):
+```pythondef factorial_bin_rep(i):
     if not i:
-        return one
-    return mul_bin_rep(i,factorial(sub_bin_rep(i,one)))
+        return b_one
+    return mul_bin_rep(i,factorial_bin_rep(sub_bin_rep(i,b_one)))
 ```
 
 And with the ability to convert to and from base-10 representations, the result of $100!$ is easy to obtain:
 ```python
-to_str(factorial(from_str('100')))
+bin_rep_to_str(factorial_bin_rep(str_to_bin_rep('100')))
 ```
 ```
 '93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000'
