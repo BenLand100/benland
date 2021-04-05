@@ -84,7 +84,7 @@ These mathematical operations will be re-implemented later; for now, this is jus
 ```python
 int_to_rep(128)
 ```
-```
+```plaintext
 ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'i']
 ```
 Note that only the 7th index ($2^7 = 128$) has the one symbol.
@@ -92,7 +92,7 @@ This method can also convert a Python integer to any base.
 ```python
 rep_int(128,rep=['o','i','j'])
 ```
-```
+```plaintext
 ['j', 'o', 'j', 'i', 'i']
 ```
 Where a two symbol in the ones place, zero symbol in threes place, twp symbol in nines place, and one symbols in the twenty-sevens and eighty-ones place.
@@ -101,7 +101,7 @@ And since base-10 is included in "any base":
 ```python
 int_to_rep(128,rep='0123456789')
 ```
-```
+```plaintext
 ['8', '2', '1']
 ```
 Which clearly drives the point home that this representation has the least significant place first: annoying perhaps for a modern person, but convenient for calculation purposes.
@@ -110,7 +110,7 @@ I'll make an array of small numbers in binary encoding for testing purposes as t
 ```python
 numbers = [int_to_rep(i) for i in range(10)]
 ```
-```
+```plaintext
 [[],
  ['i'],
  ['o', 'i'],
@@ -129,7 +129,7 @@ Even though these numbers are least significant bit first, I'll choose to repres
 ```python
 int_to_rep(-128,rep='0123456789')
 ```
-```
+```plaintext
 ['-', '8', '2', '1']
 ```
 
@@ -367,7 +367,7 @@ print('negative two',add_bin_rep_signed(numbers[4],neg_bin_rep(numbers[6])))
 print('two',sub_bin_rep_signed(numbers[3],numbers[1]))
 print('negative one',sub_bin_rep(numbers[1],numbers[2]))
 ```
-```
+```plaintext
 two ['o', 'i']
 negative two ['-', 'o', 'i']
 two ['o', 'i']
@@ -414,7 +414,7 @@ print('six',mul_bin_rep_signed(numbers[3],numbers[2]))
 print('negative eighty-one',mul_bin_rep_signed(numbers[9],numbers[9]))
 print('negative eighty-one',mul_bin_rep_signed(numbers[9],neg_bin_rep(numbers[9])))
 ```
-```
+```plaintext
 six ['o', 'i', 'i']
 negative eighty-one ['i', 'o', 'o', 'o', 'i', 'o', 'i']
 negative eighty-one ['-', 'i', 'o', 'o', 'o', 'i', 'o', 'i']
@@ -468,7 +468,7 @@ And you can see that the division result and remainder are calculated correctly.
 print('one, remainder zero',div_bin_rep(numbers[1],numbers[1]))
 print('two, remainder one',div_bin_rep(numbers[5],numbers[2]))
 ```
-```
+```plaintext
 one, remainder zero (['i'], [])
 two, remainder one (['o', 'i'], ['i'])
 ```
@@ -507,14 +507,14 @@ def element(list,i):
 ```python
 length(['0','1','2','3'])
 ```
-```
+```plaintext
 ['o', 'o', 'i']
 ```
 `position` will return a binary representation of the index of an item in a list.
 ```python
 position(['0','1','2','3'],'2')
 ```
-```
+```plaintext
 ['o', 'i']
 ```
 While `take` will return the item in a list at binary representation of the index.
@@ -522,7 +522,7 @@ While `take` will return the item in a list at binary representation of the inde
 arr = ['0','1','2','3']
 take(arr,position(arr,'2'))
 ```
-```
+```plaintext
 '2'
 ```
 
@@ -558,7 +558,7 @@ Now, a string in any base (which is really just a list of digit symbols) can be 
 ```python
 str_to_bin_rep('37')
 ```
-```
+```plaintext
 ['i', 'o', 'i', 'o', 'o', 'i']
 ```
 
@@ -599,7 +599,7 @@ print(i)
 s = bin_rep_to_str(i)
 print(s)
 ```
-```
+```plaintext
 ['i', 'o', 'i', 'o', 'o', 'i']
 37
 ```
@@ -623,7 +623,7 @@ And with the ability to convert to and from base-10 representations, the result 
 ```python
 bin_rep_to_str(factorial_bin_rep(str_to_bin_rep('100')))
 ```
-```
+```plaintext
 '93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000'
 ```
 Which, [according to WolframAlpha](https://www.wolframalpha.com/input/?i=100!) is correct.
@@ -668,6 +668,6 @@ Ultimately I want to convert all this Python code into L2 code, and have made so
 Because I'm not tied to a particular hardware architecture, [IEEE 754 encoding](https://en.wikipedia.org/wiki/IEEE_754) is not very attractive to re-implement. 
 That said, an exponential representation with a maximum precision does have some attractive features, especially since most fractions have non-terminating representations in different bases.
 Thinking about the choice of representation for fractional numbers in L2 does give some insight into why LISP dialects have a ratio datatype to exactly store any [rational](https://en.wikipedia.org/wiki/Rational_number) number, which could also arbitrarily approximate any real but not rational number.
-Perhaps ratios in a future post, and floating points later.
+Perhaps ratios in a future post, [and floating points later](/post/2021/03/31/real-math-as-an-algorithm/).
 
 
