@@ -1,6 +1,6 @@
 ---
 title: Floating point math algorithms without float datatypes or math-specific hardware
-date: '2021-04-5'
+date: '2021-04-05'
 categories:
   - Math
   - Programming
