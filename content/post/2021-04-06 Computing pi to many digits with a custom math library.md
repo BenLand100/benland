@@ -155,7 +155,7 @@ def calc_pi(ftol=small,max_bits=bin_precision):
 
 Finally $\pi$ can be computed.
 ```python
-pi = calc_pi(ftol=very_small,max_bits=max_bits)
+pi = calc_pi(ftol=ftol,max_bits=max_bits)
 float_rep_to_str(pi,max_digits=str_to_bin_rep('100'))
 ```
 ```plaintext
