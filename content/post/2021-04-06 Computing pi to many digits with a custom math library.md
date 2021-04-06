@@ -103,7 +103,7 @@ Notably, typing this into Wolfram Alpha
 ```
 does not give enough digits to simply throw it into the calculation: the value of $\pi$ would be inaccurate past this 60 digit limit.
 The solution, then, is to also calculate the square root very precisely when calculating $\pi$.
-I have previously implemented an arbitrary power function that could compute $10005^0.5$, however this is quite slow.
+I have previously implemented an arbitrary power function that could compute $10005^{0.5}$, however this is quite slow.
 An iterative method that approximates the square root of a number can be arbitrarily precise and much faster.
 
 Given some guess $g$ for $\sqrt{a}$, a better guess $g'$ is given by:
