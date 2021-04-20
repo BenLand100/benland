@@ -56,6 +56,7 @@ title: Resume/CV
 
 ## Publications
 
+* SNO+ Collaboration. ***Development, characterisation, and deployment of the SNO+ liquid scintillator***. [arXiv:2011.12924 (2021)](https://arxiv.org/abs/2011.12924). Accepted to JINST.
 * B. J. Land, Z. Bagdasarian, J. Caravaca, M. Smiley, G. D. Orebi Gann. ***MeV-scale performance of water-based and pure liquid scintillator detectors***. [Phys. Rev. D 103, 052004 (2021)](https://doi.org/10.1103/PhysRevD.103.052004).
 * SNO Collaboration. ***A search for hep solar neutrinos and the diffuse supernova neutrino background using all three phases of the Sudbury Neutrino Observatory***. [Phys. Rev. D 102, 062006 (2020)](https://doi.org/10.1103/PhysRevD.102.062006).
 * SNO+ Collaboration. ***Measurement of neutron-proton capture in the SNO+ water phase***. [Phys. Rev. C 102, 014002 (2020)](https://doi.org/10.1103/PhysRevC.102.014002).
@@ -73,7 +74,7 @@ title: Resume/CV
 * J. Caravaca, F.B. Descamps, B.J. Land, J. Wallig, M. Yeh, G.D. Orebi Gann. ***An Experiment to Demonstrate Cherenkov / Scintillation Signal Separation***. [Phys. Rev. C 95, 055801 (2017)](https://doi.org/10.1103/PhysRevC.95.055801).
 * T.M. Hoang, M. Anquez, B.A. Robbins, X.Y. Yang, B.J. Land, C.D. Hamley, M.S. Chapman. ***Parametric excitation and squeezing in a many-body spinor condensate***. [Nat. Commun. 7, 11233 (2016)](https://doi.org/10.1038/ncomms11233).
 * SNO+ Collaboration. ***Current Status and Future Prospects of the SNO+ Experiment***. [Advances in High Energy Physics, vol. 2016, Article ID 6194250, 21 pages (2016)](https://doi.org/10.1155/2016/6194250). 
-* Watchman Collaboration. ***The Physics and Nuclear Nonproliferation Goals of WATCHMAN: A WAter CHerenkov Monitor for ANtineutrinos***. [arXiv:1502.01132](https://arxiv.org/abs/1502.01132). 
+* Watchman Collaboration. ***The Physics and Nuclear Nonproliferation Goals of WATCHMAN: A WAter CHerenkov Monitor for ANtineutrinos***. [arXiv:1502.01132 (2015)](https://arxiv.org/abs/1502.01132). 
 * T.M. Hoang, C.S. Gerving, B.J. Land, M. Anquez, C.D. Hamley, M.S. Chapman. ***Dynamic stabilization of a quantum many-body spin system***. [Phys. Rev. Lett. 111, 090403 (2013)](https://doi.org/10.1103/PhysRevLett.111.090403).
 * C.S. Gerving, T.M. Hoang, B.J. Land, M. Anquez, C.D. Hamley, M.S. Chapman. ***Non-equilibrium dynamics of an unstable quantum pendulum explored in a spin-1 Bose condensate*** [Nat. Commun. 8, 1169 (2012)](https://doi.org/10.1038/ncomms2179).
 
