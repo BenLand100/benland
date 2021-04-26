@@ -5,6 +5,7 @@ categories:
   - Math
   - Programming
   - Physics
+  - Games
 description: A description of the decade-old WindMouse algorithm for generating mouse movements that could be mistaken for human.
 slug: windmouse-human-mouse-movement
 ---
