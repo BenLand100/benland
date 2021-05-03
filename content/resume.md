@@ -56,6 +56,7 @@ title: Resume/CV
 
 ## Publications
 
+* DUNE Collaboration. ***Deep Underground Neutrino Experiment (DUNE) Near Detector Conceptual Design Report***. [arXiv:2103.13910 [physics.ins-det] (2021)](https://arxiv.org/abs/2103.13910).
 * SNO+ Collaboration. ***The SNO+ Experiment***. [arXiv:2104.11687 [physics.ins-det] (2021)](https://arxiv.org/abs/2104.11687). Submitted to JINST.
 * SNO+ Collaboration. ***Development, characterisation, and deployment of the SNO+ liquid scintillator***. [arXiv:2011.12924 [physics.ins-det] (2021)](https://arxiv.org/abs/2011.12924). Accepted to JINST.
 * B. J. Land, Z. Bagdasarian, J. Caravaca, M. Smiley, G. D. Orebi Gann. ***MeV-scale performance of water-based and pure liquid scintillator detectors***. [Phys. Rev. D 103, 052004 (2021)](https://doi.org/10.1103/PhysRevD.103.052004).
