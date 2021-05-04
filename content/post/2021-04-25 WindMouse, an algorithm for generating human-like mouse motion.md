@@ -8,6 +8,7 @@ categories:
   - Games
 description: A description of the decade-old WindMouse algorithm for generating mouse movements that could be mistaken for human.
 slug: windmouse-human-mouse-movement
+toc: true
 ---
 
 This is a post about an algorithm I developed over a decade ago to generate mouse movements that could be mistaken for actual human input.
