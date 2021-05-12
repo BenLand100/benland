@@ -63,7 +63,7 @@ title: Resume/CV
 * SNO Collaboration. ***A search for hep solar neutrinos and the diffuse supernova neutrino background using all three phases of the Sudbury Neutrino Observatory***. [Phys. Rev. D 102, 062006 (2020)](https://doi.org/10.1103/PhysRevD.102.062006).
 * SNO+ Collaboration. ***Measurement of neutron-proton capture in the SNO+ water phase***. [Phys. Rev. C 102, 014002 (2020)](https://doi.org/10.1103/PhysRevC.102.014002).
 * J. Caravaca, B. J. Land, M. Yeh, G. D. Orebi Gann ***Characterization of water-based liquid scintillator for Cherenkov and scintillation separation***. [Eur. Phys. J. C 80:867 (2020)](https://doi.org/10.1140/epjc/s10052-020-8418-4).
-* T. Kaptanoglu, M. Luo, B.J. Land, A. Bacon, J.R. Klein ***The Dichroicon: Spectral Photon Sorting For Large-Scale Cherenkov and Scintillation Detectors***. [Phys. Rev. D 101, 072002 (2020)](https://doi.org/10.1103/PhysRevD.99.112007).
+* T. Kaptanoglu, M. Luo, B.J. Land, A. Bacon, J.R. Klein ***The Dichroicon: Spectral Photon Sorting For Large-Scale Cherenkov and Scintillation Detectors***. [Phys. Rev. D 101, 072002 (2020)](https://doi.org/10.1103/PhysRevD.101.072002).
 * Theia Collaboration. ***Theia: An advanced optical neutrino detector***. [Eur. Phys. J. C 80, 416 (2020)](https://doi.org/10.1140/epjc/s10052-020-7977-8).
 * SNO Collaboration. ***Cosmogenic neutron production at the Sudbury Neutrino Observatory***. [Phys. Rev. D 100, 112005 (2019)](https://doi.org/10.1103/PhysRevD.100.112005). 
 * R.G. Huang, G. Benato, J. Caravaca,b, Yu.G. Kolomensky, B.J. Land, G.D. Orebi Gann, B. Schmidt. ***Characterization of light production and transport in tellurium dioxide crystals***. [JINST 14, P10032 (2019)](https://doi.org/10.1088/1748-0221/14/10/p10032). 
