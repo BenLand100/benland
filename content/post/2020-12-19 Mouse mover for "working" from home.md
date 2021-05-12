@@ -163,7 +163,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 }
 ~~~
 
-An icon resource file is necessary to get preetty tray and executable icons:
+An icon resource file is necessary to get pretty tray and executable icons:
 ~~~
 0   ICON    "mouse.ico"
 1   ICON    "running.ico"
