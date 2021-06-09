@@ -56,6 +56,7 @@ title: Resume/CV
 
 ## Publications
 
+* SNO+ Collaboration. ***Optical calibration of the SNO+ detector in the waterphase with deployed sources***. [arXiv:2106.03951 [physics.ins-det] (2021)](https://arxiv.org/pdf/2106.03951.pdf)
 * DUNE Collaboration. ***Deep Underground Neutrino Experiment (DUNE) Near Detector Conceptual Design Report***. [arXiv:2103.13910 [physics.ins-det] (2021)](https://arxiv.org/abs/2103.13910).
 * SNO+ Collaboration. ***The SNO+ Experiment***. [arXiv:2104.11687 [physics.ins-det] (2021)](https://arxiv.org/abs/2104.11687). Submitted to JINST.
 * SNO+ Collaboration. ***Development, characterisation, and deployment of the SNO+ liquid scintillator***. [JINST 16, P05009 (2021)](https://doi.org/10.1088/1748-0221/16/05/p05009)
