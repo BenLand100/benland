@@ -284,7 +284,7 @@ Before looking directly at the filter function, have a look at the power spectru
 Power is the square of the amplitude, which for complex numbers is given by $|x|^2$.
 Numpy has a convenient `fftfreq` function to calculate the frequency associate with each index of the FFT result.
 Note that Fourier transforms include positive and negative frequencies, but as these are the same for these power spectra, I'll only show the positive component.
-```
+```python
 ps_resp = np.abs(resp_f)**2
 ps_desire = np.abs(desire_f)**2
 ps_filter = np.abs(filter_f)**2
