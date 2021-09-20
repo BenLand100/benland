@@ -10,12 +10,15 @@ You can find a copy [here](https://nino.lbl.gov/~benland100/thesis_final.pdf).
 During graduate school, my particular involvement was with the [SNO](https://sno.phy.queensu.ca/), [SNO+](https://snoplus.phy.queensu.ca/), and [Theia](https://theia.berkeley.edu/index.php/Main_Page) projects.
 
 ![UPenn Shield](/images/upenn.png#leftsmall)
-Currently, I work as a postdoc at the [University of Pennsylvania](https://live-sas-physics.pantheon.sas.upenn.edu/people/benjamin-land) where I continue to research neutrinos in the [high energy physics neutrino group](https://live-sas-physics.pantheon.sas.upenn.edu/research/particle-physics). 
-I've remained involved in the SNO+ and Theia projects, and am getting involved in the [DUNE](https://www.dunescience.org/) experiment, where I'll be focusing on developing the cold electronics / supporting hardware for the detector and exploring (solar) neutrino interactions in liquid argon.
+I then did research as a postdoc at the [University of Pennsylvania](https://live-sas-physics.pantheon.sas.upenn.edu/people/benjamin-land) where I continued to research neutrinos in the [high energy physics neutrino group](https://live-sas-physics.pantheon.sas.upenn.edu/research/particle-physics). 
+I've remained involved in the SNO+ and Theia projects, and got invoved in the [DUNE](https://www.dunescience.org/) experiment, where I focused on developing software for the cold electronics, data acquisition, and data selection, while exploring (solar) neutrino interactions in liquid argon.
+
+After around a decade doing fundamental physics research, I decided to use the physics PhD and associated skills as leverage to pivot into industry. 
+I now work as a lead data scientist at Comcast, applying the quantitative and analytical skills developed doing physics research to the problem of predicting optimal business strategies. 
 
 Otherwise, I am 30 years old and hail from Macon, GA. 
-I am a long time programmer, have contributed to many projects, and learned many languages since I became interested in using computers to automate mundane human tasks (read: cheating on MMORPGs) back in the early aughts. 
+I am a long time programmer, have contributed to many projects, and learned many languages since I became interested in using computers to automate mundane human tasks (read: automating MMORPGs) back in the early aughts. 
 Check out my [GitHub](https://github.com/BenLand100) for more about the projects I deemed most interesting. 
-Besides physics and programming, I enjoy the outdoors (that is, photographing them), Minecraft (with mods... lots of mods), and astronomy.
+Besides physics and programming, I enjoy the outdoors (that is, photographing them), video games (Minecraft, Factorio, Rimworld...), tinkering with electronics, and astronomy.
 
 

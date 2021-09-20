@@ -12,6 +12,5 @@ I'm easiest to reach via E-mail. I usually have the username `benland100`, and y
 * SNOLAB (`bland` this time) `snolab.ca`
 
 Otherwise I'm often on IRC:
-* ~~freenode `freenode.net`~~
 * LiberaChat `libera.chat`
 * Rizon `rizon.net`

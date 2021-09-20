@@ -14,8 +14,10 @@ title: Resume/CV
   *Georgia Institute of Technology*, Atlanta, GA
 
 ## Experience
+* **Lead Data Scientist** (September 2021 - present)
+  Enterprise Business Intelligence, *Comcast*
 
-* **Postdoctoral Scholar** (September 2019 - present)  
+* **Postdoctoral Scholar** (September 2019 - September 2021)  
   Experimental Neutrino Physics, *University of Pennsylvania*
   
 * **Postdoctoral Scholar** (June 2019 - August 2019)  
