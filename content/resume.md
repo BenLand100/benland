@@ -14,6 +14,7 @@ title: Resume/CV
   *Georgia Institute of Technology*, Atlanta, GA
 
 ## Experience
+
 * **Lead Data Scientist** (September 2021 - present)
   Enterprise Business Intelligence, *Comcast*
 
