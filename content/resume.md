@@ -15,7 +15,7 @@ title: Resume/CV
 
 ## Experience
 
-* **Lead Data Scientist** (September 2021 - present)
+* **Lead Data Scientist** (September 2021 - present)  
   Enterprise Business Intelligence, *Comcast*
 
 * **Postdoctoral Scholar** (September 2019 - September 2021)  
