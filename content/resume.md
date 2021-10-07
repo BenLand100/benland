@@ -59,9 +59,12 @@ title: Resume/CV
 
 ## Publications
 
+* DUNE Collaboration. ***Low exposure long-baseline neutrino oscillation sensitivity of the DUNE experiment***. [arXiv:2109.01304 [hep-ex]](https://arxiv.org/pdf/2109.01304).
+* DUNE Collaboration. ***Design, construction and operation of the ProtoDUNE-SP Liquid Argon TPC***. [arXiv:2108.01902 [physics.ins-det]](https://arxiv.org/pdf/2108.01902).
+* DUNE Collaboration. ***Searching for Solar KDAR with DUNE***. [arXiv:2107.09109 [hep-ex] (2021)](https://arxiv.org/pdf/2107.09109). Accepted by JCAP.
 * DUNE Collaboration. ***Deep Underground Neutrino Experiment Far Detector Conceptual Design Report Single-Phase Vertical Drift Technology***. Pending.
-* SNO+ Collaboration. ***Optical calibration of the SNO+ detector in the waterphase with deployed sources***. [arXiv:2106.03951 [physics.ins-det] (2021)](https://arxiv.org/pdf/2106.03951.pdf).
-* DUNE Collaboration. ***Deep Underground Neutrino Experiment (DUNE) Near Detector Conceptual Design Report***. [arXiv:2103.13910 [physics.ins-det] (2021)](https://arxiv.org/abs/2103.13910).
+* SNO+ Collaboration. ***Optical calibration of the SNO+ detector in the waterphase with deployed sources***. [arXiv:2106.03951 [physics.ins-det] (2021)](https://arxiv.org/pdf/2106.03951.pdf). Accepted by JINST.
+* DUNE Collaboration. ***Deep Underground Neutrino Experiment (DUNE) Near Detector Conceptual Design Report***. [Instruments 5(4), 31 (2021)](https://doi.org/10.3390/instruments5040031).
 * SNO+ Collaboration. ***The SNO+ Experiment***. [JINST 16, P08059 (2021)](https://doi.org/10.1088/1748-0221/16/08/P08059).
 * SNO+ Collaboration. ***Development, characterisation, and deployment of the SNO+ liquid scintillator***. [JINST 16, P05009 (2021)](https://doi.org/10.1088/1748-0221/16/05/p05009).
 * B. J. Land, Z. Bagdasarian, J. Caravaca, M. Smiley, G. D. Orebi Gann. ***MeV-scale performance of water-based and pure liquid scintillator detectors***. [Phys. Rev. D 103, 052004 (2021)](https://doi.org/10.1103/PhysRevD.103.052004).
