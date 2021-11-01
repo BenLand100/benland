@@ -41,7 +41,7 @@ where $W(f)$ is now a function of frequency instead of time, and is a complex nu
 
 {{< figure src="/images/complex.svg" class="right" >}}
 
-For the uninitiated, complex numbers may seem mysterious and unnecessary, but it's really just a way to combine a magnitude $c$ and an angle $\phi$ into a single complex quantity $c$.
+For the uninitiated, complex numbers may seem mysterious and unnecessary, but it's really just a way to combine a magnitude $c$ and an angle $\phi$ into a single complex quantity $z$.
 One could simply keep track of the magnitude and angle, or one could use the more recognized (outside of math and physics) real $a$ and imaginary $b$ representation, using the "imaginary unit" $i = \sqrt{-1}$ (or $i^2 = -1$ if that makes you less uncomfortable).
 $$
 z = a + i b
@@ -53,7 +53,7 @@ $$
 $$
 \tan{\phi} = \frac{b}{a}
 $$
-These expressions are used as the definition of the modulus (or absolute value) and argument (or phase) of the complex number $c$.
+These expressions are used as the definition of the modulus (or absolute value) and argument (or phase) of the complex number $z$.
 $$
 |z| = c = \sqrt{a^2 + b^2}
 $$ 
@@ -112,16 +112,16 @@ This is exactly what real radio hardware does to recover information from broadc
 A mixed signal for the in-phase and quadrature parts at some frequency $f$ can be defined as:
 $$
 \begin{align}
-C_I(t) &= V(t)\cos{(2 \pi f t)} \\\\
-C_Q(t) &= V(t)\sin{(2 \pi f t)}
+S_I(t) &= V(t)\cos{(2 \pi f t)} \\\\
+S_Q(t) &= V(t)\sin{(2 \pi f t)}
 \end{align}
 $$
 
 After applying some low-pass filtering technique, one arrives at the actual $I(t)$ and $Q(t)$ functions used in RF modulation.
 $$
 \begin{align}
-I(t) &= \operatorname{lowpass} M_I(t)\\\\
-Q(t) &= \operatorname{lowpass} M_Q(t)
+I(t) &= \operatorname{lowpass} S_I(t)\\\\
+Q(t) &= \operatorname{lowpass} S_Q(t)
 \end{align}
 $$
 
@@ -138,15 +138,15 @@ so $V(t)$ would be proportional to $A(t)\cos{(2 \pi f t)}$, where $A(t)$ contain
 Assuming the receiving station is in-phase with the broadcast, the mixed signals would be proportional to:
 $$
 \begin{align}
-M_I(t) &= A(t)\cos{(2 \pi f t)}\cos{(2 \pi f t)} \\\\
-M_Q(t) &= A(t)\cos{(2 \pi f t)}\sin{(2 \pi f t)}
+S_I(t) &= A(t)\cos{(2 \pi f t)}\cos{(2 \pi f t)} \\\\
+S_Q(t) &= A(t)\cos{(2 \pi f t)}\sin{(2 \pi f t)}
 \end{align}
 $$
 Applying trig product rules results in:
 $$
 \begin{align}
-M_I(t) &= A(t)\frac{1}{2}(\cos{(4 \pi f t)}+1) \\\\
-M_Q(t) &= A(t)\frac{1}{2}(\sin{(4 \pi f t)})
+S_I(t) &= A(t)\frac{1}{2}(\cos{(4 \pi f t)}+1) \\\\
+S_Q(t) &= A(t)\frac{1}{2}(\sin{(4 \pi f t)})
 \end{align}
 $$
 So there's an oscillatory part at twice the carrier frequency, and a _constant_ part proportional to $A(t)$.
@@ -157,7 +157,7 @@ I(t) &= A(t)\\\\
 Q(t) &= 0
 \end{align}
 $$
-Or, exactly what the station broadcast!
+Or, exactly the information that the station broadcast!
 If there were a phase difference between the receiving and broadcast stations, or one of the stations were moving, part of $A(t)$ would be in-phase, and part quadrature.
 A bit of math would show that $C(t) = \sqrt{I(t)^2 + Q(t)^2}$ would be proportional to what the station broadcast, regardless of phase difference.
 
@@ -172,13 +172,13 @@ This is called [quadrature amplitude modulation](https://en.wikipedia.org/wiki/Q
 ## RF receiver implementation
 
 Following from the theory, the basic idea here is to digitize the voltage coming from some antenna, then use digital mixing with an oscillating signal of 60 kHz, and finally low pass filter the result to get the intensity of the WWVB broadcast.
-To do this digitally instead of analog, I'll need to digitize the voltage at a much higher rate than the 60kHz signal, so that I get a reasonable number of voltage points within each cycle.
+To do this digitally instead of analog, I'll need to digitize the voltage at a much higher rate than the 60 kHz signal, so that I get a reasonable number of voltage points within each cycle.
 To do the mixing and filtering, I'll need some fast logic, and an FPGA is the ideal choice.
 
 
 {{< figure src="/images/microzed.jpg" class="left" >}}
 Building on experience I gained doing hardware design for particle physics experiments, I procured a [MicroZed development board](https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/microzed/) based on the [Zqyn-7000 SoC](https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html). 
-While there are cheaper FPGAs out there, the Zynq line includes hard ARM cores, and can run Linux, making it a pretty ideal integrated device. 
+While there are cheaper FPGAs out there, the Zynq line includes hard ARM cores, which can run Linux, making it a pretty ideal integrated device for development and testing. 
 The Zynq-7000 also has enough IO and resources to be useful in future projects.
 I got the breakout board with the MicroZed for accessing the logic pins, but in retrospect the IO board would have been the better option, since the breakout board doesn't expose the Zynq-7000's integrated ADC pins, for some reason.
 
@@ -194,7 +194,7 @@ The idea, then, is to bias the antenna to 1V, and let the received signals from 
 These fluctuations will be very small, so amplifying them to larger values will improve the performance downstream, and put less stringent requirements on the ADC precision.
 
 {{< figure src="/images/analog_front_end.svg" class="right" >}}
-The 1 V voltage reference has high output impedance so it is buffered with an opamp.
+The 1 V voltage reference has high output impedance so it is buffered with an [operational amplifier (opamp)](https://en.wikipedia.org/wiki/Operational_amplifier).
 A 1MΩ resistor is used to bias the antenna to 1V, and another opamp is setup as a non-inverting amplifier to drive the ADC input.
 I decided on a gain of 10 (the ratio of R3 to R2) for testing.
 This will be adjusted if higher (or lower) gain is necessary in testing.
@@ -215,12 +215,12 @@ Direct conversion receivers, however, do just that.
 I'll probably try out several ADCs to digitize the amplified RF signal from the analog front end, but I'll start with a [AD7822BNZ](https://www.analog.com/media/en/technical-documentation/data-sheets/AD7822_7825_7829.pdf), an 8 bit, 2 mega sample per second (MSPS) ADC in a convenient DIP package with a parallel output bus.
 A 2 MHz sample rate should give a sufficient number of samples per cycle of the 60 kHz signal, though 8 bit precision could be better.
 Low precision is driven by the choice of a parallel output bus, which is a matter of convenience.
-Every 500 ns, a conversion is finished, and the 8 bit value representing the voltage is placed on this bus, making it pretty simple to read into an ADC by just connecting each output to an input pin.
+Every 500 ns, a conversion is finished, and the 8 bit value representing the voltage is placed on this bus, making it pretty simple to read into an FPGA by just connecting each output to an input pin.
 Fancier ADCs will have serial busses that run faster than the digitization rate to clock out the converted bits, to avoid having to dedicate dozens+ of IO pins to receiving the data.
 
 The easiest operating mode for this ADC is to hold the `conv` signal high, and briefly lower it to trigger a conversion every 500 ns.
 The `eoc` (end of conversion) will swing low when the conversion is complete. 
-The documentation suggested trying this `eoc` signal to the pins for `cs` (channel select) and `rd` (read) if the ADC is being used stand-alone, such that the data appears out the output bus automatically when the conversion is completed.
+The documentation suggested connecting this `eoc` signal to the pins for `cs` (channel select) and `rd` (read) if the ADC is being used stand-alone, such that the data appears out the output bus automatically when the conversion is completed.
 A device (the FPGA in this project) can then latch the output data on the rising edge of `eoc`.
 Some Verilog to do this follows, which includes a reset period to let the voltage references within the ADC stabilize, and a `ready` flag each for each clock sample that represents a new output value.
 ```verilog
@@ -290,13 +290,17 @@ endmodule
 
 ### Software defined demodulation
 
-With digitized data available in the FPGA, I just need to implement the signal generation, mixing, and low pass filtering in Verilog.
-Generating a sin wave at a particular frequency is a bit of a trick.
+With digitized data available in the FPGA, I just need to implement the signal generation of the in-phase and quadrature signals, mixing, and low pass filtering in Verilog.
+Generating a sine wave at a particular frequency is a bit of a trick in digital hardware.
 I opted for defining one cycle as $2^{16}$ counts of a 16 bit counter. 
-One quarter of a sine wave is stored in a lookup table in the FPGA.
-Based on the high 2 bits of the counter, I can determine whether this quarter wave should be reversed or multiplied by $-1$, while using the lower 14 bits to determine the index of the lookup table.
+One quarter of a sine wave is stored in a lookup table in the FPGA, since all four quarters are the same shape, just reversed in time, or inverted across zero.
+I only include 512 samples in this quarter, but this could be increased if more precision is required.
+Based on the high 2 bits of the counter, which divide the range into quarters, I can determine whether this quarter wave should be reversed or multiplied by $-1$, while using the next-lower 9 bits to determine the index of the lookup table.
+The remaining three bits allow for smaller increments of phase to be added in each clock cycle, to represent slower frequencies.
+More bits may be necessary, here, since my system clock runs at 100 MHz on the MicroZed.
+
 In this way, a 16 bit signed decimal value can be returned that is proportional to the value of a sine wave at any phase.
-The cosine is just shifted by one quarter phase from the sine, so adding 1 to the top two bits of the phase allows the same calculation.
+The cosine is just shifted by one quarter phase from the sine, so adding 1 to the top two bits of the phase allows the same trick to work.
 With an input clock and an adjustable phase increment per clock tick, output of many frequencies can be generated.
 ```verilog
 module sincos #(
@@ -469,6 +473,7 @@ module sdr_receiver(
     end
     endfunction //end of Function
 ```
+Included here is a [borrowed function](https://verilogcodes.blogspot.com/2017/11/a-verilog-function-for-finding-square-root.html) for a clever way of computing the square root of an integer in Verilog.
 
 ## Early results / next steps
 
