@@ -121,7 +121,7 @@ header input.searchbar {
   background-color: var(--basecolor);
   border-radius: 3px;
   border: none;
-  outline: dotted 1.5px #000;
+  outline: dotted 2px #000;
 }
 
 header input.searchbar:focus {
@@ -131,7 +131,7 @@ header input.searchbar:focus {
   background-color: var(--basecolor);
   border-radius: 3px;
   border: none;
-  outline: solid 1.5px #000;
+  outline: solid 2px #000;
 }
 
 header a {
