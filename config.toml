@@ -7,6 +7,9 @@ enableGitInfo = true
 footnoteReturnLinkContents = "↩"
 googleAnalytics = "UA-190640148-1"
 
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
 

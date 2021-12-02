@@ -12,6 +12,11 @@
             <a href="{{ .URL }}">{{.Name }}</a>
           </li>
           {{end -}}
+          <li class="searchbar">
+            <form action="/search" method="GET">
+              <input class="searchbar" type="search" name="q" id="search-query" placeholder="Search....">
+            </form>
+          </li>
         </ul>
       </nav>
     </header>

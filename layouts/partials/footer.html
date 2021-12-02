@@ -1,6 +1,6 @@
     <footer>
       <hr/>
-      {{ if not .IsHome }} Last Modified: {{ .Lastmod.Format "January 2, 2006" }} </br>{{ end }}
+      {{ if not .IsHome }} {{ if not .Lastmod.IsZero }} Last Modified: {{ .Lastmod.Format "January 2, 2006" }} </br>{{ end }}{{ end }}
       {{ with .Site.Params.footer -}} {{ . | markdownify }} {{ end }}
     </footer>
 

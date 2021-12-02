@@ -85,6 +85,7 @@ header {
   font-size: 1rem;
   background: var(--basecolor);
   border-bottom: 2px solid #000;
+  overflow: auto;
 }
 
 header nav {
@@ -101,10 +102,23 @@ header li {
   display: inline-block;
 }
 
+header li.searchbar {
+  display: inline-block;
+  vertical-align: center;
+  padding: 0 0.5rem;
+}
+
+header input.searchbar {
+  color: #fff;
+  font-size: 1rem;
+  background-color: var(--basecolor);
+  border: none;
+}
+
 header a {
   color: #fff;
   line-height: 1.75rem;
-  padding: 0 0.5rem
+  padding: 0 0.5rem;
 }
 
 header .current a {
