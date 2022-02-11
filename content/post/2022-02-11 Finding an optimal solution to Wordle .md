@@ -10,7 +10,7 @@ slug: optimal-wordle-solution
 toc: true
 ---
 
-At this point, probably everyone has heard of the game [Wordle]() where one has six guesses to determine a secret five letter word.
+At this point, probably everyone has heard of the game [Wordle](https://www.nytimes.com/games/wordle/index.html) where one has six guesses to determine a secret five letter word.
 Each time you guess, the letters are colored to represent the following:
 
 1. Gray --- the letter is not in the word.
@@ -111,7 +111,7 @@ def avg_frac_remaining(guess,wl=wl):
 
 ### Aside: entropy and information
 
-I've seen [other approaches]() treat this same problem with information theory, and aimed to pick the outcome with maximal information (entropy) using an expression analogous to:
+I've seen [other approaches](https://www.youtube.com/watch?v=v68zYyaEmEA) treat this same problem with information theory, and aimed to pick the outcome with maximal information (entropy) using an expression analogous to:
 $$
 -\sum_{i \in I} P(g, i \\,|\\, W) \log P(g, i \\,|\\, W)
 $$
