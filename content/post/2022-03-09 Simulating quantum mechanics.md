@@ -370,7 +370,7 @@ def animate(simulation_steps,init_func=None):
 
 And a simple call to `animate(sim_free)` gives a nice visualization of how the wave function changes with time.
 
-{{< video "/images/qm/wave_packet.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/wave_packet.mp4" class="center" width=720 height=504 >}}
 
 This demonstrates a foundational result of quantum mechanics, which is that the width of a Gaussian wave packet grows with time.
 How does this happen? The second derivative of the magnitude of the wave function induces the phase to change, and since the second derivative is not constant (derivative of a Gaussian is a Gaussian), the rate of phase change is not constant, leading to a winding phase. 
@@ -382,7 +382,7 @@ As the state evolves, the momentum states start to depart the origin in opposite
 
 A wave packet with some momentum can be simulated as well, starting from `wave_packet(mom=10)`.
 
-{{< video "/images/qm/wave_packet_mom.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/wave_packet_mom.mp4" class="center" width=720 height=504 >}}
 
 Here, the spreading of the wave function still occurs, but the bulk distribution is also moving in the direction of positive momentum, since the state is now largely composed of momentum eigenstates with positive momentum. 
 
@@ -414,7 +414,7 @@ def box_init():
     plt.ylim(-3,3)
 ```
 
-{{< video "/images/qm/wave_packet_box.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/wave_packet_box.mp4" class="center" width=720 height=504 >}}
 
 This has the qualitative behavior you might expect from a particle with some momentum in a box: it hits a wall and bounces back.
 The wave packets still spreads out over time, and near the bounces we start to see [interference patterns](https://en.wikipedia.org/wiki/Wave_interference) as the reflected part of the packet interferes with the part that hasn't reflected yet.
@@ -440,7 +440,7 @@ def barrier_init():
 animate(sim_barrier_mom,init_func=barrier_init)
 ```
 
-{{< video "/images/qm/wave_packet_barrier.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/wave_packet_barrier.mp4" class="center" width=720 height=504 >}}
 
 Notice that, within the region of the potential, the wave function is not oscillatory, but rather exponentially damped, which is what a rigorous treatment of this situation would show.
 This is because there is not enough kinetic energy for a classical particle to enter this potential, at all, but the boundary conditions of the quantum mechanical wave function are such that it does penetrate some depth into classically forbidden regions.
@@ -468,7 +468,7 @@ def quadratic_init():
 animate(sim_quadratic_potential,init_func=quadratic_init)
 ```
 
-{{< video "/images/qm/wave_packet_quad.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/wave_packet_quad.mp4" class="center" width=720 height=504 >}}
 
 Notice that this, unlike the particle in a box, is periodic.
 Anyone who has worked with quadratic potentials or masses on spring should know this: the amplitudes of states with different momentum are different, but the _period_ of the oscillation is the same for all. 
@@ -501,7 +501,7 @@ sim_quad_0 = simulate(wave_packet(mom=10),dt=-1e-1j,V=quadratic_potential,steps=
 animate(sim_quad_0,init_func=quadratic_init)
 ```
 
-{{< video "/images/qm/quad_0.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/quad_0.mp4" class="center" width=720 height=504 >}}
 
 Note that the imaginary time evolution quickly damps out the momentum, and the result is some stationary Gaussian that is a bit wider than the initial wave packet.
 Fortunately for my narrative, the ground state of the QHO is exactly a Gaussian with a width determined by the strength of the potential.
@@ -543,16 +543,16 @@ sim_quad_1 = simulate(Phi_1, dt=-1e-1j, condition=orthogonal_to([phi_0]), V=quad
 animate(sim_quad_1,init_func=quadratic_init)
 ```
 
-{{< video "/images/qm/quad_1.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/quad_1.mp4" class="center" width=720 height=504 >}}
 
 The complex squiggle and double peaked probability is exactly what the first excited eigenstate looks like.
 The same procedure, removing the ground and first excited state and evolving with imaginary time, can build up the next excited state ad infinitum. 
 
-{{< video "/images/qm/quad_2.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/quad_2.mp4" class="center" width=720 height=504 >}}
 
 Now, you might ask yourself how to verify that these states are in fact eigenstates without having to look up and plot the analytic solutions to the QHO, and the answer is simple: evolve it in time, and only the phase should change!
 
-{{< video "/images/qm/quad_2_evo.mp4" "center" 720 504 >}}
+{{< video src="/images/qm/quad_2_evo.mp4" class="center" width=720 height=504 >}}
 
 ## Until next time...
 

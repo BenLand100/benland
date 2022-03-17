@@ -1,4 +1,4 @@
-<video preload="auto" width="{{ .Get 2 }}" height="{{ .Get 3 }}px" autoplay loop muted playsinline class="{{ .Get 1 }}">
-  <source src="{{ .Get 0 }}" type="video/mp4">
+<video preload="auto" {{ with .Get "width" }}width="{{ . }}px" {{ end }}{{ with .Get "height" }}height="{{ . }}px" {{ end }} autoplay loop muted playsinline {{ with .Get "controls" }}controls {{ end }}{{ with .Get "class" }}class="{{ . }}" {{ end }}>
+  <source src="{{ .Get "src" }}" type="video/mp4">
   <span>HTML5 video unsupported</span>
 </video>
