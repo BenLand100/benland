@@ -9,7 +9,7 @@ slug: real-math-as-an-algorithm
 toc: true
 ---
 
-Following the [previous post on implementing integer math](/post/2021/03/31/real-math-as-an-algorithm/) without utilizing some lower-level math implementation, this post will extend the functionality to approximate [real numbers](https://en.wikipedia.org/wiki/Real_number) using the building blocks for representing integers.
+Following the [previous post on implementing integer math](/post/2021/03/31/math-as-an-algorithm/) without utilizing some lower-level math implementation, this post will extend the functionality to approximate [real numbers](https://en.wikipedia.org/wiki/Real_number) using the building blocks for representing integers.
 As before, this is targeted for the simple LISP-like language [L2](/post/2021/01/21/l2-lisp-machine-python/) but will be done with Python code first, using only functionality present in L2.
 
 ## Representation
