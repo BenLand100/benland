@@ -59,8 +59,12 @@ title: Resume/CV
 
 ## Publications
 
-* DUNE Collaboration. ***Low exposure long-baseline neutrino oscillation sensitivity of the DUNE experiment***. [arXiv:2109.01304 [hep-ex]](https://arxiv.org/pdf/2109.01304).
-* DUNE Collaboration. ***Design, construction and operation of the ProtoDUNE-SP Liquid Argon TPC***. [arXiv:2108.01902 [physics.ins-det]](https://arxiv.org/pdf/2108.01902). Accepted by JINST.
+* DUNE Collaboration. ***Scintillation light detection in the 6-m drift-length ProtoDUNE Dual Phase liquid argon TPC***. [Eur. Phys. J. C 82:618 (2022)](https://doi.org/10.1140/epjc/s10052-022-10549-w).
+* SNO+ Collaboration. ***Improved search for invisible modes of nucleon decay in water with the SNO+detector***. [Phys. Rev. D 105, 112012](https://doi.org/10.1103/PhysRevD.105.112012).
+* Theia Collaboration. ***Theia: Summary of physics program. Snowmass White Paper Submission***. [arXiv:2202.12839  [hep-ex] (2022)](https://arxiv.org/abs/2202.12839).
+* DUNE Collaboration. ***Snowmass Neutrino Frontier: DUNE Physics Summary***. [arXiv:2203.06100 [hep-ex] (2022)](https://arxiv.org/abs/2203.06100).
+* DUNE Collaboration. ***Low exposure long-baseline neutrino oscillation sensitivity of the DUNE experiment***. [Phys. Rev. D 105. 072006 (2022)](https://doi.org/10.1103/PhysRevD.105.072006).
+* DUNE Collaboration. ***Design, construction and operation of the ProtoDUNE-SP Liquid Argon TPC***. [JINST 17, P01005 (2022)](https://doi.org/10.1088/1748-0221/17/01/P01005).
 * DUNE Collaboration. ***Searching for Solar KDAR with DUNE***. [JCAP 10, 065 (2021)](https://doi.org/10.1088/1475-7516/2021/10/065).
 * DUNE Collaboration. ***Deep Underground Neutrino Experiment Far Detector Conceptual Design Report Single-Phase Vertical Drift Technology***. Pending.
 * SNO+ Collaboration. ***Optical calibration of the SNO+ detector in the waterphase with deployed sources***. [JINST 16, P10021 (2021)](https://doi.org/10.1088/1748-0221/16/10/P10021).
