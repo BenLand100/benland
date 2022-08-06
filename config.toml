@@ -39,5 +39,5 @@ googleAnalytics = "UA-190640148-1"
     weight = 5
 
 [params]
-    description = "Homepage for (and Physics / Programming blog by) Benjamin J. Land / BenLand100"
-    footer = "Copyright 2020-2022 Benjamin J. Land </br> BTC: 3EbPMras39ZgfYD3WpGQqYHxFAX6GZ9K4D"
+    description = "Homepage and physics/programming/tech/math project blog for Benjamin J. Land (BenLand100)"
+    footer = "Copyright 2020-2022 Benjamin J. Land"
