@@ -40,4 +40,4 @@ googleAnalytics = "UA-190640148-1"
 
 [params]
     description = "Homepage and physics/programming/tech/math project blog for Benjamin J. Land (BenLand100)"
-    footer = "Copyright 2020-2022 Benjamin J. Land"
+    footer = "Copyright 2020-2022 Benjamin J. Land - <a href=\"https://www.paypal.com/donate/?business=WU68RDX27UMV4&no_recurring=1&currency_code=USD\">Buy me a beer?</a>"
