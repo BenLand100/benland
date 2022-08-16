@@ -1,0 +1,3 @@
+<figure {{ with .Get "class" }}class="{{ . }}" {{ end }}>
+    <canvas class="glslCanvas" {{ with .Get "fragment" }}data-fragment-url="{{ . }}" {{ end }} {{ with .Get "width" }}width="{{ . }}" {{ end }}{{ with .Get "height" }}height="{{ . }}" {{ end }}></canvas>
+</figure>
