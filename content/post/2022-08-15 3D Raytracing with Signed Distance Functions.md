@@ -4,7 +4,8 @@ date: '2022-08-15'
 categories: 
   - Math
   - Programming
-description: 
+  - Graphics
+description: A description of rendering principles based around signed distance functions as a geometry representation and raycasting/raytracing with some lighting scheme as the rendering engine, as implemented in the sdfray Python package. 
 slug: raycasting-raytracing-sdf
 glsl: true
 toc: true
