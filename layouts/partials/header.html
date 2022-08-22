@@ -13,7 +13,15 @@
 {{if isset .Params "glsl" }}    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script> {{end}}
 {{ partial "mathjax_support.html" -}}
 {{ partial "highlight_support.html" }}
-{{ template "_internal/google_analytics_async.html" . }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GA4ID }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ .Site.Params.GA4ID }}');
+    </script>
   </head>
   
   <body>

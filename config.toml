@@ -5,7 +5,6 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 enableEmoji = true
 enableGitInfo = true
 footnoteReturnLinkContents = "↩"
-googleAnalytics = "UA-190640148-1"
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
@@ -41,3 +40,4 @@ googleAnalytics = "UA-190640148-1"
 [params]
     description = "Homepage and physics/programming/tech/math project blog for Benjamin J. Land (BenLand100)"
     footer = "Copyright 2020-2022 Benjamin J. Land - <a href=\"https://www.paypal.com/donate/?business=WU68RDX27UMV4&no_recurring=1&currency_code=USD\">Buy me a beer?</a>"
+    GA4ID = "G-9LH6TXZN0X"
