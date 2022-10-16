@@ -2,8 +2,6 @@
 title: Contact Info
 ---
 
-If you find information on this blog useful, feel free to reach out using contact info below, or [buy me a beer](https://www.paypal.com/donate/?business=WU68RDX27UMV4&no_recurring=1&currency_code=USD).
-
 I'm easiest to reach via E-mail. I usually have the username `benland100`, and you can find me at:
 * GMail (primary/personal) `gmail.com`
 * This server (secondary/personal) `ben.land` or `benland.us`

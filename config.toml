@@ -39,5 +39,5 @@ footnoteReturnLinkContents = "↩"
 
 [params]
     description = "Homepage and physics/programming/tech/math project blog for Benjamin J. Land (BenLand100)"
-    footer = "Copyright 2020-2022 Benjamin J. Land - <a href=\"https://www.paypal.com/donate/?business=WU68RDX27UMV4&no_recurring=1&currency_code=USD\">Buy me a beer?</a>"
+    footer = "Copyright 2020-2022 Benjamin J. Land"
     GA4ID = "G-9LH6TXZN0X"
