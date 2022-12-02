@@ -59,6 +59,8 @@ title: Resume/CV
 
 ## Publications
 
+* EOS Collaboration. ***EOS: a demonstrator of hybrid optical detector technology***. [arXiv:2211.11969 [physics.ins-det] (2022)](https://arxiv.org/abs/2211.11969).
+* SNO+ Collaboration. ***Observation of Antineutrinos from Distant Reactors using Pure Water at SNO+***. [arXiv:2210.14154 [nucl-ex] (2022)](https://arxiv.org/abs/2210.14154).
 * DUNE Collaboration. ***Scintillation light detection in the 6-m drift-length ProtoDUNE Dual Phase liquid argon TPC***. [Eur. Phys. J. C 82:618 (2022)](https://doi.org/10.1140/epjc/s10052-022-10549-w).
 * SNO+ Collaboration. ***Improved search for invisible modes of nucleon decay in water with the SNO+detector***. [Phys. Rev. D 105, 112012](https://doi.org/10.1103/PhysRevD.105.112012).
 * Theia Collaboration. ***Theia: Summary of physics program. Snowmass White Paper Submission***. [arXiv:2202.12839  [hep-ex] (2022)](https://arxiv.org/abs/2202.12839).
