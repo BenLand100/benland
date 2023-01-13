@@ -5,7 +5,7 @@ categories:
   - Programming
   - Electronics
   - 3D Printing
-description: An overview of how to build a robust smart plug that does exactly what you want, and integrating into Home Assistant, using commodity parts you can get on Amazon.
+description: An overview of how to build a robust smart plug that does exactly what you want, including integration with Home Assistant, using commodity parts you can get on Amazon.
 slug: diy-smart-plug
 toc: true
 ---
