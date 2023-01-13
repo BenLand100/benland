@@ -80,12 +80,13 @@ hr {
 /* Header and Footer */
 
 header {
-  position: relative;
+  position: sticky;
   width: 100%;
   font-size: 1rem;
   background: var(--basecolor);
   border-bottom: 2px solid #000;
   overflow: auto;
+  top: 0;
 }
 
 header nav {
