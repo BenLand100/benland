@@ -12,7 +12,7 @@ toc: true
 
 ## Motivation
 
-In this post, I will run through the construction of a 30A 125V smart plug based on the ESP32 platform that can be either controlled from a simple webpage, or integrated into a system like Home Assistant.
+In this post, I will run through the construction of a 30A 125V smart plug based on the ESP32 platform that can be either controlled from a simple webpage, or integrated into a system like [Home Assistant](https://www.home-assistant.io/).
 
 While there are many good commercial options for smart plugs for home devices, and there are many industrial options for controlling heavy machinery, there's a bit of a gap in the market for easy to use smart plugs for more heavy-duty workloads.
 By "heavy-duty" here, I mean larger than 15A @ 125V to be switched. 
@@ -126,7 +126,7 @@ To round it off, the lid has a grate and raised lettering showing the current ra
 
 With everything hooked up to the ESP32, all that's left is to convince it to do something useful.
 There are many software stacks for programming these devices, with varying levels of control and difficulty.
-For something simple like this switch, I opted to use the [Arduino-flavor tool chain](), since it hides all the complexity of platform behind simple `setup()` and `loop()` entrypoints.
+For something simple like this switch, I opted to use the [Arduino-flavor tool chain](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html), since it hides all the complexity of platform behind simple `setup()` and `loop()` entrypoints.
 This makes the ESP32 more accessible to those familiar with the (significantly less-powerful) Arduino micro controllers, and enables very fast development.
 
 Behind the scenes, Espressif has developed a proper bootloader that initializes the ESP32 and then schedules a task to invoke the `loop()` method on repeat.
@@ -237,8 +237,15 @@ void api() {
 In the following you'll see the additional resources I added to the server, including a configuration page for adding network credentials, and a root page that has an ON/OFF button for direct control.
 These more-interactive resources generate HTML on the fly, and serve it up with the proper content type for browsers to load it like any other webpage.
 Also present are the `digitalWrite` and associated setup to control the pin the relay is connected to, along with some code for indicator LEDs.
+When the pin is "written" `LOW` or `HIGH`, the voltage level changes on the output, activating or deactivating whatever the pin is connected to.
+
+To use this software, you would need an [Arduino IDE](https://www.arduino.cc/en/software) and an ESP32 Dev board hooked up via USB-Serial for programming.
+You'll also need to install the [Espressif Arduino-ESP32 libraries](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).
+I include the entire code so it will be easy to use - this could be modified to control basically any hardware, or fit other interfaces.
 
 ```c++
+// Released under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WebServer.h>
