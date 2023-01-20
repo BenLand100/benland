@@ -80,7 +80,8 @@ hr {
 /* Header and Footer */
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   font-size: 1rem;
   background: var(--basecolor);

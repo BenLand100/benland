@@ -194,7 +194,7 @@ $$
 
 where now it looks as if there are now $j$ Schrodinger equations, one for each point!
 This is actually a perfectly reasonable interpretation, which would be even more palatable had I done a more rigorous discretization of space, hypothesizing that $\vec{x}_j$ represents certain allowed positions for particles to be in.
-The final remaining weirdness is an apparent second derivative of spatial coordinates of the $\phi_j$.
+The final remaining weirdness is an apparent second derivative of spatial coordinates of the $\psi_j$.
 In discretizing the wave function, one must also discritize the spatial derivative into a [finite difference](https://en.wikipedia.org/wiki/Finite_difference#Higher-order_differences).
 
 $$
