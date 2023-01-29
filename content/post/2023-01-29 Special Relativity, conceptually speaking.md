@@ -35,7 +35,7 @@ To make this obvious, replace the object following the blue arrow with a ray of 
 
 ## Motion approaching light speed
 
-{{< figure src="/images/relativity/relativistic.svg" class="center" caption="A relativistic scenario with at any speed $v$ where a stickperson, Alice, observes a stickperson in a spaceship, Bob, fly by (left) and visa versa (right). In the time, $\Delta t$ for Alice and $\Delta t_0$ for Bob, a beam of light follows the trajectory of the yellow arrow from floor to ceiling of the spaceship." >}}
+{{< figure src="/images/relativity/relativistic.svg" class="center" caption="A relativistic scenario at any speed $v$ where a stickperson, Alice, observes a stickperson in a spaceship, Bob, fly by (left) and visa versa (right). In the time, $\Delta t$ for Alice and $\Delta t_0$ for Bob, a beam of light follows the trajectory of the yellow arrow from floor to ceiling of the spaceship." >}}
 
 As in the classical scenario before, Alice still sees the light go a distance $C = \sqrt{A^2 + B^2}$ in some span of time $\Delta t$, and Bob observes the same light travel just the distance $A$ in his reference frame.
 But unlike before, where Alice and Bob disagreed on the speed of the object (in an understandable way), we know Alice and Bob will measure the same speed of light, $c$, in both cases.
