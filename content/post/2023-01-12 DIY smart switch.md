@@ -127,7 +127,7 @@ To round it off, the lid has a grate and raised lettering showing the current ra
 
 With everything hooked up to the ESP32, all that's left is to convince it to do something useful.
 There are many software stacks for programming these devices, with varying levels of control and difficulty.
-For something simple like this switch, I opted to use the [Arduino-flavor tool chain](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html), since it hides all the complexity of platform behind simple `setup()` and `loop()` entrypoints.
+For something simple like this plug, I opted to use the [Arduino-flavor tool chain](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html), since it hides all the complexity of platform behind simple `setup()` and `loop()` entrypoints.
 This makes the ESP32 more accessible to those familiar with the (significantly less-powerful) Arduino micro controllers, and enables very fast development.
 
 Behind the scenes, Espressif has developed a proper bootloader that initializes the ESP32 and then schedules a task to invoke the `loop()` method on repeat.
@@ -156,8 +156,8 @@ prefs.end();
 ```
 
 There will always be an initial state where no network info is known, or perhaps the network was unreachable, when the device can fall back to being its own access point.
-`WiFi.softAP("30AmpSwitch", "30AmpSwitch");` 
-This will let any WiFi client connect (SSID: 30AmpSwitch; PW: 30AmpSwitch) and configure network settings.
+`WiFi.softAP("30AmpPlug", "30AmpPlug");` 
+This will let any WiFi client connect (SSID: 30AmpPlug; PW: 30AmpPlug) and configure network settings.
 
 ### Webserver
 
@@ -235,7 +235,8 @@ void api() {
 
 ## The Final Software
 
-In the following you'll see the additional resources I added to the server, including a configuration page for adding network credentials, and a root page that has an ON/OFF button for direct control.
+The software for the ESP32 is now [available on my GitHub](https://github.com/BenLand100/smartplug/blob/master/smartplug.ino). 
+There you will find the additional resources I added to the server, including a configuration page for adding network credentials, and a root page that has an ON/OFF button for direct control.
 These more-interactive resources generate HTML on the fly, and serve it up with the proper content type for browsers to load it like any other webpage.
 Also present are the `digitalWrite` and associated setup to control the pin the relay is connected to, along with some code for indicator LEDs.
 When the pin is "written" `LOW` or `HIGH`, the voltage level changes on the output, activating or deactivating whatever the pin is connected to.
@@ -244,235 +245,15 @@ To use this software, you would need an [Arduino IDE](https://www.arduino.cc/en/
 You'll also need to install the [Espressif Arduino-ESP32 libraries](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).
 I include the entire code so it will be easy to use - this could be modified to control basically any hardware, or fit other interfaces.
 
-```c++
-// Released under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
-#include <Arduino.h>
-#include <WiFi.h>
-#include <WebServer.h>
-#include <Preferences.h>
-
-#define RELAY 12
-#define STATUS 2
-Preferences prefs;
-
-WebServer server(80);
-
-char buffer[4096];
-bool configured;
-bool state;
-
-#define ENTRY digitalWrite(STATUS, configured ? HIGH : LOW);
-#define EXIT digitalWrite(STATUS, configured ? LOW : HIGH);
-
-void root() {
-  ENTRY
-  Serial.print("Power state: ");
-  Serial.println(state ? "ON" : "OFF");
-  sprintf(buffer,
-    "<!DOCTYPE html><html>"
-    "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
-    "<link rel=\"icon\" href=\"data:,\">"
-    "<style>"
-    "html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center; }"
-    ".buttonon { background-color: #00FF00; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer; }"
-    ".buttonoff { background-color: #FF0000; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer; }"
-    "</style>"
-    "</head>"
-    "<body><h1>30A Smart Switch</h1>"
-    "<p>Current State: %s</p> %s"
-    "</body></html>",
-    state ? "ON" : "OFF",
-    ( state
-      ? "<p><a href=\"/off\"><button class=\"buttonoff\">OFF</button></a></p>"
-      : "<p><a href=\"/on\"><button class=\"buttonon\">ON</button></a></p>" ) 
-  );  
-  server.send(200, "text/html", buffer);
-  EXIT
-}
-
-
-void turnOn() {
-  ENTRY
-  digitalWrite(RELAY, HIGH);
-  state = true;  
-  server.sendHeader("Location", "/", true);  
-  server.send(302, "text/plain", "");
-  EXIT
-}
-
-void turnOff() {
-  ENTRY
-  digitalWrite(RELAY, LOW);
-  state = false;
-  server.sendHeader("Location", "/", true);  
-  server.send(302, "text/plain", "");
-  EXIT
-}
-
-void api() {
-  ENTRY
-  if (server.method() == HTTP_GET) {
-    server.send(200, "text/plain", state ? "ON" : "OFF");
-  } else if (server.method() == HTTP_POST) {
-    if (server.hasArg("plain")) { //Arduino/ESP32 puts the body in "plain" to keep everyone confused... 
-      String new_state = server.arg("plain");
-      if (new_state == "ON") {
-        digitalWrite(RELAY, HIGH);
-        state = true;  
-        server.send(200, "text/plain", "ok");
-      } else if (new_state == "OFF") {
-        digitalWrite(RELAY, LOW);
-        state = false;  
-        server.send(200, "text/plain", "ok");
-      } else {
-        server.send(400, "text/plain", "");
-      }
-    } else {
-      server.send(400, "text/plain", "");
-    }
-  } else {
-    server.send(400, "text/plain", "");
-  }
-  EXIT
-}
-
-void configure() {
-  ENTRY
-  if (server.method() == HTTP_GET) {
-    sprintf(buffer,
-      "<!DOCTYPE html><html>"
-      "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
-      "<link rel=\"icon\" href=\"data:,\">"
-      "<style>"
-      "html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center; }"
-      "</style>"
-      "</head>"
-      "<body><h1>30A Smart Switch</h1>"
-      "<p>WiFi Configuration</p>"
-      "<form action=\"/configure\" method=\"post\">"
-      "<label for=\"fname\">Network SSID:</label><br>"
-      "<input type=\"text\" id=\"ssid\" name=\"ssid\"><br>"
-      "<label for=\"fname\">Network Password:</label><br>"
-      "<input type=\"password\" id=\"pwd\" name=\"pwd\"><br>"
-      "<input type=\"submit\" value=\"Submit\">"
-      "</form>"
-      "</body></html>"
-    );  
-    server.send(200, "text/html", buffer);
-  } else if (server.method() == HTTP_POST) {
-    if (server.hasArg("ssid") && server.hasArg("pwd")) {
-      String SSID = server.arg("ssid");
-      String PWD = server.arg("pwd");
-      
-      prefs.begin("credentials", false);
-      prefs.putString("SSID",SSID);
-      prefs.putString("PWD",PWD);
-      prefs.end();
-      
-      sprintf(buffer,
-        "<!DOCTYPE html><html>"
-        "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
-        "<link rel=\"icon\" href=\"data:,\">"
-        "<style>"
-        "html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center; }"
-        "</style>"
-        "</head>"
-        "<body><h1>30A Smart Switch</h1>"
-        "<p>WiFi configuration saved!</p>"
-        "<p>Reconnect after device reboots.</p>"
-        "</body></html>"
-      );  
-      server.send(200, "text/html", buffer);
-      delay(1000);  
-      ESP.restart();
-    } else {
-      server.send(400, "text/plain", "");
-    }
-  } else {
-    server.send(400, "text/plain", "");
-  }
-  EXIT
-}
-
-void setup() {     
-  Serial.begin(115200); 
-
-  pinMode(STATUS, OUTPUT);
-  digitalWrite(STATUS, HIGH);
-  
-  pinMode(RELAY, OUTPUT);
-  digitalWrite(RELAY, LOW);
-  state = false;
-
-  prefs.begin("credentials", true);
-  String SSID = prefs.getString("SSID","");
-  String PWD = prefs.getString("PWD","");
-  prefs.end();
-
-  configured = SSID != "";
-
-  if (configured) {
-    Serial.print("Connecting to ");
-    Serial.print(SSID);
-    WiFi.begin(SSID.c_str(), PWD.c_str()); 
-    for (int i = 0; i < 20; i++) {
-      Serial.print(".");
-      delay(500);
-      if (WiFi.status() == WL_CONNECTED)  break;
-    }
-
-    configured = WiFi.status() == WL_CONNECTED;
-  }
-  
-  if (configured) {
-    Serial.print("\nConnected! IP Address: ");
-    Serial.println(WiFi.localIP()); 
-  
-    server.on("/", root);     
-    server.on("/on", turnOn);   
-    server.on("/off", turnOff);   
-  
-    
-    server.on("/api", HTTP_GET, api);  
-    server.on("/api", HTTP_POST, api); 
-    
-    server.on("/configure", HTTP_GET, configure);  
-    server.on("/configure", HTTP_POST, configure); 
-    
-    digitalWrite(STATUS, LOW);
-     
-  } else {
-    
-    Serial.println("Dropping into AP mode for configuration.");
-    
-    WiFi.softAP("30AmpSwitch", "30AmpSwitch");
-    
-    Serial.print("IP address: ");
-    Serial.println(WiFi.softAPIP());
-
-    server.on("/", HTTP_GET, configure);  
-    server.on("/", HTTP_POST, configure); 
-  }
-          
-  server.begin();     
-   
-}    
-       
-void loop() {    
-  server.handleClient();
-}
-```
-
 ## Setup & Use
 
 {{< figure src="/images/30A/config.png" class="rightsmall" caption="The `/configure` endpoint, which is configured to `/` when disconnected from WiFi and running as an AP." >}}
 
 If for any reason the software can't connect to a WiFi network, it will fallback to being an access point of its own.
 In this mode, a client can navigate to `http://192.168.4.1/` to modify the WiFi configuration, rebooting the ESP32. 
-If it does connect, the switch control screen will be accessible at `http://[dhcp_assigned_ip]/`, as identifiable from the DHCP server's logs.
+If it does connect, the plug control screen will be accessible at `http://[dhcp_assigned_ip]/`, as identifiable from the DHCP server's logs.
 
-{{< figure src="/images/30A/off.png" class="leftsmall" caption="The `/` endpoint when the switch is off, ready to be turned on." >}}
+{{< figure src="/images/30A/off.png" class="leftsmall" caption="The `/` endpoint when the plug is off, ready to be turned on." >}}
 
 In the connected mode, the control screen will enable anyone on the local network the ability to turn the device on and off, as well as see its status. 
 For most home use cases, this is no issue, but if limiting access is a desire, additional logic in the software would be necessary.
@@ -488,7 +269,7 @@ To tie it into Home Assistant, an addition to the `configuration.yaml` is needed
     - platform: rest
       resource: http://[dhcp_assigned_ip]/api
       device_class: switch
-      name: 30A Smart Switch
+      name: 30A Smart Plug
  ```
 Be sure to fill in the IP, set an appropriate name, restart Home Assistant, and you're good to go! 
 
