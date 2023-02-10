@@ -21,7 +21,7 @@ To tie it back to the real science that is quantum mechanics, and develop the si
 
 ### Wave functions
 Most formulations of quantum mechanics describes particles as complex [wave functions](https://en.wikipedia.org/wiki/Wave_function), or complex fields, $\psi$, which have some kind of value at every point in space $\vec{x}$.
-Using a simple one-dimensional space, $\psi(\vec{x})$ is just a regular mathematical function of one real variable, which returns a [complex number](/post/2021/10/31/fpga-rf-receiver/#an-aside-on-complex-numbers).
+Using a simple one-dimensional space, $\psi(\vec{x})$ is just a regular mathematical function of one real variable, which returns a complex number (see a [previous aside on complex numbers](/post/2021/10/31/fpga-rf-receiver/#an-aside-on-complex-numbers)).
 The [usual interpretation](https://en.wikipedia.org/wiki/Copenhagen_interpretation) of quantum mechanics may disagree, but the thinking these days (especially in quantum field theory) is that the wave function is the [physically real](https://en.wikipedia.org/wiki/Wave_function#Ontology) object here.
 At the very least, the wave function conclusively describes the chance to detect the particle according to a probability distribution 
 
@@ -67,7 +67,7 @@ This means there are two classes of solution, in general:
 
 It's important to recognize that the hat on the Hamiltonian denotes an "operator". 
 Operators are like functions of wave functions, which return another wave function. 
-These are not often written like functions taking an argument, $\hat{H}(\psi(\vec{x},t))$, but as a function accepting an argument from the right in what appears to be an multiplication, $\hat{H}\psi$, where I've employed another notational convenience, and stopped putting function arguments on wave functions.
+These are not often written like functions taking an argument, $\hat{H}(\psi(\vec{x},t))$, but as a function accepting an argument from the right in what appears to be a multiplication, $\hat{H}\psi$, where I've employed another notational convenience, and stopped putting function arguments on wave functions.
 While I'm at it, I choose units where all pesky constants like $\hbar$ are exactly $1$, and stop writing them.
 Using this convention, one would often write the above equations this way:
 
@@ -138,16 +138,18 @@ $$
 where a squared operator means to apply it twice in a row to whatever is to the right. 
 
 Now for the question of how to extract momentum from a wave function.
-The probability of detecting a particle is the magnitude of the complex wave function, but the momentum is encoded in the rate of change of phase of the complex numbers with respect to position, or $\frac{d\psi}{dx}$.
-If $\phi$ is further restricted to being an eigenstate of the momentum operator as well
+The probability of detecting a particle is the magnitude of the complex wave function, but the momentum is encoded in the rate of change of phase of the complex numbers with respect to position, or the imaginary part of $\frac{d\psi}{dx}$.
+This can be made clear if $\phi$ is further restricted to being an eigenstate of the momentum operator
 $$
 \hat{p}\phi = p\phi
 $$
-then we know two things:
-1. The result of applying the momentum operator to a momentum eigenstate must be proportional to the eigenstate.
-2. The momentum eigenstate is an eigenstate of the Hamiltonian as well, and therefore only the phase, not the magnitude, changes in time. 
+We can then say three things about the form of momentum operator, if we consider a Hamiltonian with no potential:
 
-This implies that the momentum operator is given by
+1. The result of applying the momentum operator to a momentum eigenstate must be proportional (by $p$) to the eigenstate.
+2. The momentum eigenstate is an eigenstate of the Hamiltonian as well, and therefore only the phase, not the magnitude, changes in time. That phase change is proprtional to $p^2$. 
+3. A state with momentum but constant magnitude must have the same magnitude everywhere in space, by symmetry, meaning spatial derivatives should have no real component.
+
+This implies that the momentum operator is takes an imaginary spatial derivative to a real number 
 $$
 \hat{p} = -i\frac{d}{dx}
 $$
@@ -170,9 +172,9 @@ $$
 $$
 \frac{d\psi}{dt} = \frac{i}{2m}\frac{d^2}{dx^2}\psi - iV\psi
 $$
-which, considering the factor of $i$ means the momentum squared (energy, or second derivative of the phase as a function of position) serves to rotate the phase in time, while the second derivative of the magnitude as a function of position serves to change the magnitude of the wave function in time.
+which, considering the factor of $i$ means the momentum squared (energy, or second derivative of the phase as a function of position) serves to rotate the phase in time, while the second derivative of the magnitude as a function of position (for more general wavefunctions than momentum eigenstates) serves to change the magnitude of the wave function in time.
 
-In the end, this this complicated interplay lets the Schrodinger equation move probability around according to the momentum encoded in the wave function, and critically lets the Schrodinger equation generate momentum in the wave function whenever there are spatial gradients in probability.
+In the end, this complicated interplay lets the Schrodinger equation move probability around according to the momentum encoded in the wave function, and critically lets the Schrodinger equation generate momentum in the wave function whenever there are spatial gradients in probability.
 To believe this, one really has to see it in action.
 
 ## Towards a numerical simulation
