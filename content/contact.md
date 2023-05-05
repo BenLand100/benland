@@ -2,7 +2,7 @@
 title: Contact Info
 ---
 
-Connect with me on Mastodon [@benland100@ben.land](https://mastodon.ben.land/@benland100).
+Connect with me on LinkedIn: [linkedin.com/in/benland100](https://www.linkedin.com/in/benland100/).
 
 Contact me via E-mail. I usually have the username `benland100`, unless otherwise noted, and you can find me `@`:
 * GMail (primary/personal) `gmail.com`
