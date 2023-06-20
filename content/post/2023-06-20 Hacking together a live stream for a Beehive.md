@@ -49,7 +49,7 @@ Forgetting the password for the device might result in having to add a weather-p
 
 ### PoE is delightful
 
-I acquired a [TL-SG108PE 8-port PoE switch]() to drive this (and optionally 3 more) camera(s).
+I acquired a [TL-SG108PE 8-port PoE switch](https://www.tp-link.com/us/home-networking/8-port-switch/tl-sg108pe/) to drive this (and optionally 3 more) camera(s).
 Couple that with some direct-bury CAT-6 Ethernet cable, and it was very easy to trench power and data connectivity out to the hive.
 Technically, this is limited to 330 feet, due to the Ethernet standard, but one might go further with PoE range extenders...
 100ft cables were sufficient to reach anywhere in this suburban environment.
@@ -115,7 +115,8 @@ To get rid of old files, a simple shell loop can be used.
 ```bash
 while true; do 
     echo "Cleanup time!"; 
-    find . -name '*.ts' -type f -mmin +5 -delete; #Delete any *.ts file older than 5 minutes
+    #Delete any *.ts file older than 5 minutes
+    find . -name '*.ts' -type f -mmin +5 -delete;
     sleep 30; 
 done
 ```
