@@ -75,12 +75,14 @@ A block of wood was used to compress a PVC pipe to the camera mount.
 
 ## Networking
 
-Ultimately this is going to be a public feed, so I'm not to fussed with security on this camera, and connected it to my primary VLAN.
-A more security-forward setup would dedicate a VLAN to cameras, and not route them to the internet at all.
+Ultimately this is going to be a public feed, so I'm not too fussed with security on this camera. 
+That in mind, I connected it to my primary VLAN.
+A more security-forward setup would dedicate a VLAN to cameras, and not route them to the internet, or other machines, at all.
 This results in a DHCP assigned IP, and registers the hostname `beecam` on the local network DNS server.
 
 ## Camera Services
 
+Out of the box, the non-app streaming capabilities are not turned on, but can be enabled via the web UI.
 Under the advanced network settings, "port" settings can be adjusted to enable [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol). 
 This will cause the camera to emit an RTSP stream on port 554 (by default) containing the live video feed.
 Assuming you created a `stream` user with the password `password`, this means the following URL is now a valid h265 stream.
