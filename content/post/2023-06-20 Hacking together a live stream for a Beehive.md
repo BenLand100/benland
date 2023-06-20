@@ -1,11 +1,11 @@
 ---
-title: 'Hacking together a live feed for a beehive'
+title: 'Hacking together a live stream video feed for a beehive'
 date: '2023-06-20'
 categories: 
   - Electronics
   - Home Improvement
   - Sysadmin
-description: Read about how I used a slightly modified security camera to setup a live stream for my beehive.
+description: Read about how I used a slightly modified security camera to setup a live stream for the bees entering and exiting my beehive.
 slug: hacking-together-beecam
 toc: true
 ---
