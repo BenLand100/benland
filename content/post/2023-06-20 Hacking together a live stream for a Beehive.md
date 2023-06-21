@@ -73,14 +73,14 @@ Brute force and a small pipe wrench was used to overcome the glue, which seems t
 This was not my proudest creation, but it got the camera close to the hive, in an easily adjustable (by virtue of re-staking) manner.
 A block of wood was used to compress a PVC pipe to the camera mount.
 
-## Networking
+## Network connectivity
 
 Ultimately this is going to be a public feed, so I'm not too fussed with security on this camera. 
 That in mind, I connected it to my primary VLAN.
 A more security-forward setup would dedicate a VLAN to cameras, and not route them to the internet, or other machines, at all.
-This results in a DHCP assigned IP, and registers the hostname `beecam` on the local network DNS server.
+Instead of that security-forward approach, this results in a standard DHCP assigned IP for the camera, and the router registers the hostname `beecam` on its local network DNS server.
 
-## Camera Services
+### Camera Services
 
 Out of the box, the non-app streaming capabilities are not turned on, but can be enabled via the web UI.
 Under the advanced network settings, "port" settings can be adjusted to enable [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol). 
@@ -89,6 +89,8 @@ Assuming you created a `stream` user with the password `password`, this means th
 ```
 rtsp://stream:password@beecam:554/h265Preview_01_main
 ```
+
+This network protocol can be accessed by programs like SMplayer, VLC, and ffmpeg to display or manipulate the video feed.
 
 ## Streaming with ffmpeg
 
