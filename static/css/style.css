@@ -260,6 +260,12 @@ figure.rightsmall {
   float:right;
 }
 
+figure.rightxsmall {
+  max-width: 18%;
+  padding: 0.5em 0 0 2%;
+  float:right;
+}
+
 figure.left {
   max-width: 50%;
   padding: 0.5em 2% 0 0;
