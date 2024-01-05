@@ -62,7 +62,7 @@ $$
 \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2} }}
 $$
 
-The Lorentz factor has the property that it's zero for a frame at rest with respect to an observer, and tends towards infinity as the relative velocity approaches the speed of light $c$.
+The Lorentz factor has the property that it's exactly one for any frame at rest with respect to an observer, and tends towards infinity as the relative velocity approaches the speed of light $c$.
 With this, it's more natural to write the previous result as
 
 $$
