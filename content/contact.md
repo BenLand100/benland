@@ -6,7 +6,7 @@ Connect with me on LinkedIn: [linkedin.com/in/benland100](https://www.linkedin.c
 
 Contact me via E-mail. I usually have the username `benland100`, unless otherwise noted, and you can find me `@`:
 * GMail (primary/personal) `gmail.com`
-* This server (secondary/personal) `ben.land` or `benland.us`
+* This server (secondary/personal) `ben.land`
 * Comcast (professional - `benjamin_land@`) `comcast.com`
 * UC Berkeley (academic) `berkeley.edu`
 * Georgia Tech (academic) `gatech.edu`
