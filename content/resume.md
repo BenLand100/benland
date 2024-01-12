@@ -15,7 +15,7 @@ title: Resume/CV
 
 ## Experience
 
-* **Sr. Manager - Data Science** (April 2023 - present)
+* **Sr. Manager - Data Science** (April 2023 - present)  
   Enterprise Business Intelligence, *Comcast*
   
 * **Lead Data Scientist** (September 2021 - April 2023)  
@@ -41,6 +41,7 @@ title: Resume/CV
 
 
 ## Honors/Awards
+
 * **NSSC Fellowship**  
   UC Berkeley (January 2017 - December 2018)
 * **Pierotti Award**  
@@ -62,8 +63,11 @@ title: Resume/CV
 
 ## Publications
 
-* EOS Collaboration. ***EOS: a demonstrator of hybrid optical detector technology***. [arXiv:2211.11969 [physics.ins-det] (2022)](https://arxiv.org/abs/2211.11969).
-* SNO+ Collaboration. ***Observation of Antineutrinos from Distant Reactors using Pure Water at SNO+***. [arXiv:2210.14154 [nucl-ex] (2022)](https://arxiv.org/abs/2210.14154).
+* DUNE Collaboration. ***Identification and reconstruction of low-energy electrons in the ProtoDUNE-SP detector***. [Phys. Rev. D 107, 092012 (2023)](https://doi.org/10.1103/PhysRevD.107.092012).
+* DUNE Collaboration. ***Highly-parallelized simulation of a pixelated LArTPC on a GPU***. [JINST 18, P04034 (2023)](https://doi.org/10.1088/1748-0221/18/04/P04034).
+* SNO+ Collaboration. ***Evidence of Antineutrinos from Distant Reactors using Pure Water at SNO+***. [Phys. Rev. Lett. 130, 091801 (2023)](https://doi.org/10.1103/PhysRevLett.130.091801).
+* EOS Collaboration. ***Eos: conceptual design for a demonstrator of hybrid optical detector technology***. [JINST 18, P02009 (2023)](https://doi.org/10.1088/1748-0221/18/02/P02009).
+* DUNE Collaboration. ***Reconstruction of interactions in the ProtoDUNE-SP detector with Pandora***. [Eur. Phys. J. C 83:618 (2023)](https://doi.org/10.1140/epjc/s10052-023-11733-2).
 * DUNE Collaboration. ***Scintillation light detection in the 6-m drift-length ProtoDUNE Dual Phase liquid argon TPC***. [Eur. Phys. J. C 82:618 (2022)](https://doi.org/10.1140/epjc/s10052-022-10549-w).
 * SNO+ Collaboration. ***Improved search for invisible modes of nucleon decay in water with the SNO+detector***. [Phys. Rev. D 105, 112012](https://doi.org/10.1103/PhysRevD.105.112012).
 * Theia Collaboration. ***Theia: Summary of physics program. Snowmass White Paper Submission***. [arXiv:2202.12839  [hep-ex] (2022)](https://arxiv.org/abs/2202.12839).
