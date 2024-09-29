@@ -131,10 +131,10 @@ The horsehead itself is a dark (cold/non-illuminated) nebula in the foreground, 
 The "flame" is a similar effect, with the dark nebula blocking the bright star(s) illuminating that region.
 A cool red star can be seen in the lower left, notably distinct from the hot blue stars.
 
-Some stars here have a much more prominent bright cloud around them, notably NGC2023 just below and to the left of the horsehead and in the crop to the right. 
+Some stars here have a much more prominent bright cloud around them, notably NGC2023 just below and to the left of the Horsehead and in the crop to the right. 
 Here, this is starlight reflected off the nearby nebula, and texture (light and dark regions of lower and higher density) can be seen.
 Compare this to the "flare" around the brightest star, which is an optical artifact instead of a reflection nebula. 
-There is another good reflection nebula all the way to the left at the same vertical offset as the one below the horsehead, and another near the bottom directly below the horsehead. 
+There is another good reflection nebula all the way to the left at the same vertical offset as the one below the Horsehead, and another near the bottom directly below the Horsehead. 
 
 The bottom half of the image probably at first appears to simply have fewer stars.
 On close inspection you can see the background stars are simply being blocked by the dark nebula that makes the horse head, which is the same nebula being illuminated to form NGC2023 and forming the dark part of the flame.
@@ -173,7 +173,7 @@ Without these coatings, the sensor sees an out-of-focus reflection of stars off 
 These two galaxies (bright central spots) are merging currently, or at least were 23 million years ago when the light started its journey to us, which is what it means to be 23 million light years away (though NASA and Wikipedia disagree on this).
 To appear at this size at that distance, that puts the galaxy at about 77,000 light years across, which is fairly stadard for spiral galaxies.
 With this image, we're getting into _serious effort_ territory with three hours of data in one sitting. 
-Largely due to the distance, galaxies are much fainter, and require more time to get a good low-noise iamge.
+Largely due to the distance, galaxies are much fainter, and require more time to get a good low-noise image.
 
 To some extent I can compensate for galaxies being dimmer targets in post processing by setting lower black levels, or applying harder stretches, but if you look closely you can see that begins to reveal imperfections in the background flatness.
 These imperfections are _largely_ due to light (the street lights and porch lights referenced earlier) getting to the camera sensor by routes other than the primary and secondary mirror, which turn up as light or dark areas in an otherwise flat background.
