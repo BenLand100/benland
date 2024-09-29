@@ -92,7 +92,7 @@ Now to the fun part, in roughly chronological/experience order.
 This is one of the earliest images I took, and also includes NGC 1977 the Running Man nebula off to the left. The Orion nebula is a star-forming region visible to the naked eye as the "sword stars" in the Orion constellation, below the belt. Despite being an early image, there's a lot of clear detail and low noise because this nebula is _very bright_ from all the reflected starlight and hot glowing gas. The nebula is around 1300 light years away, within our own galaxy. It's about 24 light years across spanning about 1 degree, or about two full moons, in the sky. 
 
 ### What am I seeing?
-{{<figure src="/images/astro/orion_gas.jpg" class="leftsmall" caption="The colors here are all due to hot glowing gas (hydrogen -- red, oxygen -- blue), with density and temperature distributions viewed from a distance giving texture. Reflected starlight accounts for the remaining light (blues/grays). The dots are foreground and background stars.">}}
+{{<figure src="/images/astro/orion_gas.jpg" class="left" caption="The colors here are all due to hot glowing gas (hydrogen -- red, oxygen -- blue), with density and temperature distributions viewed from a distance giving texture. Reflected starlight accounts for the remaining light (blues/grays). The dots are foreground and background stars.">}}
 The diffuse light you see is a combination of reflected starlight off gas and dust (white/gray/blues), glowing hot oxygen gas (more saturated blues), and glowing hot hydrogen gas (reds).
 The texture to the diffuse light is due to how the nebula material is distributed, which is mostly driven by solar winds of nearby stars, differences in density, and [light pressure](https://en.wikipedia.org/wiki/Radiation_pressure) from nearby stars.
 Most other colors have similar hot-chemical origins.
@@ -100,7 +100,7 @@ The heat is produced by a combination of friction, gravitational contraction, an
 The stars themselves are the result of the nebula material amassing and getting compressed by gravity to a point that fusion initiates.
 Where did the nebular material come from? Old dead stars, mostly. 
 
-{{<figure src="/images/astro/orion_stars.jpg" class="rightsmall" caption="Everything pictured here is a star or an optical artifact resulting from starlight. Note the different sized bright cores (proportional to brightness, not actual size), flare around the brightest stars, and diffraction spikes. Incidentally, the width of the diffraction spikes shows the focus size of the star, before the pixels spill over to make the core.">}}
+{{<figure src="/images/astro/orion_stars.jpg" class="right" caption="Everything pictured here is a star or an optical artifact resulting from starlight. Note the different sized bright cores (proportional to brightness, not actual size), flare around the brightest stars, and diffraction spikes. Incidentally, the width of the diffraction spikes shows the focus size of the star, before the pixels spill over to make the core.">}}
 Stars are visible as bright points of light. The camera sensor pixels tend to "fill up" under this point, and spill over into adjacent pixels, giving stars an apparent size.
 This size is purely an artifact of the imaging process, however, and is only proportional to apparent brightness.
 The brightest stars have horizontal and vertical "spikes" which are again proportional to the brightness.
