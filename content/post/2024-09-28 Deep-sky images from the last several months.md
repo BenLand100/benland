@@ -51,7 +51,7 @@ Dedicated cameras exist for deep-sky astrophotography, and will often include a 
 The marginally-known truth is that the best of these cameras are very similar to modern Sony mirrorless cameras _except_ for those two factors, and often use the exact same sensors.
 Still, the astrophotography software out in the wild tend to support the dedicated cameras better, and their niche features are very useful for deep sky photography. 
 
-For my work, I've used both a Sony α7C 24MP full frame mirrorless camera and a ZWO ASI2300MC-Pro (using Sony's IMX571 24MP APS-C sensor) dedicated astro cameras with all the bells and whistles.
+For my work, I've used both a Sony α7C 24MP full frame mirrorless camera and a ZWO ASI2600MC-Pro (using Sony's IMX571 24MP APS-C sensor) dedicated astro cameras with all the bells and whistles.
 I had good experiences with the α7C, but ultimately decided full frame was not to my advantage in reach, pixel density, or telescope image spot size (the corners were not illuminated). 
 The APS-C dedicated astro cameras were therefore really attractive, and I was happy to keep using my α7C exclusively for photography. 
 The cooling does help noticeably reduce noise in the resulting data, and being able to see the deep-red light from glowing hydrogen made me a happy customer.
