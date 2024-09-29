@@ -124,7 +124,7 @@ The very bright star with huge diffraction spikes (purely optical effects) is th
 
 ### What am I seeing? 
 
-{{<figure src="/images/astro/ngc2023_near_horsehead.jpg" link="/images/astro/ic434_horsehead_native.jpg" class="rightsmall" caption="NGC2023 cropped from the above for clarity. This reflection nebula is _not_ an optical artifact, unlike most other light around bright stars. The illuminating star is dead center.">}}
+{{<figure src="/images/astro/ngc2023_near_horsehead.jpg" link="/images/astro/ic434_horsehead_native.jpg" class="left" caption="NGC2023 cropped from the above for clarity. This reflection nebula is _not_ an optical artifact, unlike most other light around bright stars. The illuminating star is dead center.">}}
 Everything about the Orion nebula still applies, and these sections will continue to build on each other.
 This, like all the images here, are at approximately the same scale, so this and the Orion nebula are similar sizes.
 The horsehead itself is a dark (cold/non-illuminated) nebula in the foreground, blocking light from a hot glowing region.
@@ -157,6 +157,8 @@ Because only apparent brightness and temperature are evident in images of stars,
 All visible stars visible in my images are within our own galaxy, however, as stars from other galaxies will only be resolved as a gradient proportional to star density.
 More on that next.
 
+
+{{<figure src="/images/astro/rosette_star_halos.jpg" class="right" caption="In addition to diffraction spikes and flare seen before on bright stars, the Astromania UHC filter introduces a distinct 'halo' optical effect.">}}
 Here, the cluster of bright central stars are actually within the nebula that appears to surround them, and formed from the same material the nebula is made from. 
 The void in the nebula we see has been created by light pressure and solar wind from the new stars, heating the impacted areas of the nebula up to the point of glowing hot.
 The more diffuse areas are "blown away" first, leaving the denser strands to appear as structures or tendrils.
@@ -194,10 +196,10 @@ The more golden/redish regions will be the older cooler stars.
 Galactic cores tend to have enough stars to have blown away the dust long ago, leading to very little new star formation, and a generally older, redder population of stars.
 Towards the fringes, that dust collects and gets pressed back into new stars in a repeating cycle as stars die and return their material with catastrophic explosions or general off-gassing of hot material.
 
-{{<figure src="/images/astro/background_galaxies.jpg" class="right" caption="Crop of the background of the M51 image, showing some more distant galaxies: NGC5169 and NGC5173. The smallest was not labeled in the catalogs I had available, but is certainly known. The other dots in this image are stars in our galaxy.">}}
+{{<figure src="/images/astro/background_galaxies.jpg" class="center" caption="Crop of the background of the M51 image, showing some more distant galaxies: NGC5169 and NGC5173. The smallest was not labeled in the catalogs I had available, but is certainly known. The other dots in this image are stars in our galaxy.">}}
 In the star field surrounding M51, there are luminous objects that appear to be fuzzy stars, but lack diffraction spikes or a saturated core.
 Sometimes they will have some visible structure, or a clear shape, and other times will simply be a fuzzy orb -- these are even more distant galaxies.
-Several examples are shown in the crop on the right, which are over a hundred million light years away.
+Several examples are shown in the crop above, which are over a hundred million light years away.
 While it can be hard to discriminate a star from a galaxy (very distant galaxies are very hard to tell from dim stars), some smudges of light can be very clearly identified as galaxies by their extent and lack of diffraction spikes.
 Generally speaking the smaller they are the further they are, so these background galaxies are some of the furthest objects I've imaged.
 
@@ -207,13 +209,13 @@ The earlier nebula images were mostly stars for the simple reason that nebula te
 
 {{<figure src="/images/astro/leo_triplet_small.jpg" link="/images/astro/leo_triplet_native.jpg" class="center" caption="M65 M64 NGC3628 from March 29, 2024 -- $60 \times 4 \mathrm{min}$ exposures (4hr total) with the α7C. Acquired with [INDI](https://indilib.org/index.php) + [KStars/Ekos](https://kstars.kde.org/). Processed with [Siril](https://siril.org/). Click for full resolution.">}}
 
-{{<figure src="/images/astro/m65.jpg" class="rightsmall" caption="M65 has a bit more of a tilt, and its bright compact core is prominent. Big dust clouds block the star haze from this perspective.">}}
-A bit further and therefore a bit smaller each than the Whirlpool galaxy, there is a cluster of mutually-nearby galaxies 35 million light years away called the Leo Triplet. 
-At my focal length, and with a full frame sensor, I was able to capture all three in the frame without needing a mosaic. 
+{{<figure src="/images/astro/m65.jpg" class="right" caption="M65 has a bit more of a tilt, and its bright compact core is prominent. Big dust clouds block the star haze from this perspective.">}}
 {{<figure src="/images/astro/ngc3628.jpg" class="leftsmall" caption="NGC3628 is nearly edge-on and its dust clouds block much of the light from the galaxies stars.">}}
+A bit further and therefore a bit smaller (each) than the Whirlpool galaxy, there is a cluster of mutually-nearby galaxies 35 million light years away called the Leo Triplet. 
+At my focal length, and with a full frame sensor, I was able to capture all three in the frame without needing a mosaic. 
 The four hours it took to capture this data is pretty close to the limit of how long I can see a target from my yard before it goes behind a tree, but I can start thinking about combining data from multiple nights.
 
-{{<figure src="/images/astro/m66.jpg" class="rightsmall" caption="M66 has a similar look to the Whirlpool galaxy, and both are nearly face-on.">}}
+{{<figure src="/images/astro/m66.jpg" class="right" caption="M66 has a similar look to the Whirlpool galaxy, and both are nearly face-on.">}}
 The new APS-C camera I have will in principle be able to provide better resolution, as well, but often I am limited by the stability of the air (a concept called "seeing" in astronomy) which slightly blurs out the details by refracting the light slightly in a time dependent way. 
 If will be interesting to see how much better I can do next March.
 
@@ -275,6 +277,8 @@ This makes it large in the sky, and almost overfills the APS-C sensor at 800mm f
 
 I would have rotated the camera 90deg for this, but I still had not really figured out how to take proper flats, and was postponing modifications to the image train to get proper flats to process the Eastern Veil nebula data pictured above.
 I decided not to rotate and crop in post just to keep all these images at roughly the same scale, and I'll admit it's a curious framing.
+
+All that said, this is probably the best image I've taken so far, and it's been a journey getting here.
 
 ### What am I seeing?
 
