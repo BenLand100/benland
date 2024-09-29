@@ -246,7 +246,7 @@ This planetary nebula is approximately 2 light years across, and is still expand
 
 {{<figure src="/images/astro/ngc6992_eastern_veil_nebula_small.jpg" link="/images/astro/ngc6992_eastern_veil_nebula_native.jpg" class="center" caption="NGC6992 from Sept 4, 2024 -- $20 \times 5 \mathrm{min}$ exposures (1h40m total) with the ASI2600MC-Pro @ -10C. Acquired with [INDI](https://indilib.org/index.php) + [KStars/Ekos](https://kstars.kde.org/). Processed with [oscdeeppy](https://github.com/BenLand100/oscdeeppy). Click for full resolution.">}}
 
-{{<figure src="/images/astro/ngc6992_eastern_veil_nebula_a7c.jpg" class="right" caption="I also shot this target in Dec 2023 for about 30m ($10\times3\mathrm{min}$) with my α7C, but the red light was very faint.">}}
+{{<figure src="/images/astro/ngc6992_eastern_veil_nebula_a7c.jpg" class="left" caption="I also shot this target in Dec 2023 for about 30m ($10\times3\mathrm{min}$) with my α7C, but the red light was very faint.">}}
 This image of the Eastern Veil nebula is the first image I took with the APS-C ASI2600MC-Pro, with the intention of testing out its ability to see the red glow of hot hydrogen better than my Sony α7C. 
 Needless to say the 2600MC did not disappoint, especially since I had tried this target before to lackluster effect. To be fair, the former attempt was much less exposure time, but it clearly was not seeing the red glow.
 
