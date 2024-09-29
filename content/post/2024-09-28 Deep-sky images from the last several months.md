@@ -1,10 +1,10 @@
 ---
-title: 'Deep-sky images from the Philadelphia suburbs'
+title: 'Deep-sky images from the Philadelphia suburbs, vol 1'
 date: '2024-09-28'
 categories: 
   - Astrophotography
-description: A survey of my best astrophotography from the last year.
-slug: deep-sky-images
+description: A survey of my best astrophotography from the last year, and contextualized descriptions of the pictured objects.
+slug: deep-sky-images-vol-one
 toc: true
 ---
 
@@ -124,13 +124,14 @@ The very bright star with huge diffraction spikes (purely optical effects) is th
 
 ### What am I seeing? 
 
-Everything about the Orion nebula still applies. 
+{{<figure src="/images/astro/ngc2023_near_horsehead.jpg" link="/images/astro/ic434_horsehead_native.jpg" class="rightsmall" caption="NGC2023 cropped from the above for clarity. This reflection nebula is _not_ an optical artifact, unlike most other light around bright stars. The illuminating star is dead center.">}}
+Everything about the Orion nebula still applies, and these sections will continue to build on each other.
 This, like all the images here, are at approximately the same scale, so this and the Orion nebula are similar sizes.
 The horsehead itself is a dark (cold/non-illuminated) nebula in the foreground, blocking light from a hot glowing region.
 The "flame" is a similar effect, with the dark nebula blocking the bright star(s) illuminating that region.
 A cool red star can be seen in the lower left, notably distinct from the hot blue stars.
 
-Some stars here have a much more prominent bright cloud around them, notably NGC2023 just below and to the left of the horsehead. 
+Some stars here have a much more prominent bright cloud around them, notably NGC2023 just below and to the left of the horsehead and in the crop to the right. 
 Here, this is starlight reflected off the nearby nebula, and texture (light and dark regions of lower and higher density) can be seen.
 Compare this to the "flare" around the brightest star, which is an optical artifact instead of a reflection nebula. 
 There is another good reflection nebula all the way to the left at the same vertical offset as the one below the horsehead, and another near the bottom directly below the horsehead. 
