@@ -265,12 +265,12 @@ This is only the eastern part of of what ultimately is a shockwave, circular/sph
 The light and heat of the explosion plus the remnant hydrogen and oxygen of the star and interstellar space nearby results in the same glowing reds and blues present in nebula associated with star forming regions.
 In time, this and other shockwaves will kick off the clumping of interstellar gas, resulting in new stars.
 
-## M31 -- The Triangulum galaxy
+## M33 -- The Triangulum galaxy
 
-{{<figure src="/images/astro/m33_triangulum_small.jpg" link="/images/astro/m33_triangulum_native.jpg" class="center" caption="NGC6992 from September 7, 2024 -- $40 \times 5 \mathrm{min}$ exposures (3h20m total) with the ASI2600MC-Pro @ -10C. Acquired with [INDI](https://indilib.org/index.php) + [KStars/Ekos](https://kstars.kde.org/). Processed with [oscdeeppy](https://github.com/BenLand100/oscdeeppy). Click for full resolution.">}}
+{{<figure src="/images/astro/m33_triangulum_small.jpg" link="/images/astro/m33_triangulum_native.jpg" class="center" caption="M33 from September 7, 2024 -- $40 \times 5 \mathrm{min}$ exposures (3h20m total) with the ASI2600MC-Pro @ -10C. Acquired with [INDI](https://indilib.org/index.php) + [KStars/Ekos](https://kstars.kde.org/). Processed with [oscdeeppy](https://github.com/BenLand100/oscdeeppy). Click for full resolution.">}}
 
 
-{{<figure src="/images/astro/triangulum_core.jpg" class="right" caption="M31 crop of the core to see the limiting resolution for this acquisition.">}}
+{{<figure src="/images/astro/triangulum_core.jpg" class="right" caption="M33 crop of the core to see the limiting resolution for this acquisition.">}}
 After testing out the 2600MC on nebula (and never really spending enough time on targets), I realized Triangulum was up one night as the Crescent nebula went behind a tree, and started a nice acquisition around zenith with minimal moon. 
 Triangulum is close by, in galactic terms, at only 2.7 million light years away -- over ten times closer than the other pictured galaxies.
 This makes it large in the sky, and almost overfills the APS-C sensor at 800mm focal length. 
@@ -282,7 +282,7 @@ All that said, this is probably the best image I've taken so far, and it's been 
 
 ### What am I seeing?
 
-{{<figure src="/images/astro/triangulum_nebula.jpg" class="left" caption="NGC604, the largest known hydrogen-alpha emission nebula in the 'upper left' of M31 as pictured above.">}}
+{{<figure src="/images/astro/triangulum_nebula.jpg" class="left" caption="NGC604, the largest known hydrogen-alpha emission nebula in the 'upper left' of M33 as pictured above.">}}
 Triangulum is packed with young blue stars, and the hydrogen-alpha glow of hot gas can be seen in several locations, even from outside the galaxy itself, as pictured to the left.
 This red glowing region is very similar to the Orion nebula pictured earlier, but far larger (and the largest of its kind known) at nearly 1500 light years across.
 The proximity of Triangulum reveals fine detail in the dust in and around the spiral arms, and instead of just a star haze, distinct bright clusters can be seen.
