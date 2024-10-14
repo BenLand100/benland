@@ -1,5 +1,5 @@
 ---
-title: 'Deep-sky images from the Philadelphia suburbs, vol 1'
+title: 'Deep-sky images vol. 1: from the Philadelphia suburbs'
 date: '2024-09-28'
 categories: 
   - Astrophotography
