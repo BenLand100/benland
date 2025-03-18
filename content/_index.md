@@ -17,5 +17,6 @@ Look me up:
 
 Check out my:
 [BeeCam](https://ben.land/beecam/) /
+[Photography](https://ben.land/photos/) /
 [Astrophotography](https://ben.land/astro/) /
 [Earth](https://ben.land/earth/)

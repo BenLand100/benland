@@ -20,6 +20,6 @@ In this role I develop new techniques and approaches for solving business proble
 Otherwise, I am 33(+) years old, currently live in Ardmore, PA, and originally hail from Macon, GA. 
 I am a long time programmer, have contributed to many projects, and learned many languages since I became interested in using computers to automate mundane human tasks (read: automating MMORPGs) back in the early aughts. 
 Check out my [GitHub](https://github.com/BenLand100) for more about the projects I deemed most interesting. 
-Besides physics and programming, I enjoy the outdoors (that is, photographing them), video games (Minecraft, Factorio, Rimworld...), tinkering with electronics, and [astrophotography](https://immich.ben.land/share/C0HEi5rSDIGh38n8l3MGSIBTWWiMLH8QgzF-V-IqPn5E6aDfskwJT8bKreeBRYKCFgs).
+Besides physics and programming, I enjoy the [photography](https://ben.land/photos/), [beekeeping](https://ben.land/beecam/), video games (Minecraft, Factorio, Rimworld...), tinkering with electronics, and [astrophotography](https://ben.land/astro/).
 
 
