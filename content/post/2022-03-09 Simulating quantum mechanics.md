@@ -149,7 +149,7 @@ We can then say three things about the form of momentum operator, if we consider
 2. The momentum eigenstate is an eigenstate of the Hamiltonian as well, and therefore only the phase, not the magnitude, changes in time. That phase change is proprtional to $p^2$. 
 3. A state with momentum but constant magnitude must have the same magnitude everywhere in space, by symmetry, meaning spatial derivatives should have no real component.
 
-This implies that the momentum operator is takes an imaginary spatial derivative to a real number 
+This implies that the momentum operator turns an imaginary spatial derivative into a real number 
 $$
 \hat{p} = -i\frac{d}{dx}
 $$
