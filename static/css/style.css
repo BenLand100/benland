@@ -203,6 +203,13 @@ img[src$='#leftsmall']
   float:left;
 }
 
+img[src$='#leftsupersmall']
+{
+  max-width: 17%;
+  padding: 0.5em 2% 0 0;
+  float:left;
+}
+
 img[src$='#leftlarge']
 {
   max-width: 60%;
@@ -220,6 +227,13 @@ img[src$='#right']
 img[src$='#rightsmall']
 {
   max-width: 25%;
+  padding: 0.5em 0 0 2%;
+  float:right;
+}
+
+img[src$='#rightsupersmall']
+{
+  max-width: 17%;
   padding: 0.5em 0 0 2%;
   float:right;
 }
