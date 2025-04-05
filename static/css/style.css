@@ -159,7 +159,7 @@ footer {
 
 code:not([class]) {
   font-family:
-    Courier New,
+    "Courier New",
     monospace;
   font-size: 100%;
   padding: 2px;
@@ -171,14 +171,14 @@ code:not([class]) {
 
 div.highlight pre {
   border: 1px solid var(--basecolor);
-  box-shadow: 2px 2px 2px var(--basecolor);=
+  box-shadow: 2px 2px 2px var(--basecolor);
   background: #eee;
   overflow-x: auto;
 }
 
 pre code {
   font-family:
-    Courier New,
+    "Courier New",
     monospace;
   font-size: 100%;
   padding: 2px;
@@ -264,7 +264,6 @@ figure img {
 
 figure.center {
   padding: 0.5em 0 0 2%;
-  float:center;
 }
 
 figure.right {
