@@ -1,4 +1,4 @@
-    <header>
+    <header {{if .IsHome }} style="position: sticky;" {{ end }}>
       <nav>
         <ul>
           {{ $title := lower .Title -}} 

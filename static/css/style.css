@@ -45,7 +45,7 @@ div.home-wrapper {
 }
 
 div.home-wrapper img {
-  width: 50%;
+  width: 57%;
   aspect-ratio: 498/504; 
 }
 
@@ -84,7 +84,6 @@ hr {
 /* Header and Footer */
 
 header {
-  position: sticky;
   top: 0;
   z-index: 10;
   width: 100%;
@@ -126,7 +125,7 @@ header li.searchbar {
 }
 
 header input.searchbar {
-  width: auto;
+  width: 100px;
   color: #fff;
   font-size: 1rem;
   background-color: var(--basecolor);
@@ -136,7 +135,7 @@ header input.searchbar {
 }
 
 header input.searchbar:focus {
-  width: 100%;
+  width: 100px;
   color: #fff;
   font-size: 1rem;
   background-color: var(--basecolor);
