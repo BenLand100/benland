@@ -44,6 +44,10 @@ div.home-wrapper {
   hyphens: none;
 }
 
+div.home-wrapper img {
+  width: 57%;
+}
+
 hr {
   border-color: var(--basecolor);
   width: 100%;
