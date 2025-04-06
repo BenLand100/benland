@@ -2,6 +2,7 @@
 title: 'Counting bees in a video feed with a neural network'
 date: '2023-12-15'
 categories: 
+  - Beekeeping
   - Programming
   - Machine learning
 description: Collecting data for and training a U-net inspired neural network for identifying bees in a video feed.

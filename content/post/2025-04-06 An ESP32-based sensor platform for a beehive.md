@@ -2,6 +2,7 @@
 title: 'BeeLogger, an ESP32-based sensor platform for monitoring a beehive'
 date: '2025-04-06'
 categories: 
+  - Beekeeping
   - Electronics
   - 3D Printing
   - Programming

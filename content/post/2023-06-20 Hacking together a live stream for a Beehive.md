@@ -2,6 +2,7 @@
 title: 'Hacking together a live stream video feed for a beehive'
 date: '2023-06-20'
 categories: 
+  - Beekeeping
   - Electronics
   - Home Improvement
   - Sysadmin
