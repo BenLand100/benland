@@ -5,7 +5,7 @@ title: Home
 # Benjamin J. Land
 ~BenLand100
 
-![Profile Picture](/images/profile.jpg)
+![Profile Picture](/images/profile.webp)
 
 Data&nbsp;scientist / Particle&nbsp;physicist / Computer&nbsp;nerd / Scifi&nbsp;superfan
 
