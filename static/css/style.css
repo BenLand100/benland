@@ -4,9 +4,10 @@
 
 html {
   font-family:
-    'Open Sans',
-    'Helvetica',
+    'Trebuchet MS',
+    'Arial',
     sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -17,12 +18,13 @@ body {
 
 h1 {
   line-height: 1.5em;
+  font-size: 2.5em;
 }
 
 a {
   color: var(--basecolor);
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
@@ -151,7 +153,7 @@ header a {
 }
 
 header .current a {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 footer { 
@@ -163,11 +165,11 @@ footer {
 
 code:not([class]) {
   font-family:
-    "Courier New",
+    'Courier New',
     monospace;
-  font-size: 100%;
+  font-size: 1em;
   padding: 2px;
-  background: #eee;
+  background: #eef;
   overflow-x: auto;
 }
 
@@ -176,16 +178,17 @@ code:not([class]) {
 div.highlight pre {
   border: 1px solid var(--basecolor);
   box-shadow: 2px 2px 2px var(--basecolor);
-  background: #eee;
+  background: #eef;
   overflow-x: auto;
+  padding: 0.5em;
 }
 
 pre code {
   font-family:
     "Courier New",
     monospace;
-  font-size: 100%;
-  padding: 2px;
+  line-height: 1.15em;
+  font-size: 90%;
 }
 
 /* Images, tables, misc. */
