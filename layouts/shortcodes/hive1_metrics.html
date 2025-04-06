@@ -1,0 +1,16 @@
+<p style="width: 100%; text-align: center;"> <a id="load_hive1_metrics" onclick="load_hive1_metrics()"> [[ Load Hive One Metrics ]] </a> </p>
+<div id="hive1_metrics" style=""></div>
+<script>
+var hive1_iframe = null;
+function load_hive1_metrics() {
+  if (hive1_iframe == null) {
+      hive1_iframe = document.createElement("iframe");
+      hive1_iframe.setAttribute('src','https://ben.land/beecam/stream/hive1_metrics.html');
+      hive1_iframe.setAttribute('style','height: auto; width: 100%; aspect-ratio:2; border: none;');
+      document.getElementById('hive1_metrics').appendChild(hive1_iframe);
+      document.getElementById('load_hive1_metrics').text = "[[ Refresh Hive One Metrics ]]";
+  } else {
+      hive1_iframe.setAttribute('src','https://ben.land/beecam/stream/hive1_metrics.html');
+  }
+}
+</script>
