@@ -7,7 +7,7 @@ categories:
   - 3D Printing
   - Programming
   - Sysadmin
-description: Read about how I used a slightly modified security camera to setup a live stream for the bees entering and exiting my beehive.
+description: The BeeLogger is a PoE device that provides REST endpoints to read I2C sensors deployed in and around a beehive.
 slug: beelogger-beehive-sensors
 toc: true
 ---
