@@ -17,7 +17,7 @@ All of these images are from my yard, with streetlights and porch lights nearby,
 
 I won't go far into the details here, but basically I capture many long exposures of the same area of the sky with a relatively standard camera attached to a telescope on a very stable tripod that tracks the motion of the sky.
 That stage is nearly the same as having an 800mm focal length manual F/4 lens on a camera body, and in fact I took many of these images with a Sony mirrorless camera mounted to the telescope.
-Once I have that data I then apply [a mathematical technique](http://localhost:1313/post/2023/12/24/astrophotography-with-light-pollution/#a-full-calibration-technique) to combine these images together and extract very faint images of astronomical objects, which can be very far away.
+Once I have that data I then apply [a mathematical technique](/post/2023/12/24/astrophotography-with-light-pollution/#a-full-calibration-technique) to combine these images together and extract very faint images of astronomical objects, which can be very far away.
 
 The images below have some description of the object pictured and the details of the acquisition, but as they all share some common factors, let me first describe the rig that takes these pictures, and the processing that goes into making a human-viewable image.
 
