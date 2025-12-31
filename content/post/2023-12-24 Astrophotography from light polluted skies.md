@@ -228,6 +228,6 @@ With that in mind, my post-processing technique for stacked, dithered images is 
 Following that, I'll do a bit of color calibration with stars of known temperature, and send it out into the world.
 Of course, you could dither and calibrate for even further variance reduction, no one is stopping you... ~~I just don't find the calibration data particularly enjoyable to take.~~ 
 
-Update 2025-12-30: Dither and take the calibration data, its worth it! Dithering still helps correct for things that slip past calibration, but dithering and background extraction destroy dim targets on uncalibrated data. This and other learnings after some years of experience can be found in [a future post on high quality images](/posts/2025/12/30/deep-sky-images-vol-three/)
+Update 2025-12-30: Dither and take the calibration data, its worth it! Dithering still helps correct for things that slip past calibration, but dithering and background extraction destroy dim targets on uncalibrated data. This and other learnings after some years of experience can be found in [a future post on high quality images](/post/2025/12/30/deep-sky-images-vol-three/)
 
 {{<figure src="/images/astro/orion.jpg" class="center" caption="M42 the Orion Nebula - dithered, stacked, and processed with no other calibration data. This one was taken with the real telescope, not a camera lens as the earlier images were." >}}
