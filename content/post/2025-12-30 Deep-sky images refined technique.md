@@ -3,7 +3,7 @@ title: 'Deep-sky images vol. 3: a refined technique for higher quality results'
 date: '2025-12-30'
 categories: 
   - Astrophotography
-description: A survey of galaxies I've photographed so far with descriptions.
+description: The best images of deep-sky objects I produced in 2025 and the technique used to create them.
 slug: deep-sky-images-vol-three
 toc: true
 ---
