@@ -12,10 +12,11 @@ toc: true
 
 Several years ago I wrote [a post on simulation the Schrodinger Equation](/post/2022/03/09/quantum-mechanics-simulation/) that had a brief intro to Quantum Mechanics paired with a simple Python simulation and visualization.
 That ended up being one of my more popular pages, despite the [follow up post with 2D visualizations](/post/2022/03/17/complex-wavefunction-visualization/) being arguably more visually appealing.
-Probably down to the titles in the end -- people love a Python simulation.
+Probably down to the titles in the end --- people love a Python simulation.
+After that I was following up on trying to do 3D simulations on the GPU, which diverted me down the path [raytracing](/post/2022/08/15/raycasting-raytracing-sdf/) and [photorealistic rendering](/post/2022/08/22/photorealistic-global-illumination/), then I got into [beekeeping](/beecam) and [astrophotography](/post/2025/12/30/deep-sky-images-vol-three/) and just didn't get back to this... until now!
 
-The follow up post did, perhaps, get into some more interesting physics with [determination of some eigenstates of the Coulomb potential](/post/2022/03/17/complex-wavefunction-visualization/#coulomb-potential-eigenstates), but I forgot to try the [double slit](https://en.wikipedia.org/wiki/Double-slit_experiment)!
-This one is particularly interesting because real world experiments can be easily done with both light and electrons, and the behavior can be easily explained by a wave nature in both cases.
+The one follow up post did, perhaps, get into some more interesting physics with [determination of some eigenstates of the Coulomb potential](/post/2022/03/17/complex-wavefunction-visualization/#coulomb-potential-eigenstates), but I forgot to try the [double slit](https://en.wikipedia.org/wiki/Double-slit_experiment), which is fully in the wheelhouse of a 2D simulation.
+This one is particularly interesting because real world experiments can be done with light, electrons, neutrons, etc, and the behavior can be easily explained by a wave nature in all cases.
 
 ## The double-slit experiment
 
