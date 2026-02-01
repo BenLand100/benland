@@ -558,10 +558,10 @@ Now, you might ask yourself how to verify that these states are in fact eigensta
 
 ## Until next time...
 
-And that's it for this post! 
+And that's it for this post!
 I have generalized this framework to three dimensions and included GPU acceleration with [Cupy](https://cupy.dev/) to deal with the significantly larger number of calculations required, but the qualitative results are the same.
 If I have time, perhaps I will look at Hydrogen like atoms, to extract orbitals (eigenstates!), or even slightly more complicated atomic systems. 
 This gets difficult fast because each electron experiences the Coulomb force from both the nucleus and the other electrons, and there's the spin of the electrons and Pauli exclusion principle to deal with.
 Needless to say, this exercise has convinced me that the aspiration to simulate simple atomic or molecular system in some general way with quantum mechanics is, in fact, quite difficult!
 
-
+Update: I did write [a follow up to this post focused on visualizations](/post/2022/03/17/complex-wavefunction-visualization/) that goes into [the 2D simulations](/post/2022/03/17/complex-wavefunction-visualization#wave-functions-in-two-dimensions), and [a further post on the double slit experiment](/post/2026/01/31/double-slit-simulation/).

@@ -154,7 +154,7 @@ deltay = y[1]-y[0]
 deltaxy = deltax*deltay
 ```
 And here is a way to normalize a wavefunction in 2D
-```
+```python
 def norm(phi):
     norm = cp.sum(cp.square(cp.abs(phi)))*deltaxy
     return phi/cp.sqrt(norm)
@@ -182,7 +182,7 @@ def wave_packet(p_x = 0, p_y = 0, disp_x = 0, disp_y = 0, sqsig = 0.5):
 ```
 
 And to display these beauties, the magnitude is converted into a value (brightness) and phase into a hue. I choose a low saturation, here, as before, before because fully saturated hues diminished the ability to perceive the change in magnitude encoded in the value.
-```
+```python
 from matplotlib.colors import hsv_to_rgb
 
 def to_image(z,z_min=0,z_max=None,abssq=False):
@@ -402,3 +402,5 @@ The result is the so-called $2P_2$ orbital in 2D.
 
 There's even more degeneracy at the next energy level, and it would take a long time for this approach to converge, but in a real atom, there would be a magnetic field in addition to the electric potential, which would break this degeneracy by coupling to the orbital angular momentum of the electron.
 A project for another day, perhaps.
+
+Update: I did write a follow up years later on [simulating the double slit experiment](/post/2026/01/31/double-slit-simulation/), check it out!
