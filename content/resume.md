@@ -63,19 +63,26 @@ title: Resume/CV
 
 ## Publications
 
+* SNO+ Collaboration. ***Measurement of Reactor Antineutrino Oscillation at SNO+***. [Phys. Rev. Lett. 135, 121801 (2025)](https://doi.org/10.1103/PhysRevLett.135.121801).
+* DUNE Collaboration. ***Reconstruction of interactions in the ProtoDUNE-SP detector with Pandora***. [Eur. Phys. J. C 85:697 (2025)](https://doi.org/10.1140/epjc/s10052-025-14313-8).
+* DUNE Collaboration. ***Supernova pointing capabilities of DUNE***. [Phys. Rev. D 111, 092006 (2025)](https://doi.org/10.1103/PhysRevD.107.092006).
+* DUNE Collaboration. ***The DUNE Far Detector Vertical Drift Technology. Technical Design Report***. [JINST 19, T08004 (2024)](https://doi.org/10.1088/1748-0221/19/08/T08004).
+* DUNE Collaboration. ***First measurement of the total inelastic cross section of positively charged kaons on argon at energies between 5.0 and 7.5 GeV***. [Phys. Rev. D 110, 092011 (2024)](https://doi.org/10.1103/PhysRevD.110.092011).
+* DUNE Collaboration. ***Doping liquid argon with xenon in ProtoDUNE Single-Phase: effects on scintillation light***. [JINST 19, P08005 (2024)](https://doi.org/10.1088/1748-0221/19/08/P08005).
+* DUNE Collaboration. ***DUNE Phase II: scientific opportunities, detector concepts, technological solutions***. [JINST 19, P12005 (2024)](https://doi.org/10.1088/1748-0221/19/12/P12005).
+* DUNE Collaboration. ***Impact of cross-section uncertainties on supernova neutrino spectral parameter fitting in the Deep Underground Neutrino Experiment***. [Phys. Rev. D 107, 112012 (2023)](https://doi.org/10.1103/PhysRevD.107.112012).
 * DUNE Collaboration. ***Identification and reconstruction of low-energy electrons in the ProtoDUNE-SP detector***. [Phys. Rev. D 107, 092012 (2023)](https://doi.org/10.1103/PhysRevD.107.092012).
 * DUNE Collaboration. ***Highly-parallelized simulation of a pixelated LArTPC on a GPU***. [JINST 18, P04034 (2023)](https://doi.org/10.1088/1748-0221/18/04/P04034).
 * SNO+ Collaboration. ***Evidence of Antineutrinos from Distant Reactors using Pure Water at SNO+***. [Phys. Rev. Lett. 130, 091801 (2023)](https://doi.org/10.1103/PhysRevLett.130.091801).
 * EOS Collaboration. ***Eos: conceptual design for a demonstrator of hybrid optical detector technology***. [JINST 18, P02009 (2023)](https://doi.org/10.1088/1748-0221/18/02/P02009).
 * DUNE Collaboration. ***Reconstruction of interactions in the ProtoDUNE-SP detector with Pandora***. [Eur. Phys. J. C 83:618 (2023)](https://doi.org/10.1140/epjc/s10052-023-11733-2).
 * DUNE Collaboration. ***Scintillation light detection in the 6-m drift-length ProtoDUNE Dual Phase liquid argon TPC***. [Eur. Phys. J. C 82:618 (2022)](https://doi.org/10.1140/epjc/s10052-022-10549-w).
-* SNO+ Collaboration. ***Improved search for invisible modes of nucleon decay in water with the SNO+detector***. [Phys. Rev. D 105, 112012](https://doi.org/10.1103/PhysRevD.105.112012).
+* SNO+ Collaboration. ***Improved search for invisible modes of nucleon decay in water with the SNO+ detector***. [Phys. Rev. D 105, 112012](https://doi.org/10.1103/PhysRevD.105.112012).
 * Theia Collaboration. ***Theia: Summary of physics program. Snowmass White Paper Submission***. [arXiv:2202.12839  [hep-ex] (2022)](https://arxiv.org/abs/2202.12839).
 * DUNE Collaboration. ***Snowmass Neutrino Frontier: DUNE Physics Summary***. [arXiv:2203.06100 [hep-ex] (2022)](https://arxiv.org/abs/2203.06100).
 * DUNE Collaboration. ***Low exposure long-baseline neutrino oscillation sensitivity of the DUNE experiment***. [Phys. Rev. D 105. 072006 (2022)](https://doi.org/10.1103/PhysRevD.105.072006).
 * DUNE Collaboration. ***Design, construction and operation of the ProtoDUNE-SP Liquid Argon TPC***. [JINST 17, P01005 (2022)](https://doi.org/10.1088/1748-0221/17/01/P01005).
 * DUNE Collaboration. ***Searching for Solar KDAR with DUNE***. [JCAP 10, 065 (2021)](https://doi.org/10.1088/1475-7516/2021/10/065).
-* DUNE Collaboration. ***Deep Underground Neutrino Experiment Far Detector Conceptual Design Report Single-Phase Vertical Drift Technology***. Pending.
 * SNO+ Collaboration. ***Optical calibration of the SNO+ detector in the waterphase with deployed sources***. [JINST 16, P10021 (2021)](https://doi.org/10.1088/1748-0221/16/10/P10021).
 * DUNE Collaboration. ***Deep Underground Neutrino Experiment (DUNE) Near Detector Conceptual Design Report***. [Instruments 5(4), 31 (2021)](https://doi.org/10.3390/instruments5040031).
 * SNO+ Collaboration. ***The SNO+ Experiment***. [JINST 16, P08059 (2021)](https://doi.org/10.1088/1748-0221/16/08/P08059).
