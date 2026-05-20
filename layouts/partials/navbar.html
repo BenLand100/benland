@@ -1,24 +1,74 @@
     <header {{if .IsHome }} style="position: sticky;" {{ end }}>
-      <nav>
-        <ul>
-          {{ $title := lower .Title -}} 
+      <nav class="site-nav">
+        <!-- Left: site title -->
+        <div class="nav-brand">
+          <a href="{{ .Site.BaseURL }}" class="{{ if .IsHome }}current{{ end }}">{{.Site.Title}}</a>
+        </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- Centre: page links (collapsible on mobile) -->
+        <ul class="nav-links" id="nav-links">
+          {{ $title := lower .Title -}}
           {{ $section := lower .Section -}}
-          <li class="{{ if .IsHome }}current{{ end }}">
-            <a href="{{ .Site.BaseURL }}">{{.Site.Title}}</a>
-          </li>
-          {{ range .Site.Menus.main -}} 
+          {{ range .Site.Menus.main -}}
           {{ $name := lower .Name -}}
           <li class="{{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
-            <a href="{{ .URL }}">{{.Name }}</a>
+            <a href="{{ .URL }}">{{.Name}}</a>
           </li>
           {{end -}}
-          <li class="searchbar">
-            <div class="searchbar">
-              <form action="/search" method="GET">
-                <input class="searchbar" type="search" name="q" id="search-query" placeholder="Search....">
-              </form>
-            </div>
-          </li>
         </ul>
+
+        <!-- Right: search + theme toggle (always visible) -->
+        <div class="nav-right">
+          <form action="/search" method="GET" class="nav-search">
+            <input type="search" name="q" id="search-query" placeholder="Search…" aria-label="Search">
+          </form>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+            <span id="theme-icon">&#9790;</span>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <script>
+    (function() {
+      /* --- Theme toggle --- */
+      var root = document.documentElement;
+      var btn  = document.getElementById('theme-toggle');
+      var icon = document.getElementById('theme-icon');
+
+      function systemDark() { return window.matchMedia('(prefers-color-scheme: dark)').matches; }
+      function getTheme() {
+        var s = localStorage.getItem('theme');
+        return (s === 'dark' || s === 'light') ? s : (systemDark() ? 'dark' : 'light');
+      }
+      function applyTheme(t) {
+        root.setAttribute('data-theme', t);
+        icon.innerHTML = t === 'dark' ? '&#9728;' : '&#9790;';
+        btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      applyTheme(getTheme());
+      btn.addEventListener('click', function() {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+      });
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+        if (!localStorage.getItem('theme')) applyTheme(getTheme());
+      });
+
+      /* --- Hamburger --- */
+      var ham   = document.getElementById('nav-hamburger');
+      var links = document.getElementById('nav-links');
+      if (ham && links) {
+        ham.addEventListener('click', function() {
+          var open = links.classList.toggle('open');
+          ham.setAttribute('aria-expanded', open);
+        });
+      }
+    })();
+    </script>
