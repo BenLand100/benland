@@ -108,6 +108,19 @@ main {
   font-size: 1.1em;
 }
 
+@media (max-width: 720px) {
+  main {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
 div.home-wrapper {
   text-align: center;
   hyphens: none;
@@ -281,9 +294,9 @@ button.theme-toggle:hover { color: #fff; }
 .nav-hamburger:hover span { background: #fff; }
 
 /* ----------------------------------------------------------
- *   Mobile nav (≤ 640px)
- *   ---------------------------------------------------------- */
-@media (max-width: 640px) {
+ *   Mobile nav (< 640px)
+ * ---------------------------------------------------------- */
+@media (max-width: 720px) {
   nav.site-nav {
     flex-wrap: wrap;
     padding: 0 0.6rem;
@@ -329,7 +342,7 @@ footer {
 
 /* ----------------------------------------------------------
  *   Code
- *   ---------------------------------------------------------- */
+ * ---------------------------------------------------------- */
 code:not([class]) {
   font-family:
   ui-monospace, 'Cascadia Code', 'Source Code Pro',
@@ -359,7 +372,7 @@ pre code {
 
 /* ----------------------------------------------------------
  *   Images, figures, tables, misc.
- *   ---------------------------------------------------------- */
+ * ---------------------------------------------------------- */
 img, iframe, video {
   max-width: 95%;
   padding: 0.5em 0;
@@ -401,6 +414,19 @@ figure.rightsmall  { max-width: 35%; padding: 0.5em 0 0 2%; float: right; }
 figure.rightxsmall { max-width: 18%; padding: 0.5em 0 0 2%; float: right; }
 figure.left    { max-width: 50%; padding: 0.5em 2% 0 0; float: left; }
 figure.leftsmall   { max-width: 35%; padding: 0.5em 2% 0 0; float: left; }
+
+@media (max-width: 720px) {
+  img[src$='#left'], img[src$='#leftlarge'], img[src$='#right'], figure.left, figure.right {
+    float: none;
+    max-width: 90%;
+    margin: auto;
+  };
+  img[src$='#leftsmall'], img[src$='#rightsmall'],
+  img[src$='#leftsupersmall'], img[src$='#rightsupersmall'],
+  figure.leftsmall, figure.rightsmall, figure.rightxsmall {
+    max-width: 55%;
+  }
+}
 
 blockquote {
   background: var(--bg-offset);
