@@ -338,6 +338,7 @@ footer {
   width: 100%;
   font-size: 80%;
   color: var(--text-muted);
+  margin-bottom: 0.5rem
 }
 
 /* ----------------------------------------------------------
