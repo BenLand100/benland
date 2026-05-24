@@ -114,10 +114,10 @@ main {
 @media (max-width: 720px) {
   main {
     font-size: 0.95em;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   h2 {
     font-size: 1.2em;
