@@ -613,7 +613,8 @@ Factorials get large fast, and indeed is one of the fastest-growing classes of f
 Something like the factorial of 100 is so large that it will overflow a 64-bit integer, approximately $9.3\times10^{157}$, but should be calculable with the arbitrary-length integer representations developed here.
 
 Code to compute factorials is easy to write with recursion.
-```pythondef factorial_bin_rep(i):
+```python
+def factorial_bin_rep(i):
     if not i:
         return b_one
     return mul_bin_rep(i,factorial_bin_rep(sub_bin_rep(i,b_one)))
