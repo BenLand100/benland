@@ -104,7 +104,7 @@ While the force is integrated to find the velocity, the velocity itself can be i
 
 A further approximation, to ensure that the output is always well behaved and within the realm of human behavior, clips the velocity to a random, smaller magnitude $M$ between $(\frac{M_0}{2},M_0)$ if it goes above a certain value.
 
-$$ \vec{v}_i' = M \frac{\vec{v}_i}{|\vec{v}_i|} \\,\\,\\,\\,\\,\\, \mathrm{if} \\,\\,\\,\\,\\,\\, |\vec{v}_i > M_0| $$
+$$ \vec{v}_i' = M \frac{\vec{v}_i}{|\vec{v}_i|} \,\,\,\,\,\, \mathrm{if} \,\,\,\,\,\, |\vec{v}_i > M_0| $$
 
 This acts somewhat like a terminal velocity, without explicitly including a drag force.
 

@@ -202,7 +202,7 @@ This works because `a XOR b` is the sum of each bit pair ignoring carry, and `a 
 Therefore, switching to math-style syntax --
 $$
 \begin{align}
-a' &= a \oplus b \\\\
+a' &= a \oplus b \\
 b' &= (a \otimes b) < < 1
 \end{align}
 $$

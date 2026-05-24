@@ -75,12 +75,12 @@ def frac_remaining(guess,info,wl=wl):
     m = gen_mask(guess,info,wl=wl)
     return np.count_nonzero(m)/wl.shape[0]
 ```
-For a guess $g$, word list $W$, and information $i$, this `frac_remaining` function will be mathematical function $R(g, i \\,|\\, W)$ giving the fraction of the word list remaining after obtaining information about a guess.
+For a guess $g$, word list $W$, and information $i$, this `frac_remaining` function will be mathematical function $R(g, i \,|\, W)$ giving the fraction of the word list remaining after obtaining information about a guess.
 
 ## Averaging over unknown outcomes
 
 All the player can choose is their guess, and then the game provides one of 243 possible sets of information.
-Therefore, in evaluating each guess, one should consider the average outcome of receiving any information $R(g \\,|\\, W)$.
+Therefore, in evaluating each guess, one should consider the average outcome of receiving any information $R(g \,|\, W)$.
 One might be tempted to assume all information is equally likely but there are two subtle points to consider.
 
 1. If information has already been obtained (e.g. 'A' is in position 1), or even if the word list has some constraints ('Q' is always followed by 'U'), certain information for certain words can be impossible.
@@ -92,10 +92,10 @@ What is desired, then, is an average of the remaining fraction over the possible
 Probability of receiving information for a guess is proportional to the remaining fraction per point two, so the expression to calculate is:
 
 $$
-R(g \\,|\\, W) = \left( \sum_{i \in I} R(g, i \\,|\\, W)^2 \right) \left( \sum_{i \in I} R(g, i \\,|\\, W) \right)^{-1}
+R(g \,|\, W) = \left( \sum_{i \in I} R(g, i \,|\, W)^2 \right) \left( \sum_{i \in I} R(g, i \,|\, W) \right)^{-1}
 $$
 
-where the first part is a weighted sum, and the second part is the normalization, since $R(g, i \\,|\\, W)$ is not normalized to sum to 1 over all possible information.
+where the first part is a weighted sum, and the second part is the normalization, since $R(g, i \,|\, W)$ is not normalized to sum to 1 over all possible information.
 
 Doing this in python is perhaps more straightforward than the math, if one leverages `itertools` for the loop over information, and `functools` to simplify some of the function calls.
 ```python
@@ -113,10 +113,10 @@ def avg_frac_remaining(guess,wl=wl):
 
 I've seen [other approaches](https://www.youtube.com/watch?v=v68zYyaEmEA) treat this same problem with information theory, and aimed to pick the outcome with maximal information (entropy) using an expression analogous to:
 $$
--\sum_{i \in I} P(g, i \\,|\\, W) \log P(g, i \\,|\\, W)
+-\sum_{i \in I} P(g, i \,|\, W) \log P(g, i \,|\, W)
 $$
-where the $P(g, i \\,|\\, W)$ is the probability of receiving some information for a guess given a word list.
-The author choose to define this function the same as $R(g, i \\,|\\, W)$, which is curious, because $R$ is not normalized due to the different information cases having overlap in the words that might remain. 
+where the $P(g, i \,|\, W)$ is the probability of receiving some information for a guess given a word list.
+The author choose to define this function the same as $R(g, i \,|\, W)$, which is curious, because $R$ is not normalized due to the different information cases having overlap in the words that might remain. 
 This likely means that the combination of a guess and information is a bad basis for calculating entropy, and that this approach is flawed.
 As it turns out, maximizing the expectation of the negative logarithm of a number is equivalent to minimizing the expectation of the same number, which is equivalent the approach I've taken here.
 

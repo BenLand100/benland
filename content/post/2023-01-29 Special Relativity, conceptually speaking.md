@@ -44,12 +44,12 @@ Since the speed of the light is the same for both, but the distances are clearly
 Plugging several relations in the diagram into the the distance observed by Alice, and applying a little algebra, leads to a foundational result of Special Relativity...
 
 $$ \begin{aligned}
-C &= \sqrt{A^2 + B^2} \\\\
-c \\, \Delta t &= \sqrt{(c\\, \Delta t_0)^2 + (v\\, \Delta t)^2} \\\\
-(c \\, \Delta t)^2 &= (c\\, \Delta t_0)^2 + (v\\, \Delta t)^2 \\\\
-(c\\, \Delta t_0)^2 &= (c \\, \Delta t)^2 - (v\\, \Delta t)^2 \\\\
-(\Delta t_0)^2 &= (\Delta t)^2 \left(1 - \frac{v^2}{c^2} \right) \\\\
-\Delta t_0 &= \Delta t \sqrt{1 - \frac{v^2}{c^2} } \\\\
+C &= \sqrt{A^2 + B^2} \\
+c \, \Delta t &= \sqrt{(c\, \Delta t_0)^2 + (v\, \Delta t)^2} \\
+(c \, \Delta t)^2 &= (c\, \Delta t_0)^2 + (v\, \Delta t)^2 \\
+(c\, \Delta t_0)^2 &= (c \, \Delta t)^2 - (v\, \Delta t)^2 \\
+(\Delta t_0)^2 &= (\Delta t)^2 \left(1 - \frac{v^2}{c^2} \right) \\
+\Delta t_0 &= \Delta t \sqrt{1 - \frac{v^2}{c^2} } \\
 \end{aligned}$$
 
 ...that the spans of time are related by the relative velocity of the two reference frames!
@@ -66,7 +66,7 @@ The Lorentz factor has the property that it's exactly one for any frame at rest 
 With this, it's more natural to write the previous result as
 
 $$
-\Delta t = \gamma\\, \Delta t_0
+\Delta t = \gamma\, \Delta t_0
 $$
 
 which means times spans, $\Delta t_0$, measured in a reference frame at rest with respect to some events will always appear to take longer in any other reference frame with a relative velocity: time dilation.
@@ -78,10 +78,10 @@ This allows everything we know and understand at low velocities (namely, the pre
 
 With time dilation, one gets length contraction basically for free by tacking on another experiment.
 As the ship passes Alice at velocity $v$, she notes that it takes a span of time $\Delta t$ in her reference frame to pass (note the cyan bars in the diagram).
-Generally speaking, Alice would ascribe a length $L = v\\, \Delta t$ to the ship.
+Generally speaking, Alice would ascribe a length $L = v\, \Delta t$ to the ship.
 
 In Bob's reference frame, the two events corresponding to the front and back of the ship passing Alice would be separated instead by the time $\Delta t_0$ at the same velocity $v$.
-In that time, Alice moved past Bob's ship, which he ascribes a length $L_0 = v\\, \Delta t_0$.
+In that time, Alice moved past Bob's ship, which he ascribes a length $L_0 = v\, \Delta t_0$.
 By the time dilation equation, this means the two lengths are _different_:
 
 $$

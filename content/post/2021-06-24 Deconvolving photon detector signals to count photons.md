@@ -52,21 +52,21 @@ More complicated schemes of computing multiple thresholds, measuring pulse prope
 To understand [deconvolution](https://en.wikipedia.org/wiki/Deconvolution), one must first understand its inverse [convolution](https://en.wikipedia.org/wiki/Convolution).
 Conceptually, convolution smears out one function $f(t)$ by another function $g(t)$.
 Mathematically this is achieved by defining the value of the convolved function at a point $t$, written as $(f \ast g)(t)$ as the integral of the product of the function $f$ in the neighborhood of $t$ with a (reversed) copy of $g$ centered at that point $t$.
-$$ (f \ast g)(t) = \int f(t-u)g(u) \\, du $$
+$$ (f \ast g)(t) = \int f(t-u)g(u) \, du $$
 To illustrate this, consider a [delta function](https://en.wikipedia.org/wiki/Dirac_delta_function) $\delta(x)$ defined as being only nonzero at zero and having an integral of 1.
 $$ \int \delta(x) dx = 1 $$
 Such a function can be imagined as starting with a normalized Gaussian distribution, and letting its width go to zero.
 $$ \delta(x) \approx \lim_{\sigma \rightarrow 0} \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{x^2}{2\sigma^2}} $$
 Then define a function $p(t) = \delta(t-a)$. 
 Convolving some function $f(t)$ with $p(t)$ results in a copy of $f(t)$ displaced by $a$.
-$$ (f \ast p)(t) = \int f(t-u)\delta(u-a) \\, du  = f(t-a) $$
+$$ (f \ast p)(t) = \int f(t-u)\delta(u-a) \, du  = f(t-a) $$
 This is because $\delta(u-a)$ is only nonzero, and has an integral of 1, when $u = a$.
 
 ### Building a series of pulses
 
 One can then imagine a more complicated function with several delta functions, $q(t) = \sum_i \delta(t-a_i)$. 
 Convolving some function $f(t)$ with $q(t)$ results in a a sum of $f(t)$ displaced by all the $a_i$.
-$$ (f \ast q)(t) = \int f(t-u)\sum_i\delta(u-a_i) \\, du  = \sum_i f(t-a_i) $$
+$$ (f \ast q)(t) = \int f(t-u)\sum_i\delta(u-a_i) \, du  = \sum_i f(t-a_i) $$
 
 In the last example, $q(t)$ can be thought of as an expression representing the arrival times of several photons $a_i$.
 If $f(t)$ is equated with the pulse shape of a single detected photon, then $(f \ast q)(t)$ is the total voltage response of the photodetector.
@@ -78,42 +78,42 @@ To then extract the arrival times of the photons, no matter how many there are o
 To undo the convolution, one has to think of things a bit differently, and dive into [Fourier transformations](https://en.wikipedia.org/wiki/Fourier_transform).
 Consider the Fourier transformation of $f(t)$:
 $$ 
-\mathcal{F}\\{f(t)\\} = F(f) = \int f(t) e^{-2\pi i f t} \\, dt = \int f(t) (\cos(2\pi f t) - i \sin(2\pi f t)) \\, dt 
+\mathcal{F}\{f(t)\} = F(f) = \int f(t) e^{-2\pi i f t} \, dt = \int f(t) (\cos(2\pi f t) - i \sin(2\pi f t)) \, dt 
 $$
 which represents the phase and amplitude (as a complex number) of each sinusoidal frequency $f$ making up the function $f(t)$.
 Notably, a Fourier transformation can be undone by a very similar operation on $F(f)$:
-$$ \mathcal{F}^{-1}\\{F(f)\\} = f(t) = \int F(f) e^{2\pi i f t} \\, df = \int F(f) (\cos(2\pi f t) + i \sin(2\pi f t)) \\, df $$
+$$ \mathcal{F}^{-1}\{F(f)\} = f(t) = \int F(f) e^{2\pi i f t} \, df = \int F(f) (\cos(2\pi f t) + i \sin(2\pi f t)) \, df $$
 That this is the inverse operation isn't too hard to demonstrate:
 $$ 
 \begin{aligned}
-f(t) &= \int F(f) e^{2\pi i f t} \\, df \\\\
-     &= \int \left( \int f(\tau) e^{-2\pi i f \tau} \\, d\tau \right) e^{2\pi i f t} \\, df
+f(t) &= \int F(f) e^{2\pi i f t} \, df \\
+     &= \int \left( \int f(\tau) e^{-2\pi i f \tau} \, d\tau \right) e^{2\pi i f t} \, df
 \end{aligned}
 $$
 Note that $\tau$ is used instead of $t$ when the expression for $F(f)$ is substituted, because $t$ already appears in the expression.
 Rearranging this, one arrives at the following, which appears daunting at first glance.
 $$
 \begin{aligned}
-f(t) &= \int \int f(\tau) e^{2\pi i f t} e^{-2\pi i f \tau} \\, df d\tau \\\\
-     &= \int \int f(\tau) e^{2\pi i f (t-\tau)} \\, df d\tau
+f(t) &= \int \int f(\tau) e^{2\pi i f t} e^{-2\pi i f \tau} \, df d\tau \\
+     &= \int \int f(\tau) e^{2\pi i f (t-\tau)} \, df d\tau
 \end{aligned}
 $$
 However, note that the exponential parts are oscillatory $\sin$ and $\cos$ functions, which integrate to zero on their own. 
 If you're not familiar with imaginary exponential, this is perhaps a bit easier to see if it's expanded out as was done in the definitions of Fourier transformations above.
 $$
 \begin{aligned}
-f(t) &= \int \int f(\tau) (\cos(2\pi f (t-\tau)) + i\sin(2\pi f (t-\tau))  \\, df d\tau \\\\
-f(t) &= \int f(\tau) \left( \int (\cos(2\pi f (t-\tau)) + i\sin(2\pi f (t-\tau))  \\, df \right) d\tau \\\\
+f(t) &= \int \int f(\tau) (\cos(2\pi f (t-\tau)) + i\sin(2\pi f (t-\tau))  \, df d\tau \\
+f(t) &= \int f(\tau) \left( \int (\cos(2\pi f (t-\tau)) + i\sin(2\pi f (t-\tau))  \, df \right) d\tau \\
 \end{aligned}
 $$
 Note that each term is the $\sin$ or $\cos$ of a difference of two angles. 
 If the arguments to the functions are different ($t$ vs $\tau$) each term is an oscillatory function about zero, so its total integral over $f$ is zero.
 With $t = \tau$, the part in the innermost integral simplifies to $1$, since $t-\tau = 0$, meaning that innermost integral is (technically) infinite when $t = \tau$.
-This ultimately means the $\int e^{2\pi i f (t -\tau)} \\, df$ part of the expression above [acts like a delta function](https://en.wikipedia.org/wiki/Dirac_delta_function#Fourier_transform) $\delta(t-\tau)$.
+This ultimately means the $\int e^{2\pi i f (t -\tau)} \, df$ part of the expression above [acts like a delta function](https://en.wikipedia.org/wiki/Dirac_delta_function#Fourier_transform) $\delta(t-\tau)$.
 (As a physicist, I would handwave that an infinite integral times an infinitesimal $d\tau \approx \frac{1}{\infty}$ is approximately 1 --- mathematicians undoubtedly have a more rigorous definition.)
 We are left with the following, which has already been solved by considering delta functions, above.
 $$
-f(t) = \int f(\tau) \delta(t-\tau) \\, d\tau = f(t)
+f(t) = \int f(\tau) \delta(t-\tau) \, d\tau = f(t)
 $$
 
 Fourier transformations are useful in many areas of mathematical analysis, as operations that are complicated in the time-domain $f(t)$ can be much simpler in the frequency domain $F(f)$.
@@ -123,34 +123,34 @@ That's certainly the case for convolutions.
 
 Consider the definition of a convolution, copied from above.
 $$
-(f \ast g)(t) \int f(t-u)g(u) \\, du 
+(f \ast g)(t) \int f(t-u)g(u) \, du 
 $$
-If $f(t)$ is defined in terms of its Fourier transform $\mathcal{F}\\{f(t)\\} = F(f)$, then
+If $f(t)$ is defined in terms of its Fourier transform $\mathcal{F}\{f(t)\} = F(f)$, then
 $$
-f(t) = \mathcal{F}^{-1}\\{F(f)\\} = \int F(f) e^{2\pi i f t} \\, df 
+f(t) = \mathcal{F}^{-1}\{F(f)\} = \int F(f) e^{2\pi i f t} \, df 
 $$
 and this can be substituted into the definition of the convolution, and massaged a bit.
 $$
 \begin{aligned}
-(f \ast g)(t) &= \int \left( \int F(f) e^{2\pi i f (t-u)} \\, df  \right) g(u)  \\, du \\\\
-              &= \int \int F(f) e^{2\pi i f (t-u)} g(u) \\, df du\\\\
-              &= \int \int F(f) e^{2\pi i f t} e^{-2\pi i f u} g(u) \\, df du \\\\
-              &= \int F(f) \left(\int g(u) e^{-2\pi i f u} \\, du \right) e^{2\pi i f t} \\, df
+(f \ast g)(t) &= \int \left( \int F(f) e^{2\pi i f (t-u)} \, df  \right) g(u)  \, du \\
+              &= \int \int F(f) e^{2\pi i f (t-u)} g(u) \, df du\\
+              &= \int \int F(f) e^{2\pi i f t} e^{-2\pi i f u} g(u) \, df du \\
+              &= \int F(f) \left(\int g(u) e^{-2\pi i f u} \, du \right) e^{2\pi i f t} \, df
 \end{aligned}
 $$
 Now recognize that the part in parentheses is the Fourier transform of $g(t)$.
 $$
-G(f) = \mathcal{F}\\{g(t)\\} = \int g(t) e^{-2\pi i f t} \\, dt
+G(f) = \mathcal{F}\{g(t)\} = \int g(t) e^{-2\pi i f t} \, dt
 $$
 After that substitution, one has
 $$
-(f \ast g)(t) = \int F(f) G(f) e^{2\pi i f t} \\, df 
+(f \ast g)(t) = \int F(f) G(f) e^{2\pi i f t} \, df 
 $$
 which is the inverse Fourier transform of the product of $F(f)G(f)$!
 $$
 \begin{align}
-(f \ast g)(t) &= \mathcal{F}^{-1}\\{ F(f)G(f) \\} \\\\
-\mathcal{F} \\{ (f \ast g)(t) \\} &= F(f)G(f)
+(f \ast g)(t) &= \mathcal{F}^{-1}\{ F(f)G(f) \} \\
+\mathcal{F} \{ (f \ast g)(t) \} &= F(f)G(f)
 \end{align}
 $$
 So, the relatively complicated convolution operation on two functions is simply a multiplication of their Fourier transformations, followed by an inverse Fourier transformation.
@@ -161,7 +161,7 @@ If a convolution is a multiplication, then its inverse is necessarily a division
 If $h(t)$ is defined as the convolution of signal $f(t)$ and some response function $g(t)$, with Fourier transforms $H(f)$, $F(f)$, and $G(f)$, respectively
 $$
 \begin{aligned}
-h(t) &= (f \ast g)(t) = \mathcal{F}^{-1}\\{ F(f)G(f) \\} \\\\ 
+h(t) &= (f \ast g)(t) = \mathcal{F}^{-1}\{ F(f)G(f) \} \\ 
 \implies H(f) &= F(f)G(f)
 \end{aligned}
 $$
@@ -171,7 +171,7 @@ F(f) = H(f) / G(f)
 $$
 and one can recover $f(t)$ from $h(t)$ and $g(t)$.
 $$
-f(t) = \mathcal{F}^{-1}\\{ \mathcal{F}\\{h(t)\\} / \mathcal{F}\\{g(t)\\} \\}
+f(t) = \mathcal{F}^{-1}\{ \mathcal{F}\{h(t)\} / \mathcal{F}\{g(t)\} \}
 $$
 This, finally, presents a method for deconvolving a signal, provided that Fourier transformations of a measured signal are possible.
 
@@ -179,8 +179,8 @@ One may not want to Fourier transform all data in order to deconvolve it, as thi
 Fortunately, the duality between convolution in the time domain and multiplication in the frequency domain can again be exploited.
 $$
 \begin{aligned}
-f(t) &= \mathcal{F}^{-1}\\{ \mathcal{F}\\{h(t)\\} \times \frac{1}{\mathcal{F}\\{g(t)\\}} \\} \\\ 
-     &= ( h \ast \mathcal{F}^{-1}\\{ \frac{1}{G(f)}\\})(t)
+f(t) &= \mathcal{F}^{-1}\{ \mathcal{F}\{h(t)\} \times \frac{1}{\mathcal{F}\{g(t)\}} \} \\ 
+     &= ( h \ast \mathcal{F}^{-1}\{ \frac{1}{G(f)}\})(t)
 \end{aligned}
 $$
 If the function $k(t)$ is defined as the inverse Fourier transform of the inverse of the Fourier transform of $g(t)$ (call this last inverse $K(f)$, following the notation in this section), then this simplifies to a single convolution.
@@ -194,7 +194,7 @@ What might not be obvious here is that the definition of $K(f)$
 $$
 K(f) = \frac{1}{G(f)}
 $$
-is really the ratio of the Fourier transform of the delta function ($\mathcal{F}\\{\delta(t)\\} = 1$) to the Fourier transform of the convolution function $g(t)$.
+is really the ratio of the Fourier transform of the delta function ($\mathcal{F}\{\delta(t)\} = 1$) to the Fourier transform of the convolution function $g(t)$.
 This has the effect of transforming structures like $g(t)$ into delta functions, which is mathematically ideal, but has the undesirable feature of relying on infinite frequencies to describe the result.
 To understand this, recall that the frequency domain representation of a function specifies the amplitude and phase of each frequency.
 As the Fourier transform of a delta function is a constant 1, it is composed of all possible frequencies at the same phase with unit amplitude.

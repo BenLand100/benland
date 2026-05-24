@@ -94,8 +94,8 @@ With these made up variables, we favor SDF raytracing to triangle mesh raytracin
 
 $$
 \begin{aligned}
-N_{SDF} C_{SDF} &< N_{TRI} C_{TRI} \\\\
-N_{SDF} \overline{C_{SDF}} N_{PRI} &< N_{PRI} \overline{N_{TRI}} C_{TRI} \\\\
+N_{SDF} C_{SDF} &< N_{TRI} C_{TRI} \\
+N_{SDF} \overline{C_{SDF}} N_{PRI} &< N_{PRI} \overline{N_{TRI}} C_{TRI} \\
 N_{SDF} \overline{C_{SDF}} &<  \overline{N_{TRI}}  C_{TRI} 
 \end{aligned}
 $$

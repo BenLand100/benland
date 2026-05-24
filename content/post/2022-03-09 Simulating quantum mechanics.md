@@ -33,7 +33,7 @@ where the ${}^*$ denotes a complex conjugate, or negating the imaginary part of 
 This probabilistic interpretation requires that the following be true:
 
 $$
-\int \left|\psi(\vec{x})\right|^2\\,\\,d\vec{x} = 1
+\int \left|\psi(\vec{x})\right|^2\,\,d\vec{x} = 1
 $$
 
 meaning the total magnitude of the complex field is 1, conserving probability. 
@@ -48,7 +48,7 @@ $$
 Here, $\hat{H}$ is called the Hamiltonian operator and essentially measures, or specifies, the energy of a wave function.
 Namely, the energy of a wave function is the expectation value of the Hamiltonian, which physicists write as
 $$
-E = \left<\hat{H}\right> = \int \psi^*(\vec{x})\hat{H}\psi(\vec{x})\\,\\,d\vec{x}
+E = \left<\hat{H}\right> = \int \psi^*(\vec{x})\hat{H}\psi(\vec{x})\,\,d\vec{x}
 $$
 which can be thought of as a weighted average of the Hamiltonian applied to the wave function everywhere.
 
@@ -75,7 +75,7 @@ $$
 i \frac{d\psi}{dt} = \hat{H}\psi 
 $$
 $$
-E = \left<\hat{H}\right> = \int \psi^*\hat{H}\psi\\,\\,d\vec{x}
+E = \left<\hat{H}\right> = \int \psi^*\hat{H}\psi\,\,d\vec{x}
 $$
 
 But remember: this isn't just regular scalar multiplication! 
@@ -510,12 +510,12 @@ Fortunately for my narrative, the ground state of the QHO is exactly a Gaussian 
 
 To generate an excited state, in principle, one could take any wave packet $\psi$, remove the ground state $\phi_0$ from it (i.e. set it's $C_0(t)$ coefficient to zero), and perform the same procedure on the resulting $\Psi_1$ to find the first excited eigenstate $\phi_1$.
 $$
-\Psi_1 = \psi - \left( \int \phi_0^* \psi \\,\\, dx \right) \phi_0  = \psi - C_0(t)\phi_0
+\Psi_1 = \psi - \left( \int \phi_0^* \psi \,\, dx \right) \phi_0  = \psi - C_0(t)\phi_0
 $$
 Here the integral is used to determine the complex coefficient weight of $\phi_0$ within $\psi$.
 This works because the eigenstates have an orthogonality property of zero overlap
 $$
-\delta_{nm} = \int \phi_n^* \phi_m \\,\\, dx
+\delta_{nm} = \int \phi_n^* \phi_m \,\, dx
 $$
 where $\delta_{nm}$ is one if $n=m$ and zero otherwise.
 

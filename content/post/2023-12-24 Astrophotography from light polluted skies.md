@@ -39,12 +39,12 @@ The absorption of photons would be a Poisson random process from any number of d
 Let's categorize the rates of those sources as signal $S_{ij}$ of the deep sky object we want and background $B_{ij}$ such as light polution or skyglow.
 That means the total photons asorbed in a pixel, $T_{ij}$, for a span of time $\Delta T$ is given by
 $$
-T_{ij} = \epsilon_{ij} (\mathrm{Pois}(\Delta T\\, S_{ij}) + \mathrm{Pois}(\Delta T\\, B_{ij}))
+T_{ij} = \epsilon_{ij} (\mathrm{Pois}(\Delta T\, S_{ij}) + \mathrm{Pois}(\Delta T\, B_{ij}))
 $$
 where the $\epsilon_{ij}$ is a pixel-depdendent efficiency to convert photons to signal.
 The value reported for the pixel $P_{ij}$ would include a gaussian random error with a mean of $E_{B,ij}$ and standard deviation $E_{N,ij}$ of a few photons (typically) due to electronics bias and noise, respectively.
 $$
-P_{ij} = \mathrm{Gauss}(E_{B,ij},E_{N,ij}) + T_{ij} = \mathrm{Gauss}(E_{B,ij},E_{N,ij}) + \epsilon_{ij}\mathrm{Pois}(\Delta T\\, S_{ij}) + \epsilon_{ij}\mathrm{Pois}(\Delta T\\, B_{ij}).
+P_{ij} = \mathrm{Gauss}(E_{B,ij},E_{N,ij}) + T_{ij} = \mathrm{Gauss}(E_{B,ij},E_{N,ij}) + \epsilon_{ij}\mathrm{Pois}(\Delta T\, S_{ij}) + \epsilon_{ij}\mathrm{Pois}(\Delta T\, B_{ij}).
 $$ 
 This is technically just a mathematical model, but is well motivated by how both CCD and CMOS digital sensors work, along with any other technology that would be based on counting photons.
 
@@ -71,15 +71,15 @@ This means the uncertainty actually is larger for longer exposure times.
 Fortunately, as it only grows with a square root, all is made well again with some averaging.
 If there are $N$ measurements of $P_{ij}$, the expectation of the sum is
 $$
-\mathrm{E}[N\\,P_{ij}] = N \mathrm{E}[P_{ij}]
+\mathrm{E}[N\,P_{ij}] = N \mathrm{E}[P_{ij}]
 $$
 making the average of $N$ measurements
 $$
-\frac{\mathrm{E}[N\\,P_{ij}]}{N} = \mathrm{E}[P_{ij}]
+\frac{\mathrm{E}[N\,P_{ij}]}{N} = \mathrm{E}[P_{ij}]
 $$
 which seems a bit tautological, until you check the standard deviation of the average of $N$ measurements,
 $$
-\frac{\mathrm{StDev}[N\\,P_{ij}]}{N} = \frac{\sqrt{\mathrm{Var}[N\\,P_{ij}]}}{N} = \frac{\sqrt{N}\sqrt{\mathrm{Var}[P_{ij}]}}{N} = \frac{\sqrt{N}(\mathrm{StDev}[P_{ij}])}{N} = \frac{1}{\sqrt{N}}\mathrm{StDev}[P_{ij}]
+\frac{\mathrm{StDev}[N\,P_{ij}]}{N} = \frac{\sqrt{\mathrm{Var}[N\,P_{ij}]}}{N} = \frac{\sqrt{N}\sqrt{\mathrm{Var}[P_{ij}]}}{N} = \frac{\sqrt{N}(\mathrm{StDev}[P_{ij}])}{N} = \frac{1}{\sqrt{N}}\mathrm{StDev}[P_{ij}]
 $$
 where the fact that uncorrelated variances add was leveraged to pull out the $\sqrt{N}$ factor. 
 This immediately reveals that the average of many images multiplies the uncertainty at any pixel by a factor of $\sqrt{1/N}$ compared to a single image, meaning there are diminishing returns to averaging more images (must double the quantity averaged for the same factor of uncertainty reduction) though the uncertainty continues to decrease.
@@ -90,18 +90,18 @@ Unfortunately, what we really want is an image of just the exposed signal $S_{ij
 If we take for granted that there is a method to estimate the average background contribution at a pixel 
 
 $$ 
-\bar{B}_{ij} \approx \epsilon _ {ij} \\, \Delta T \\, B _ {i j}
+\bar{B}_{ij} \approx \epsilon _ {ij} \, \Delta T \, B _ {i j}
 $$
 
 and that the electronics bias is a fixed, measurable effect, meaning that $E_{B,ij}$ is known, we can define a new image $P'_{ij}$ based off the old one as
 
 $$
-P' _ {ij} = P _ {ij} - \bar{B} _ {ij} - E_{B,ij} = \mathrm{Gauss}(0,E) + \mathrm{Pois}(\Delta T\\, S_{ij}) + \mathrm{Pois}(\Delta T\\, B_{ij}) - \bar{B} _ {ij} - E_{B,ij}.
+P' _ {ij} = P _ {ij} - \bar{B} _ {ij} - E_{B,ij} = \mathrm{Gauss}(0,E) + \mathrm{Pois}(\Delta T\, S_{ij}) + \mathrm{Pois}(\Delta T\, B_{ij}) - \bar{B} _ {ij} - E_{B,ij}.
 $$
 
 This new image has an expectation value of
 $$
-\mathrm{E}[P' _ {ij}] = \mathrm{E}[P_{ij}] - \bar{B}_{ij} - E _ {B,ij} = \epsilon _ {ij} \\, \Delta T S _ {ij}
+\mathrm{E}[P' _ {ij}] = \mathrm{E}[P_{ij}] - \bar{B}_{ij} - E _ {B,ij} = \epsilon _ {ij} \, \Delta T S _ {ij}
 $$
 with the background and bias removed, as designed.
 
@@ -113,7 +113,7 @@ since we have only subtracted constants off the pixel values, which are random v
 
 With enough averaged measurements, ultimately this standard deviation will decrease to zero, but it also highlights the aspects of imagaging to optimize for quality, which can be more clearly seen in the ratio of the uncertainty to the expectation value.
 $$
-\frac{\mathrm{StDev}[P' _ {ij}]}{\mathrm{E}[P' _ {ij}]} = \frac{\sqrt{(E _ {N,ij})^2 + \epsilon_{ij} \Delta T ( S_{ij} + B_{ij} )}}{\epsilon _ {ij} \\, \Delta T S _ {ij}} = \sqrt{  \left( \left(\frac{E _ {N,ij}}{\epsilon _ {ij} \\, \Delta T \\, S _ {ij}} \right)^2 + \frac{1}{\epsilon _ {ij} \Delta T S_{ij}} \left( 1 + \frac{B _ {ij}}{S _ {ij}} \right) \right) }
+\frac{\mathrm{StDev}[P' _ {ij}]}{\mathrm{E}[P' _ {ij}]} = \frac{\sqrt{(E _ {N,ij})^2 + \epsilon_{ij} \Delta T ( S_{ij} + B_{ij} )}}{\epsilon _ {ij} \, \Delta T S _ {ij}} = \sqrt{  \left( \left(\frac{E _ {N,ij}}{\epsilon _ {ij} \, \Delta T \, S _ {ij}} \right)^2 + \frac{1}{\epsilon _ {ij} \Delta T S_{ij}} \left( 1 + \frac{B _ {ij}}{S _ {ij}} \right) \right) }
 $$
 
 With the intuition that the uncertainty should be small relative to the desired value, some observations can be made:
@@ -137,7 +137,7 @@ P'' _ {ij} = \frac{P' _ {ij}}{\epsilon _ {ij}} = \frac{P _ {ij} - \bar{B} _ {ij}
 $$
 where
 $$
-\mathrm{E}[P'' _ {ij}] = \Delta T\\, S _ {ij}
+\mathrm{E}[P'' _ {ij}] = \Delta T\, S _ {ij}
 $$
 and
 $$

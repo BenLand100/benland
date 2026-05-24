@@ -46,7 +46,7 @@ This is a form of _abstract vector space_, and the the arbitrary state $\ket{\ps
 Most of the intuition from normal vectors in linear algebra will carry over to state vectors.
 Along these lines, one could write $\ket{\psi}$ as a column vector.
 
-$$ \ket{\psi} = \vector{C_0\\\\C_1} $$
+$$ \ket{\psi} = \vector{C_0\\C_1} $$
 
 The probabilistic interpretation of the magnitude squared of the components implies that the sum of the magnitudes squared of all $C_n$, or the magnitude of the state vector, should be $1$.
 Thinking about this from the perspective of an inner product (or dot product), which computes the magnitude squared of all components of a vector, this means something like the probability of a state to be itself is 100%.
@@ -56,7 +56,7 @@ The inner product of the state with itself is historically written as :
 
 $$\braket{\psi|\psi}$$
 
-This introduces the idea of a conjugate vector $\bra{\psi}$ which flips the sign of the imaginary part of all the complex numbers (flips across the real axis -- conjugation is denoted with $^*\\,$).
+This introduces the idea of a conjugate vector $\bra{\psi}$ which flips the sign of the imaginary part of all the complex numbers (flips across the real axis -- conjugation is denoted with $^*\,$).
 
 $$ \bra{\psi} = C_0^* \bra{0} + C_1^* \bra{1} $$
 
@@ -66,17 +66,17 @@ $$ \bra{\psi} = \vector{C_0^* & C_1^*} $$
 
 and normal matrix multiplication would provide the result.
 
-$$\braket{\psi|\psi} =   \vector{C_0^* & C_1^*}  \cdot \vector{C_0 \\\\ C_1} = |C_0|^2 + |C_1|^2 $$
+$$\braket{\psi|\psi} =   \vector{C_0^* & C_1^*}  \cdot \vector{C_0 \\ C_1} = |C_0|^2 + |C_1|^2 $$
 
 
 In the notation of physics one needs to understand that the two basis states are distinct in the sense that their inner product is zero, while the inner product of a labeled state with itself is unity. All other usual linear algebra rules apply.
 
 $$ 
 \begin{aligned}
-\braket{\psi|\psi} &= (C_0^* \bra{0} + C_1^* \bra{1})(C_0 \ket{0} + C_1 \ket{1}) \\\\
-&= C_0^* C_0 \braket{0|0} + C_0^* C_1 \braket{0|1} + C_1^* C_0 \braket{1|0} + C_1^* C_1 \braket{1|1} \\\\
-&= C_0^* C_0 + C_1^* C_1 \\\\
-&= |C_0|^2 + |C_1|^2 \\\\
+\braket{\psi|\psi} &= (C_0^* \bra{0} + C_1^* \bra{1})(C_0 \ket{0} + C_1 \ket{1}) \\
+&= C_0^* C_0 \braket{0|0} + C_0^* C_1 \braket{0|1} + C_1^* C_0 \braket{1|0} + C_1^* C_1 \braket{1|1} \\
+&= C_0^* C_0 + C_1^* C_1 \\
+&= |C_0|^2 + |C_1|^2 \\
 \end{aligned}
  $$
 
@@ -182,11 +182,11 @@ This is analogous to how there are many possible classical logic tables, but onl
 To make this a bit more concrete, consider the quantum equivalent of the classical NOT gate, which inverts the inputs, often called $X$.
 For a single qubit, $X$ takes the matrix form
 $$
-X = \vector{0&1\\\\1&0}
+X = \vector{0&1\\1&0}
 $$
 meaning that it swaps the coefficients of the two states, much like NOT swaps the logic level of the input.
 $$
-\vector{0\\\\1} = \vector{0&1\\\\1&0} \cdot \vector{1\\\\0}
+\vector{0\\1} = \vector{0&1\\1&0} \cdot \vector{1\\0}
 $$
 It is called the $X$ gate, because it represents a 180-degree rotation around the X-axis of a Bloch sphere, which can be physically realized by applying a certain frequency of electromagnetic radiation for a certain amount of time to the qubit in question.
 
@@ -212,11 +212,11 @@ which is manifestly true, as long as you don't think too hard about what $e$ rai
 As it turns out, if $\ket{\psi(0)}$ is an eigenstate of the Hamiltonian, this is the usual result that energy eigenstates only change phase in time. 
 In a two-state system, if both basis states are eigenstates have the same energy, both states will stay in phase as time moves on, and this would correspond to an identity gate $I$ in the quantum logic gate world.
 $$
-I = e^{-iEt}\vector{1 & 0 \\\\ 0 & 1}
+I = e^{-iEt}\vector{1 & 0 \\ 0 & 1}
 $$
 If both basis states are eigenstates with different energies, with separation $\Delta E$, this would correspond to a phase shift gate, $P$ where the amount of phase shift would depend on the amount of evolution time.
 $$
-P = e^{-iEt}\vector{1 & 0 \\\\ 0 & e^{-i\Delta E t}}
+P = e^{-iEt}\vector{1 & 0 \\ 0 & e^{-i\Delta E t}}
 $$
 Recall that in both cases, the overall phase $e^{-iEt}$ is not observable.
 

@@ -228,7 +228,7 @@ function render(templateString, data) {
     //now any conditionals removed we can do simple substitution
     var key, find, re;
     for (key in data) {
-        find = '\\$\\{\\s*' + key + '\\s*\\}';
+        find = '\$\{\s*' + key + '\s*\}';
         re = new RegExp(find, 'g');
         templateString = templateString.replace(re, data[key]);
     }

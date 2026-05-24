@@ -33,7 +33,7 @@ Fortunately, [there are methods](/post/2021/06/24/deconvolving-with-convolution/
 Starting from Fourier transforms, it's pretty obvious how this will work.
 The measured voltage from the antenna is some function of time $V(t)$, and the [Fourier transform](/post/2021/06/24/deconvolving-with-convolution/#fourier-transformations) of this is
 $$
-\mathcal{F}\\{V(t)\\} = W(f) = \int V(t) e^{-2\pi i f t} \\, dt = \int V(t) (\cos(2\pi f t) - i \sin(2\pi f t)) \\, dt 
+\mathcal{F}\{V(t)\} = W(f) = \int V(t) e^{-2\pi i f t} \, dt = \int V(t) (\cos(2\pi f t) - i \sin(2\pi f t)) \, dt 
 $$
 where $W(f)$ is now a function of frequency instead of time, and is a complex number whose magnitude is the intensity of the signal at the frequency $f$ and phase is the relative phase of that frequency component to the phase of other frequencies. 
 
@@ -70,16 +70,16 @@ $$
 Using [Euler's formula](https://en.wikipedia.org/wiki/Euler%27s_formula), and a bit of trig, one can see this is equivalent to the above expressions.
 $$
 \begin{align}
-z &= c e^{i \phi} \\\\
-  &= c \cos{\phi} + i c \sin{\phi} \\\\
+z &= c e^{i \phi} \\
+  &= c \cos{\phi} + i c \sin{\phi} \\
   &= a + i b
 \end{align}
 $$
 With two complex numbers $z_1$ and $z_1$, multiplication with the magnitude and phase representation clearly shows the scaling of magnitudes and addition of phases.
 $$
 \begin{align}
-z_3 &= z_1 \times z_2 \\\\
-    &= c_1 e^{i \phi_1} \times c_2 e^{i \phi_2} \\\\
+z_3 &= z_1 \times z_2 \\
+    &= c_1 e^{i \phi_1} \times c_2 e^{i \phi_2} \\
     &= c_1 c_2 e^{i (\phi_1+\phi_2)}
 \end{align}
 $$
@@ -90,9 +90,9 @@ The Fourier transform of the voltage as a function of time $V(t)$ gives a functi
 So, $C = |W(f_{60k} = \operatorname{60 kHz})|$ (the magnitude of the complex number) would be the intensity of the received 60 kHz WWVB station within some slice of voltage $V(t)$ - exactly what I want.
 $$ 
 \begin{align}
-C &= \left| \int V(t) (\cos(2\pi f_{60k} t) - i \sin(2\pi f_{60k} t)) \\, dt \right| \\\\
-  &= \left| \left( \int V(t) \cos(2\pi f_{60k} t) \\, dt \right) - i \left( \int V(t) \sin(2\pi f_{60k} t) \\, dt \right) \right| \\\\
-  &= \sqrt{\left( \int V(t) \cos(2\pi f_{60k} t) \\, dt \right)^2 + \left( \int V(t) \sin(2\pi f_{60k} t) \\, dt \right)^2}
+C &= \left| \int V(t) (\cos(2\pi f_{60k} t) - i \sin(2\pi f_{60k} t)) \, dt \right| \\
+  &= \left| \left( \int V(t) \cos(2\pi f_{60k} t) \, dt \right) - i \left( \int V(t) \sin(2\pi f_{60k} t) \, dt \right) \right| \\
+  &= \sqrt{\left( \int V(t) \cos(2\pi f_{60k} t) \, dt \right)^2 + \left( \int V(t) \sin(2\pi f_{60k} t) \, dt \right)^2}
 \end{align}
 $$
 I've suggestively rearranged this into the real and imaginary parts of a complex number, which I take the magnitude of to find the intensity, and everything is a real number again.
@@ -104,7 +104,7 @@ For RF, the carrier frequency ($f_{60k}$ here) is typically much faster than the
 This ends up being critical, since we're ultimately not interested in the time-averaged intensity $C$ but in the intensity as a function of time $C(t)$.
 A crude way of thinking about this would be to integrate over small slices of time $\Delta$ that are long enough to capture many periods of the carrier.
 $$
-C(t) = \sqrt{\left( \int_t^{t+\Delta} V(t') \cos(2\pi f_{60k} t') \\, dt' \right)^2 + \left( \int_t^{t+\Delta} V(t') \sin(2\pi f_{60k} t') \\, dt' \right)^2}
+C(t) = \sqrt{\left( \int_t^{t+\Delta} V(t') \cos(2\pi f_{60k} t') \, dt' \right)^2 + \left( \int_t^{t+\Delta} V(t') \sin(2\pi f_{60k} t') \, dt' \right)^2}
 $$
 This is effectively describing a low pass filter, which averages over high frequency oscillations to preserve only low frequency components.
 This is exactly what real radio hardware does to recover information from broadcast signals, first multiplying (mixing) by an oscillating signal at two phases (in-phase and quadrature), and then applying a low-pass filter to the result.
@@ -112,7 +112,7 @@ This is exactly what real radio hardware does to recover information from broadc
 A mixed signal for the in-phase and quadrature parts at some frequency $f$ can be defined as:
 $$
 \begin{align}
-S_I(t) &= V(t)\cos{(2 \pi f t)} \\\\
+S_I(t) &= V(t)\cos{(2 \pi f t)} \\
 S_Q(t) &= V(t)\sin{(2 \pi f t)}
 \end{align}
 $$
@@ -120,7 +120,7 @@ $$
 After applying some low-pass filtering technique, one arrives at the actual $I(t)$ and $Q(t)$ functions used in RF modulation.
 $$
 \begin{align}
-I(t) &= \operatorname{lowpass} S_I(t)\\\\
+I(t) &= \operatorname{lowpass} S_I(t)\\
 Q(t) &= \operatorname{lowpass} S_Q(t)
 \end{align}
 $$
@@ -138,14 +138,14 @@ so $V(t)$ would be proportional to $A(t)\cos{(2 \pi f t)}$, where $A(t)$ contain
 Assuming the receiving station is in-phase with the broadcast, the mixed signals would be proportional to:
 $$
 \begin{align}
-S_I(t) &= A(t)\cos{(2 \pi f t)}\cos{(2 \pi f t)} \\\\
+S_I(t) &= A(t)\cos{(2 \pi f t)}\cos{(2 \pi f t)} \\
 S_Q(t) &= A(t)\cos{(2 \pi f t)}\sin{(2 \pi f t)}
 \end{align}
 $$
 Applying trig product rules results in:
 $$
 \begin{align}
-S_I(t) &= A(t)\frac{1}{2}(\cos{(4 \pi f t)}+1) \\\\
+S_I(t) &= A(t)\frac{1}{2}(\cos{(4 \pi f t)}+1) \\
 S_Q(t) &= A(t)\frac{1}{2}(\sin{(4 \pi f t)})
 \end{align}
 $$
@@ -153,7 +153,7 @@ So there's an oscillatory part at twice the carrier frequency, and a _constant_ 
 Applying low pass filtering to remove the high frequency part yields something proportional to:
 $$
 \begin{align}
-I(t) &= A(t)\\\\
+I(t) &= A(t)\\
 Q(t) &= 0
 \end{align}
 $$

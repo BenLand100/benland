@@ -162,12 +162,12 @@ def norm(phi):
 
 which is equivalent to satisfying the condition
 $$
-\int\int \left|\psi(x,y)\right|^2 \\,\\,dxdy = 1
+\int\int \left|\psi(x,y)\right|^2 \,\,dxdy = 1
 $$
 
 and might be written by a physicist as
 $$
-\int \left|\psi\right|^2 \\,\\, d\vec{x} = 1
+\int \left|\psi\right|^2 \,\, d\vec{x} = 1
 $$
 to generalize into any number of dimensions.
 

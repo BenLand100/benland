@@ -90,7 +90,7 @@ Treating each datapoint as a multi-dimensional Gaussian distribution with widths
 Kernel density estimation (KDE) is quite a bit more general than this, and a one-dimensional KDE PDF with $n$ events with the $i$th event measured at $t_i$ could be written as
 $$ H_k(x) = \frac{1}{n}\sum_i^n \frac{1}{h_i} K\left(\frac{x-t_i}{h_i}\right) $$
 where $K$ is the kernel function and $h_t$ is often called "bandwidth," but is analogous to the resolution of each measurement.
-In principle any function $K$ that is normalized $\int K(x)\\,dx = 1$ could be used, but sticking with the intuition that the bandwidth is a resolution, a Gaussian is an obvious choice.
+In principle any function $K$ that is normalized $\int K(x)\,dx = 1$ could be used, but sticking with the intuition that the bandwidth is a resolution, a Gaussian is an obvious choice.
 $$ K(x) = \frac{1}{\sqrt{2 \pi}} e^{-x^2/2} $$
 This leads to the following expression for a 1D KDE PDF, which is, as described, a sum of a Gaussian distributions for each datapoint.
 $$ H_k(x) = \frac{1}{n}\sum_i^n \frac{1}{h_i\sqrt{2 \pi}} e^{-\frac{(x-t_i)^2}{2h_i^2}} $$

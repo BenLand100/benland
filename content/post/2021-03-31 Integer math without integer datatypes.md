@@ -37,7 +37,7 @@ Multiplication (division) by repeated addition (subtraction) would work, taking 
 
 The ["modern" solution](https://en.wikipedia.org/wiki/Positional_notation) to notation is to represent some small quantity of numbers (called the base, $b$) uniquely, and then use the position of those number symbols in a list to represent how many powers of the base are represented. 
 So the quantity $A$ which has a number symbol in the $i$th position, $A_i$, would be the the count of $b^i$ values in the quantity, usually counted from the right.
-$$ A = \\{A_n,A_{n-1},...,A_{1},A_{0}\\} = 1234 $$
+$$ A = \{A_n,A_{n-1},...,A_{1},A_{0}\} = 1234 $$
 $$ A = \sum^n_{i=0} A_i b^i = 4\times10^0 + 3\times10^1 + 2\times10^2 + 1\times10^3 $$
 This allows a number to be represented in approximately $\log_{10} N$ characters - much better than linear!
 The mathematical operations you learned in elementary school that operate on each position at a time can also be applied to these numbers, as you well know.
@@ -279,8 +279,8 @@ The [ring nature](https://en.wikipedia.org/wiki/Commutative_ring) of two's compl
 For example subtracting one from an 8-bit zero looks like this in twos complement:
 $$ 
 \begin{array}{rl}
- & 0 0 0 0 0 0 0 0 \\\\
--& 0 0 0 0 0 0 0 1 \\\\
+ & 0 0 0 0 0 0 0 0 \\
+-& 0 0 0 0 0 0 0 1 \\
 \hline
  & 1 1 1 1 1 1 1 1
 \end{array}
@@ -377,7 +377,7 @@ negative one ['-', 'i']
 ### Multiplication
 
 Multiplication of position notation numbers is also fairly straightforward, and does not have to resort to repeated addition, which would scale linearly with the magnitude of one of the numbers.
-Instead, one argument $B = \\{B_0,...,B_n\\}$ is broken up by place value, and each place value is separately multiplies the other argument $A = \\{A_0,...,A_m\\}$. 
+Instead, one argument $B = \{B_0,...,B_n\}$ is broken up by place value, and each place value is separately multiplies the other argument $A = \{A_0,...,A_m\}$. 
 These intermediate values are shifted left and zero padded such that the ones place lines up with the position of the place value used in multiplication, and then added.
 With this done in base $b$, and a place value position $i$, this shifting is the same as a multiplication by a power of $b^i$.
 This can be seen by expanding $A$ and $B$ into their base $b$ representations.
