@@ -344,6 +344,20 @@ footer {
 }
 
 /* ----------------------------------------------------------
+ *   Math
+ * ---------------------------------------------------------- */
+
+math {
+  font-size: 1.05em;
+}
+
+math[display="block"] {
+  font-size: 1.15em;
+  margin: 0.75em auto;
+  overflow-x: auto;
+}
+
+/* ----------------------------------------------------------
  *   Code
  * ---------------------------------------------------------- */
 code:not([class]) {
@@ -357,9 +371,8 @@ code:not([class]) {
   overflow-x: auto;
 }
 
-/* highlight.js */
-div.highlight pre {
-  border-left: 3px solid var(--basecolor);
+pre {
+  border-left: 4px solid var(--basecolor);
   background: var(--bg-code);
   overflow-x: auto;
   padding: 0.5em;
