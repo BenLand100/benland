@@ -454,6 +454,9 @@ table {
   margin: auto;
   border-top: 1px solid var(--basecolor);
   border-bottom: 1px solid var(--basecolor);
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table thead th {
