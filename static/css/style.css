@@ -124,6 +124,10 @@ main {
   }
 }
 
+main h2, main h3 {
+  clear: both;
+}
+
 div.home-wrapper {
   text-align: center;
   hyphens: none;
@@ -203,6 +207,7 @@ hr {
   max-width: 95%;
   margin: auto;
   border: 1px solid var(--basecolor);
+  padding: 0.5em 0.5em;
 }
 
 /* Titles */
@@ -306,6 +311,11 @@ ul.nav-links .current a     { color: #fff; font-weight: 600; }
   outline: dotted 2px rgba(255,255,255,0.35);
   padding: 0.2rem 0.5rem;
   transition: width 0.2s ease, outline 0.15s ease;
+}
+
+.nav-search input::selection {
+  background: rgba(255, 255, 255, 0.35);
+  color: #fff;
 }
 
 .nav-search input[type="search"]::placeholder { color: rgba(255,255,255,0.55); }
@@ -484,7 +494,7 @@ figure img {
   margin: auto;
 }
 
-figure.center  { padding: 0.5em 0 0 2%; }
+figure.center  { padding: 0.5em 0 0 0; margin: auto; }
 figure.right   { max-width: 50%; padding: 0.5em 0 0 2%; float: right; }
 figure.rightsmall  { max-width: 35%; padding: 0.5em 0 0 2%; float: right; }
 figure.rightxsmall { max-width: 18%; padding: 0.5em 0 0 2%; float: right; }
@@ -493,6 +503,7 @@ figure.leftsmall   { max-width: 35%; padding: 0.5em 2% 0 0; float: left; }
 
 @media (max-width: 720px) {
   img[src$='#left'], img[src$='#leftlarge'], img[src$='#right'], figure.left, figure.right {
+    padding: 0.5em 0 0 0;
     float: none;
     max-width: 90%;
     margin: auto;
