@@ -37,6 +37,12 @@ footnoteReturnLinkContents = "↩"
     url = "/categories/"
     weight = 5
 
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block  = [['$$', '$$']]
+    inline = [['$', '$']]
+
 [params]
     description = "Homepage and physics / programming / math / beekeeping / astrophotography / radio / project blog for Benjamin J. Land (BenLand100)"
     footer = "Copyright 2020-2026 Benjamin J. Land"

@@ -44,7 +44,7 @@ So, by performing many experiments that result in the same $\ket{\psi}$ and meas
 Mathematicians would say this combination of two basis states spans a [complex Hilbert space](https://en.wikipedia.org/wiki/Hilbert_space#Quantum_mechanics), meaning that the two states are like two axes in a world where the coordinate axes are complex numbers, and the state is a point $(C_0,C_1)$ in that 2D space.
 This is a form of _abstract vector space_, and the the arbitrary state $\ket{\psi}$ is often called a state vector in physics for this reason.
 Most of the intuition from normal vectors in linear algebra will carry over to state vectors.
-Along these lines, one could write $\ket{\psi}$ as a column vector. $  \newcommand\vector[1]{\begin{bmatrix}#1\end{bmatrix}} $
+Along these lines, one could write $\ket{\psi}$ as a column vector.
 
 $$ \ket{\psi} = \vector{C_0\\\\C_1} $$
 

@@ -278,7 +278,7 @@ Unlike addition of positive numbers, which always results in positive numbers, s
 The [ring nature](https://en.wikipedia.org/wiki/Commutative_ring) of two's complement makes this a non-issue for hardware implementations with fixed-length representations, since the borrows from higher place value bits eventually truncate.
 For example subtracting one from an 8-bit zero looks like this in twos complement:
 $$ 
-\begin{array}{r}
+\begin{array}{rl}
  & 0 0 0 0 0 0 0 0 \\\\
 -& 0 0 0 0 0 0 0 1 \\\\
 \hline

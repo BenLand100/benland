@@ -131,17 +131,17 @@ So the expected number of events in each bin, $\lambda_i$, can be written as:
 
 $$ \lambda_i = \sum_j \mu_j H_{ij} $$
 
-Finally, the [Poisson likelihood](https://en.wikipedia.org/wiki/Poisson_distribution) ${\scr L}_i$ of observing the number of data events in each bin $k_i$ will be calculated according to the calculated expected events $\lambda_i$
+Finally, the [Poisson likelihood](https://en.wikipedia.org/wiki/Poisson_distribution) ${\mathfrak L}_i$ of observing the number of data events in each bin $k_i$ will be calculated according to the calculated expected events $\lambda_i$
 
-$$ {\scr L}_i = \frac{{\lambda_i}^{k_i}e^{-\lambda_i}}{k_i!} $$
+$$ {\mathfrak L}_i = \frac{{\lambda_i}^{k_i}e^{-\lambda_i}}{k_i!} $$
 
 You may be tempted to directly calculate this using `power`, `exp`, and `factorial` functions - _don't_!
 Both the power and the factorial will overflow easily for even moderately sized datasets.
 Fortunately in python, the `scipy.stats.poisson` module provides a `pmf` (PDF) function that calculates this without having to worry about intermediate large numbers.
 
-Finally, to arrive at the total likelihood $\scr L$, the product of the likelihood of each bin is multiplied together
+Finally, to arrive at the total likelihood $\mathfrak L$, the product of the likelihood of each bin is multiplied together
 
-$$ {\scr L} = \prod_i {\scr L}_i $$
+$$ {\mathfrak L} = \prod_i {\mathfrak L}_i $$
 
 All of this is encapsulated in a Python class where the `__init__` method performs the initial setup and a `__call__` method evaluates the likelihood function.
 
@@ -273,13 +273,13 @@ For problems that are sufficiently close to having Gaussian errors (likelihood d
 
 To avoid _very_ small numbers in likelihoods, one can opt to minimize the negative logarithm of the likelihood instead.
 This can also simplify the procedure of finding confidence intervals significantly.
-To start, first examine the Poisson likelihood ${\scr L}_i$ for one bin in the histogram, with $k_i$ observed events and an expected number of events $\lambda_i$
+To start, first examine the Poisson likelihood ${\mathfrak L}_i$ for one bin in the histogram, with $k_i$ observed events and an expected number of events $\lambda_i$
 
-$$ {\scr L}_i = \frac{{\lambda_i}^{k_i}e^{-\lambda_i}}{k_i!} $$
+$$ {\mathfrak L}_i = \frac{{\lambda_i}^{k_i}e^{-\lambda_i}}{k_i!} $$
 
 The negative logarithm of this, expanded out is
 
-$$ -\log{{\scr L}_i} = \lambda_i - k_i \log{(\lambda_i}) + \log{(k_i !)} $$
+$$ -\log{{\mathfrak L}_i} = \lambda_i - k_i \log{(\lambda_i}) + \log{(k_i !)} $$
 
 The observed events $k_i$ is a constant in the likelihood function, while the $\lambda_i$ is constructed from the PDFs and changes with the scale factors, which are the parameters of the likelihood function and change.
 This means the final term $\log{(k_i !)}$ is a constant term and only shifts the likelihood function, so these terms can be omitted during the optimization process without affecting the minimum found.
@@ -362,7 +362,7 @@ As mentioned earlier, the likelihood function represents probabilities for a par
 Poisson likelihoods, as we are dealing with here, are incidentally closely related to the $\chi^2$ statistic.
 As is shown by [Wilks' theorem](https://en.wikipedia.org/wiki/Wilks%27_theorem), $-2$ times the logarithm of a likelihood ratio (where one likelihood represents a null hypothesis (the best-fit) and another likelihood is for an alternative set of parameters) is approximately Chi-squared distributed for sufficiently large datasets (where statistical error is small and the likelihood is well described by a Gaussian distribution).
 
-$$ \chi^2 = -2 \log \frac{ {\scr L}_{alt} }{ {\scr L} } $$
+$$ \chi^2 = -2 \log \frac{ {\mathfrak L}_{alt} }{ {\mathfrak L} } $$
 
 Or, for the notation used for negative log likelihood:
 
@@ -389,7 +389,7 @@ x = np.linspace(80,115,50)
 y = [profile_class_a(nev) for nev in x]
 plt.plot(x,y)
 plt.xlabel('Class A Events')
-plt.ylabel('-$\Delta$ Log ${\scr L}$')
+plt.ylabel('-$\Delta$ Log ${\mathfrak L}$')
 ```
 ![Class A profile](/images/nll_a_profile.png)
 
@@ -399,7 +399,7 @@ x = np.linspace(180,215,50)
 y = [profile_class_b(nev) for nev in x]
 plt.plot(x,y)
 plt.xlabel('Class B Events')
-plt.ylabel('$\Delta$ Log ${\scr L}$')
+plt.ylabel('$\Delta$ Log ${\mathfrak L}$')
 ```
 ![Class B profile](/images/nll_b_profile.png)
 

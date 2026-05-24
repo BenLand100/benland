@@ -1,0 +1,9 @@
+{{- $macros := dict "\\vector" "\\begin{bmatrix}#1\\end{bmatrix}" "\\ket" "\\left|#1\\right\\rangle" "\\bra" "\\left\\langle#1\\right|" }}
+{{- $opts := dict "displayMode" (eq .Type "block") "macros" $macros }}
+{{- with try (transform.ToMath .Inner $opts) }}
+  {{- with .Err }}
+    {{- errorf "KaTeX error: %s: see %s" . $.Position }}
+  {{- else }}
+    {{- .Value }}
+  {{- end }}
+{{- end -}}
