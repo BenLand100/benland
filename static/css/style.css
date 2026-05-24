@@ -136,7 +136,7 @@ div.home-wrapper img {
 
 ul.post-list {
   list-style: none;
-  padding: 0.3em 0;
+  padding: 0;
 }
 ul.post-list li {
   display: flex;
@@ -153,7 +153,7 @@ ul.post-list li a {
 
 ul.other-list {
   list-style: none;
-  padding: 0.3em 0;
+  padding: 0;
 }
 ul.other-list li {
   display: flex;
@@ -170,7 +170,7 @@ ul.other-list li a {
 
 ul.term-list {
   list-style: none;
-  padding: 0.3em 0;
+  padding: 0;
 }
 ul.term-list li {
   display: flex;
