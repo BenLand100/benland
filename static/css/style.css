@@ -4,8 +4,8 @@
 :root {
   --basecolor:      #0272a8;   /* original blue, slightly greener */
   --bg:             #ffffff;
-  --bg-offset:      #f0f0ec;
-  --bg-code:        #f0f0ec;
+  --bg-offset:      #ebebf5;
+  --bg-code:        #ebebf5;
   --text:           #111;
   --text-muted:     #444;
   --header-bg:      var(--basecolor);
@@ -16,8 +16,8 @@
   :root:not([data-theme="light"]) {
     --basecolor:     #4da8d4;   /* lighter blue for dark mode readability */
     --bg:            #1e2229;
-    --bg-offset:     #262c35;
-    --bg-code:       #262c35;
+    --bg-offset:     #2a3140;
+    --bg-code:       #2a3140;
     --text:          #d6d4cf;
     --text-muted:    #888;
     --header-bg:     #0272a8;
@@ -28,8 +28,8 @@
 [data-theme="dark"] {
   --basecolor:     #4da8d4;
   --bg:            #1e2229;
-  --bg-offset:     #262c35;
-  --bg-code:       #262c35;
+  --bg-offset:     #2a3140;
+  --bg-code:       #2a3140;
   --text:          #d6d4cf;
   --text-muted:    #888;
   --header-bg:     #0272a8;
@@ -39,8 +39,8 @@
 [data-theme="light"] {
   --basecolor:      #0272a8;
   --bg:             #ffffff;
-  --bg-offset:      #f0f0ec;
-  --bg-code:        #f0f0ec;
+  --bg-offset:      #ebebf5;
+  --bg-code:        #ebebf5;
   --text:           #111;
   --text-muted:     #444;
   --header-bg:      var(--basecolor);
@@ -132,6 +132,65 @@ div.home-wrapper {
 div.home-wrapper img {
   width: 57%;
   aspect-ratio: 498/504;
+}
+
+ul.post-list {
+  list-style: none;
+  padding: 0.3em 0;
+}
+ul.post-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.3em 0;
+  border-bottom: 2px solid var(--bg-offset);
+}
+ul.post-list li:last-child {
+  border-bottom: none;
+}
+ul.post-list li a {
+  flex: 1;
+}
+
+ul.other-list {
+  list-style: none;
+  padding: 0.3em 0;
+}
+ul.other-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.3em 0;
+  border-bottom: 2px solid var(--bg-offset);
+}
+ul.other-list li:last-child {
+  border-bottom: none;
+}
+ul.other-list li a {
+  flex: 1;
+}
+
+ul.term-list {
+  list-style: none;
+  padding: 0.3em 0;
+}
+ul.term-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.3em 0;
+  border-bottom: 2px solid var(--bg-offset);
+}
+ul.term-list li:last-child {
+  border-bottom: none;
+}
+ul.term-list li a {
+  flex: 1;
+}
+
+span.date {
+  margin-left: auto;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
 }
 
 hr {
@@ -352,6 +411,7 @@ math {
 }
 
 math[display="block"] {
+  display: block;
   font-size: 1.15em;
   margin: 0.75em auto;
   overflow-x: auto;

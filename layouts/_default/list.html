@@ -1,25 +1,35 @@
 {{ partial "header.html" . }}
-    <div class="content-wrapper">
-      {{ if not .IsHome }}<h1>{{ .Title | markdownify }}</h1>{{ end }}
+<div class="content-wrapper">
+{{ if not .IsHome }}<h1>{{ .Title | markdownify }}</h1>{{ end }}
 <main>
 {{ if .IsHome -}}
-<div class="home-wrapper">
-{{ .Content -}}
-</div>
+  <div class="home-wrapper">
+  {{ .Content -}}
+  </div>
+  <hr/>
+  <ul class="post-list">
+    {{ $pages := .Site.RegularPages }}
+    {{ range (where $pages "Section" "!=" "") -}}
+    <li class="post-list">
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    </li>
+    {{ end -}}
+  </ul>
 {{ else -}}
 {{ .Content -}}
+  <ul class="other-list">
+  {{ $pages := .Pages }}
+  {{ range (where $pages "Section" "!=" "") -}}
+    <li class="other-list">
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    </li>
+  {{ end -}}
+  </ul>
 {{ end -}}
+
 </main>
-      {{ if .IsHome }}<hr/> <h2>Posts</h2>{{ end }}
-      <ul>
-        {{ $pages := .Pages }}{{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end -}}
-        {{ range (where $pages "Section" "!=" "") -}}
-        <li>
-          <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-          <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-        </li>
-        {{ end -}}
-      </ul>
-    </div>
+</div>
 
 {{ partial "footer.html" . -}}

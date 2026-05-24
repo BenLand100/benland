@@ -15,7 +15,7 @@ title: Resume/CV
 
 ## Experience
 
-* **Director - Enterprise Analytics & Data Science** (March 2026 - present)
+* **Director - Enterprise Analytics & Data Science** (March 2026 - present)  
   Enterprise Business Intelligence, *Comcast*
 
 * **Sr. Manager - Data Science** (April 2023 - March 2026)  

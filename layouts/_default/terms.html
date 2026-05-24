@@ -1,11 +1,15 @@
 {{ partial "header.html" . }}
-    <h1>{{ .Title }}</h1>
-    <ul>
+<div class="content-wrapper">
+  <h1>{{ .Title }}</h1>
+  <main>
+    <ul class="term-list">
       {{ range .Data.Terms -}}
-      <li>
+      <li class="term-list">
         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
       </li>
       {{ end -}}
     </ul>
+  </main>
+</div>
 
 {{ partial "footer.html" . -}}
