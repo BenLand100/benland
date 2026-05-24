@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
 {{if isset .Params "glsl" }}    <script type="text/javascript" src="/glslCanvas.js"></script> {{end}}
 {{if not .IsHome }} {{ partial "mathjax_support.html" -}} {{end}}
-{{if not .IsHome }} {{ partial "highlight_support.html" }} {{end}}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GA4ID }}"></script>
     <script>
