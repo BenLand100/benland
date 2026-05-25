@@ -144,7 +144,8 @@ ul.post-list {
 }
 ul.post-list li {
   display: flex;
-  align-items: baseline;
+  gap: 1em;
+  align-items: center;
   padding: 0.3em 0;
   border-bottom: 2px solid var(--bg-offset);
 }
@@ -161,7 +162,8 @@ ul.other-list {
 }
 ul.other-list li {
   display: flex;
-  align-items: baseline;
+  gap: 1em;
+  align-items: center;
   padding: 0.3em 0;
   border-bottom: 2px solid var(--bg-offset);
 }
@@ -178,7 +180,8 @@ ul.term-list {
 }
 ul.term-list li {
   display: flex;
-  align-items: baseline;
+  gap: 1em;
+  align-items: center;
   padding: 0.3em 0;
   border-bottom: 2px solid var(--bg-offset);
 }
@@ -205,7 +208,7 @@ hr {
 /* Table of contents */
 #TableOfContents, #TOC {
   max-width: 95%;
-  margin: auto;
+  margin: 0 2.5%;
   border: 1px solid var(--basecolor);
   border-radius: 8px;
   padding: 0.5em 0.5em;

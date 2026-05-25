@@ -17,7 +17,7 @@ Data&nbsp;scientist / Particle&nbsp;physicist / Computer&nbsp;nerd / Scifi&nbsp;
 
 **Check out my:**
 [BeeCam](https://ben.land/beecam/) /
+[Deep Sky](https://ben.land/deepsky/) /
 [Photography](https://ben.land/photos/) /
 [Astrophotography](https://ben.land/astro/) /
-[Deep Sky](https://ben.land/deepsky/) /
 [Earth](https://ben.land/earth/)
