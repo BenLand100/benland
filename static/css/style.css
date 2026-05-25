@@ -207,6 +207,7 @@ hr {
   max-width: 95%;
   margin: auto;
   border: 1px solid var(--basecolor);
+  border-radius: 8px;
   padding: 0.5em 0.5em;
 }
 
