@@ -4,6 +4,10 @@
   {{- with .Err }}
     {{- errorf "KaTeX error: %s: see %s" . $.Position }}
   {{- else }}
-    {{- .Value }}
+    {{- if eq $.Type "block" }}
+      <div class="math-display">{{- .Value -}}</div>
+    {{- else }}
+      {{- .Value }}
+    {{- end }}
   {{- end }}
 {{- end -}}

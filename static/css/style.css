@@ -74,6 +74,10 @@ h1 {
   margin-right: auto;
 }
 
+p {
+  margin: 1em 0;
+}
+
 a {
   color: var(--basecolor);
   text-decoration: none;
@@ -202,13 +206,12 @@ span.date {
 
 hr {
   border-color: var(--basecolor);
-  width: 100%;
 }
 
 /* Table of contents */
 #TableOfContents, #TOC {
   max-width: 95%;
-  margin: 0 2.5%;
+  margin: 1rem 2.5%;
   border: 1px solid var(--basecolor);
   border-radius: 8px;
   padding: 0.5em 0.5em;
@@ -382,6 +385,12 @@ button.theme-toggle:hover { color: #fff; }
   /* Show hamburger, hide links by default */
   .nav-hamburger { display: flex; }
 
+  nav.site-nav::before {
+    content: "";
+    width: 100%;
+    order: 98;
+  }
+
   ul.nav-links {
     display: none;
     flex-direction: column;
@@ -428,6 +437,10 @@ math[display="block"] {
   display: block;
   font-size: 1.15em;
   margin: 0.75em auto;
+  overflow-x: auto;
+}
+
+.math-display {
   overflow-x: auto;
 }
 
@@ -490,6 +503,10 @@ figcaption {
   text-align: justify;
   font-size: 85%;
   line-height: 1.5;
+}
+
+figcaption p {
+  margin: 0.5em 0;
 }
 
 figure img {
