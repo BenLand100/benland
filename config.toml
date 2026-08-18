@@ -1,5 +1,5 @@
 baseurl = "https://ben.land/"
-languageCode = "en-us"
+locale = "en-us"
 title = "ben.land"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 enableEmoji = true
