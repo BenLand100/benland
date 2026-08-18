@@ -1,5 +1,5 @@
 ---
-title: 'Macro Shots of Native Bees'
+title: 'Macro Shots of Local Bee Variety'
 date: '2026-08-17'
 categories: 
   - Photography
@@ -50,13 +50,13 @@ Bumble bees are large, robust social bees capable of producing heat via flight m
 
 {{<figure src="/images/bees/prev_apidae_bombus_bimaculatus_01.jpg" link="/images/bees/apidae_bombus_bimaculatus_01.jpg" class="center" caption="Bombus bimaculatus. Identified by the yellow patch on T1 and two distinct yellow spots / central 'W' patch on abdominal segment T2.">}}
 
-{{<figure src="/images/bees/prev_apidae_bombus_bimaculatus_02.jpg" link="/images/bees/apidae_bombus_bimaculatus_02.jpg" class="center" caption="Bombus bimaculatus foraging on summer bloom.">}}
+{{<figure src="/images/bees/prev_apidae_bombus_bimaculatus_02.jpg" link="/images/bees/apidae_bombus_bimaculatus_02.jpg" class="center" caption="Bombus bimaculatus foraging on summer bloom. These were from Minnasota.">}}
 
 #### Tricolored / Orange-Belted Bumble Bee (*Bombus ternarius*)
 
 {{<figure src="/images/bees/prev_apidae_bombus_ternarius_01.jpg" link="/images/bees/apidae_bombus_ternarius_01.jpg" class="center" caption="Bombus ternarius (Tricolored Bumble Bee). Striking vivid orange bands on abdominal segments T2 and T3 bordered by yellow and black.">}}
 
-{{<figure src="/images/bees/prev_apidae_bombus_ternarius_02.jpg" link="/images/bees/apidae_bombus_ternarius_02.jpg" class="center" caption="Bombus ternarius in profile, highlighting the rich orange-red coloration.">}}
+{{<figure src="/images/bees/prev_apidae_bombus_ternarius_02.jpg" link="/images/bees/apidae_bombus_ternarius_02.jpg" class="center" caption="Bombus ternarius in profile, highlighting the rich orange-red coloration. Ran across this bee in Acadia National Park">}}
 
 #### Other Bumble Bee Specimens (*Bombus* sp.)
 
@@ -100,13 +100,13 @@ Long-horned bees get their common name from the exceptionally long antennae foun
 
 {{<figure src="/images/bees/prev_megachilidae_paranthidium_sp_01.jpg" link="/images/bees/megachilidae_paranthidium_sp_01.jpg" class="center" caption="Paranthidium sp. striking yellow-and-black abdominal markings and stout, compact build.">}}
 
-{{<figure src="/images/bees/prev_megachilidae_paranthidium_sp_02.jpg" link="/images/bees/megachilidae_paranthidium_sp_02.jpg" class="center" caption="Paranthidium sp. is the least bee-looking bee that I've photographed.">}}
+{{<figure src="/images/bees/prev_megachilidae_paranthidium_sp_02.jpg" link="/images/bees/megachilidae_paranthidium_sp_02.jpg" class="center" caption="Paranthidium sp. is the least bee-looking bee that I've photographed. I've only seen them on this specific type of seedum.">}}
 
 *Paranthidium* are solitary bees with vivid yellow/cream markings on a black background. Unlike many bees where yellow comes from hair, their color is in the cuticle itself. They use plant resins and pebbles to construct brood partitions.
 
 ### Mason Bees (*Osmia*)
 
-{{<figure src="/images/bees/prev_megachilidae_osmia_sp_01.jpg" link="/images/bees/megachilidae_osmia_sp_01.jpg" class="center" caption="Osmia sp. (Mason Bee). Dark metallic blue/black sheen with compact body and ventral abdominal scopa.">}}
+{{<figure src="/images/bees/prev_megachilidae_osmia_sp_01.jpg" link="/images/bees/megachilidae_osmia_sp_01.jpg" class="center" caption="Osmia sp. (Mason Bee). I suspect Osmia bicornis based on behavior, but Osmia taurus and Osmia cornifrons could also fit.">}}
 
 Mason bees are spring-flying solitary bees that nest in hollow reeds, drill holes, or beetle burrows, dividing brood cells with partitions made of damp mud or chewed leaf mastic.
 I keep several boxes of this species, which have a blond mustache and, in keeping with their namesake, build cement-like walls to seal off their tube nests to keep their brood safe until the next season.
