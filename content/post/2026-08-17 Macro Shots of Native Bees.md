@@ -1,5 +1,5 @@
 ---
-title: 'Macro Shots of Local Bee Variety'
+title: 'Macro photographs of local bee species'
 date: '2026-08-17'
 categories: 
   - Photography
