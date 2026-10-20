@@ -16,7 +16,6 @@ Data&nbsp;scientist / Particle&nbsp;physicist / Computer&nbsp;nerd / Scifi&nbsp;
 [PGP Public Key](https://ben.land/benland100.pub)
 
 **Check out my:**
-[BeeCam](https://ben.land/beecam/) /
 [Deep Sky](https://ben.land/deepsky/) /
 [Photography](https://ben.land/photos/) /
 [Astrophotography](https://ben.land/astro/) /

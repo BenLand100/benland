@@ -44,6 +44,6 @@ footnoteReturnLinkContents = "↩"
     inline = [['$', '$']]
 
 [params]
-    description = "Homepage and physics / programming / math / beekeeping / astrophotography / radio / project blog for Benjamin J. Land (BenLand100)"
+    description = "Homepage and project blog for Benjamin J. Land (BenLand100), former particle physicist, current machine learning team lead, and all-around-but-scifi-focused nerd."
     footer = "Copyright 2020-2026 Benjamin J. Land"
     GA4ID = "G-9LH6TXZN0X"
